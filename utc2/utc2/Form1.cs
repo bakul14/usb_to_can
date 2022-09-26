@@ -1392,7 +1392,7 @@ namespace utc2
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            max_cell_voltage = 0;
+            max_cell_voltage = 0.2F;
             min_cell_voltage = 10;
         }
 
