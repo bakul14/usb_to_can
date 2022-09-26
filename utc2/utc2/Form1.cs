@@ -83,9 +83,9 @@ namespace utc2
         float summary_voltage = 0;
 
         float min_cell_voltage = 1000, max_cell_voltage = 0;
-        int min_cell_number = 0, max_cell_number = 0,
-            min_stack_number = 0, max_stack_number = 0;
-
+        int stack_number = 0, cell_number = 0,
+            min_cell_number_last = 0, min_stack_number_last = 0,
+            max_cell_number_last = 0, max_stack_number_last = 0;
 
         Control[] tb = new Control[288];
         Control[] stackboxes = new Control[8];
@@ -204,17 +204,9 @@ namespace utc2
         {
             int a = 0, b = 0, c = 0, result = 0;
 
-            if ((str[1] >= '0') && (str[1] <= '9')) a = str[1] - '0';
-            else if ((str[1] >= 'A') && (str[1] <= 'F')) a = str[1] - 'A' + 10;
-            else if ((str[1] >= 'a') && (str[1] <= 'f')) a = str[1] - 'a' + 10;
-
-            if ((str[2] >= '0') && (str[2] <= '9')) b = str[2] - '0';
-            else if ((str[2] >= 'A') && (str[2] <= 'F')) b = str[2] - 'A' + 10;
-            else if ((str[2] >= 'a') && (str[2] <= 'f')) b = str[2] - 'a' + 10;
-
-            if ((str[3] >= '0') && (str[3] <= '9')) c = str[3] - '0';
-            else if ((str[3] >= 'A') && (str[3] <= 'F')) c = str[3] - 'A' + 10;
-            else if ((str[3] >= 'a') && (str[3] <= 'f')) c = str[3] - 'a' + 10;
+            a = hexascii_to_halfbyte(str[1]);
+            b = hexascii_to_halfbyte(str[2]);
+            c = hexascii_to_halfbyte(str[3]);
 
             result = ((a * 256) + (b * 16) + (c));
             return result;
@@ -223,9 +215,9 @@ namespace utc2
         int hexascii_to_halfbyte(int _ascii)
         {
             if ((_ascii >= '0') && (_ascii <= '9')) return (_ascii - '0');
-            if ((_ascii >= 'a') && (_ascii <= 'f')) return (_ascii - 'a' + 10);
-            if ((_ascii >= 'A') && (_ascii <= 'F')) return (_ascii - 'A' + 10);
-            return (0xFF);
+            else if ((_ascii >= 'a') && (_ascii <= 'f')) return (_ascii - 'a' + 10);
+            else if ((_ascii >= 'A') && (_ascii <= 'F')) return (_ascii - 'A' + 10);
+            else return 0;
         }
 
         private void brake_pressure_box_show(string str, int copy_of_dlc)
@@ -243,8 +235,39 @@ namespace utc2
             sb_pressure_box.BeginInvoke(new Action(() => sb_pressure_box.Text = str));
         }
 
+
+        private void max_cell_show(float voltage)
+        {
+            max_cell_voltage = voltage;
+            max_cell_number_last = cell_number;
+            max_stack_number_last = stack_number;
+
+            voltage_max_box.Text = max_cell_voltage.ToString("F2");
+
+            stack_max_number.Text = "Stack: " +
+                stack_number.ToString();
+            cell_max_number.Text = "Cell: " +
+                cell_number.ToString();
+        }
+
+        private void min_cell_show(float voltage)
+        {
+            min_cell_voltage = voltage;
+            min_cell_number_last = cell_number;
+            min_stack_number_last = stack_number;
+
+            voltage_min_box.Text = min_cell_voltage.ToString("F2");
+
+            stack_min_number.Text = "Stack: " +
+                stack_number.ToString(); ;
+            cell_min_number.Text = "Cell: " +
+                cell_number.ToString();
+        }
+
         private void ams_show(string str, int copy_of_dlc, int id)
         {
+            if (copy_of_dlc >= 8) { }
+            else return;
             int symbol1, symbol2, symbol3, symbol4, temp;
             int aim = (id - 0x100) % 8;
             int byte1, byte2;
@@ -263,24 +286,17 @@ namespace utc2
 
                         if (voltage > 0.1)
                         {
-                            if (voltage > max_cell_voltage)
-                            {
-                                max_cell_voltage = voltage;
-                                voltage_max_box.Text = max_cell_voltage.ToString("F2");
-                                stack_max_number.Text = "Stack: " +
-                                    ((id - 0x100) / 8 + 1).ToString();
-                                cell_max_number.Text = "Cell: " +
-                                    (aim * 4 + i + 1).ToString();
-                            }
-                            else if (voltage < min_cell_voltage)
-                            {
-                                min_cell_voltage = voltage;
-                                voltage_min_box.Text = min_cell_voltage.ToString("F2");
-                                stack_min_number.Text = "Stack: " +
-                                    ((id - 0x100) / 8 + 1).ToString(); ;
-                                cell_min_number.Text = "Cell: " +
-                                    (aim * 4 + i + 1).ToString();
-                            }
+                            stack_number = ((id - 0x100) / 8 + 1);
+                            cell_number = (aim * 4 + i + 1);
+
+                            if (voltage < min_cell_voltage)
+                                min_cell_show(voltage);
+                            else if (voltage > max_cell_voltage)
+                                max_cell_show(voltage);
+                            else if ((stack_number == min_stack_number_last) && (cell_number == min_cell_number_last))
+                                min_cell_show(voltage);
+                            else if ((stack_number == max_stack_number_last) && (cell_number == max_cell_number_last))
+                                max_cell_show(voltage);
                         }
 
                         tb[(id - 0x100) / 8 * 36 + (id - 0x100) % 8 * 8 + i * 2].Text = voltage.ToString("F2");
@@ -347,6 +363,8 @@ namespace utc2
 
         private void tractive_system_temp_show(string str, int copy_of_dlc)
         {
+            if (copy_of_dlc >= 2) { }
+            else return;
             int a = 0, b = 0;
             a = hexascii_to_halfbyte(str[5]);
             b = hexascii_to_halfbyte(str[6]);
@@ -358,16 +376,22 @@ namespace utc2
 
         private void hotcell_show(string str, int copy_of_dlc)
         {
+            if (copy_of_dlc >= 1) { }
+            else return;
             hotcell.Text = Convert.ToString(hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]));
         }
 
         private void current_show(string str, int copy_of_dlc)
         {
+            if (copy_of_dlc >= 1) { }
+            else return;
             current_box.Text = Convert.ToString(hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]));
         }
 
         private void vcu_show(string str, int copy_of_dlc, int id)
         {
+            if (copy_of_dlc >= 2) { }
+            else return;
             float current;
             int byte1, byte2;
             byte1 = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
@@ -378,6 +402,8 @@ namespace utc2
 
         private void slave_status_show(string str, int copy_of_dlc)
         {
+            if (copy_of_dlc >= 8) { }
+            else return;
             int  status;
             for (int i = 0; i < 8; i++)
             {
@@ -394,6 +420,8 @@ namespace utc2
         private void ams_master_status_show(string str, int copy_of_dlc)
         {
             int status;
+            if (copy_of_dlc >= 1) { }
+            else return;
             status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
             if (status < 10)
             {
@@ -403,6 +431,8 @@ namespace utc2
 
         private void actuator_show(string str, int copy_of_dlc)
         {
+            if (copy_of_dlc >= 1) { }
+            else return;
             int status;
             status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
             if (status < 4)
@@ -413,6 +443,8 @@ namespace utc2
 
         private void precharge_show(string str, int copy_of_dlc)
         {
+            if (copy_of_dlc >= 2) { }
+            else return;
             string[] state = new string[2] { "Opened", "Closed" };
             int status = 0;
             string value = "";
@@ -504,6 +536,8 @@ namespace utc2
 
         private void vcu_status_show(string str, int copy_of_dlc)
         {
+            if (copy_of_dlc >= 1) { }
+            else return;
             int status;
             status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
             if (status < 12)
