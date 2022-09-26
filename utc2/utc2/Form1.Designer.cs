@@ -168,9 +168,9 @@
             this.label556 = new System.Windows.Forms.Label();
             this.voltage_max_box = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label558 = new System.Windows.Forms.Label();
             this.cell_min_number = new System.Windows.Forms.Label();
             this.stack_min_number = new System.Windows.Forms.Label();
-            this.label558 = new System.Windows.Forms.Label();
             this.voltage_min_box = new System.Windows.Forms.TextBox();
             this.total_voltage_box = new System.Windows.Forms.TextBox();
             this.label498 = new System.Windows.Forms.Label();
@@ -1022,6 +1022,7 @@
             this.filter_id_low_box = new System.Windows.Forms.TextBox();
             this.filter_id_high_box = new System.Windows.Forms.TextBox();
             this.reset_button = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabcontrol1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -2797,6 +2798,17 @@
             this.groupBox10.Text = "Min cell";
             this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
+            // label558
+            // 
+            this.label558.AutoSize = true;
+            this.label558.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label558.Location = new System.Drawing.Point(82, 29);
+            this.label558.Name = "label558";
+            this.label558.Size = new System.Drawing.Size(23, 26);
+            this.label558.TabIndex = 219;
+            this.label558.Text = "V";
+            this.label558.Click += new System.EventHandler(this.label558_Click);
+            // 
             // cell_min_number
             // 
             this.cell_min_number.AutoSize = true;
@@ -2817,17 +2829,6 @@
             this.stack_min_number.TabIndex = 220;
             this.stack_min_number.Text = "Stack: -";
             this.stack_min_number.Click += new System.EventHandler(this.stack_min_box_Click);
-            // 
-            // label558
-            // 
-            this.label558.AutoSize = true;
-            this.label558.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label558.Location = new System.Drawing.Point(82, 29);
-            this.label558.Name = "label558";
-            this.label558.Size = new System.Drawing.Size(23, 26);
-            this.label558.TabIndex = 219;
-            this.label558.Text = "V";
-            this.label558.Click += new System.EventHandler(this.label558_Click);
             // 
             // voltage_min_box
             // 
@@ -13043,6 +13044,11 @@
             this.reset_button.UseVisualStyleBackColor = false;
             this.reset_button.Click += new System.EventHandler(this.reset_button_Click);
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 500;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -13065,7 +13071,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UTC 1.23";
+            this.Text = "UTC 1.24";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabcontrol1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -14110,6 +14116,7 @@
         private System.Windows.Forms.Label label556;
         private System.Windows.Forms.TextBox voltage_max_box;
         private System.Windows.Forms.Label cell_min_number;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

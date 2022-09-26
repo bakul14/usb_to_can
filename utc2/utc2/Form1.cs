@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,20 +8,31 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
+
+
 
 namespace utc2
 {
 
     public partial class Form1 : Form
     {
+
+        Queue<string> serial_messages = new Queue<string>();
+
         int filter_id_low = 0x0;
-        int filter_id_high = 0x7ff; 
+        int filter_id_high = 0x7ff;
+
+        uint BUF_SIZE = 4096;
+        uint BUF_MASK = 4095;
+        uint tail = 0, head = 0;
+        char[] circle_buffer = new char[4096];
 
         string[] data = new string[8];
-        string input_message = "GHVNCJSKMKDFJBNDJSKASJFGBYUMS[KONKOPRFEBHJK";
+        string input_message = "";
         string myfile = "";
         string readfile = "";
         string[] slave_statuses_messages = new string[14] 
@@ -87,6 +99,7 @@ namespace utc2
 
         Dictionary <int, string> precharge_dict =
             new Dictionary <int, string> ();
+
 
 
         public Form1()
@@ -163,6 +176,11 @@ namespace utc2
             precharge_dict.Add(13, "Charging Mode");
             precharge_dict.Add(17, "Precharge Process");
             precharge_dict.Add(19, "AMS_NOT_RESPONDING");
+
+            
+
+            //Thread myThread1 = new Thread(my_thread_1);
+            //myThread1.Start();
         }
         private int row_count()
         {
@@ -816,12 +834,11 @@ namespace utc2
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-
             input_message = "";
             input_message = serialPort1.ReadLine();
             int id = 0;
 
-            if (input_message.Length > 0) start_symbol = input_message[0];
+            if (input_message.Length > 1) start_symbol = input_message[0];
             else return;
 
             if (download_process_flag == false) // обычная информация, обрабатываем и выводим на экран
@@ -841,6 +858,13 @@ namespace utc2
                     }
                 }
                 //else if (start_symbol == 'f') feedback_firmware(1, input_message);
+            }
+        }
+
+        void my_thread_1() // thread
+        {
+            while (true)
+            { 
             }
         }
 
@@ -1364,6 +1388,12 @@ namespace utc2
         private void label526_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            max_cell_voltage = 0;
+            min_cell_voltage = 10;
         }
 
         private void label449_Click(object sender, EventArgs e)
