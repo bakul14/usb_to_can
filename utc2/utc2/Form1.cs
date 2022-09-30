@@ -536,13 +536,13 @@ namespace utc2
 
         private void vcu_status_show(string str, int copy_of_dlc)
         {
-            if (copy_of_dlc >= 1) { }
+            if (copy_of_dlc >= 2) { }
             else return;
             int status;
-            status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
+            status = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
             if (status < 12)
             {
-                vcu_status_box.Text = vcu_statuses[status - 0x500];
+                vcu_status_box.Text = vcu_statuses[status];
             }
         }
 
