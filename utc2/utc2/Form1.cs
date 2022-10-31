@@ -26,16 +26,14 @@ namespace utc2
         int filter_id_low = 0x0;
         int filter_id_high = 0x7ff;
 
-        uint BUF_SIZE = 4096;
-        uint BUF_MASK = 4095;
-        uint tail = 0, head = 0;
         char[] circle_buffer = new char[4096];
+
+        string myfile = string.Empty;
+        string readfile = string.Empty;
 
         string[] data = new string[8];
         string input_message = "";
-        string myfile = "";
-        string readfile = "";
-        string[] slave_statuses_messages = new string[14] 
+        string[] slave_statuses_messages = new string[14]
         {
             "SLAVE_ERROR", "SLAVE_OK",
             "STM_HEAP_OVERFLOW", "LTC_WRONG_PEC",
@@ -76,8 +74,10 @@ namespace utc2
         char start_symbol;
         int message_counter = 0;
         bool download_process_flag = false;
-        bool feedback_flag = false;
+        bool feedback_usb_flag = false;
+        bool feedback_boot_flag = false;
         bool start_flag = true;
+        bool download_button_flag = false;
 
         float[] stack_voltages = new float[8];
         float summary_voltage = 0;
@@ -86,6 +86,8 @@ namespace utc2
         int stack_number = 0, cell_number = 0,
             min_cell_number_last = 0, min_stack_number_last = 0,
             max_cell_number_last = 0, max_stack_number_last = 0;
+
+        int node_id = 0;
 
         Control[] tb = new Control[288];
         Control[] stackboxes = new Control[8];
@@ -97,9 +99,10 @@ namespace utc2
         Control[] slave_number = new Control[8];
 
 
-        Dictionary <int, string> precharge_dict =
-            new Dictionary <int, string> ();
+        Dictionary<int, string> precharge_dict =
+            new Dictionary<int, string>();
 
+        static Semaphore semaphore_thread1 = new Semaphore(2, 2);
 
 
         public Form1()
@@ -141,8 +144,8 @@ namespace utc2
             tb[264] = textBox_265; tb[265] = textBox_266; tb[266] = textBox_267; tb[267] = textBox_268; tb[268] = textBox_269; tb[269] = textBox_270; tb[270] = textBox_271; tb[271] = textBox_272;
             tb[272] = textBox_273; tb[273] = textBox_274; tb[274] = textBox_275; tb[275] = textBox_276; tb[276] = textBox_277; tb[277] = textBox_278; tb[278] = textBox_279; tb[279] = textBox_280;
             tb[280] = textBox_281; tb[281] = textBox_282; tb[282] = textBox_283; tb[283] = textBox_284; tb[284] = textBox_285; tb[285] = textBox_286; tb[286] = textBox_287; tb[287] = textBox_288;
-            
-            stackboxes[0] = stack1_box; stackboxes[1] = stack2_box; stackboxes[2] = stack3_box; stackboxes[3] = stack4_box; 
+
+            stackboxes[0] = stack1_box; stackboxes[1] = stack2_box; stackboxes[2] = stack3_box; stackboxes[3] = stack4_box;
             stackboxes[4] = stack5_box; stackboxes[5] = stack6_box; stackboxes[6] = stack7_box; stackboxes[7] = stack8_box;
 
             stackboxes_u[0] = stack_1u; stackboxes_u[1] = stack_2u; stackboxes_u[2] = stack_3u; stackboxes_u[3] = stack_4u;
@@ -167,25 +170,28 @@ namespace utc2
             filter_id_low_box.Text = filter_id_low.ToString("X");
             filter_id_high_box.Text = filter_id_high.ToString("X");
 
-            precharge_dict.Add(1,  "Error: LOW Voltage");
-            precharge_dict.Add(2,  "Error: HIGH Voltage");
-            precharge_dict.Add(3,  "Idle: Shutdown Wait");
-            precharge_dict.Add(5,  "Timeout");
-            precharge_dict.Add(7,  "Precharge Finished");
+            precharge_dict.Add(1, "Error: LOW Voltage");
+            precharge_dict.Add(2, "Error: HIGH Voltage");
+            precharge_dict.Add(3, "Idle: Shutdown Wait");
+            precharge_dict.Add(5, "Timeout");
+            precharge_dict.Add(7, "Precharge Finished");
             precharge_dict.Add(11, "Shutdown is Open");
             precharge_dict.Add(13, "Charging Mode");
             precharge_dict.Add(17, "Precharge Process");
             precharge_dict.Add(19, "AMS_NOT_RESPONDING");
 
-            
-
-            //Thread myThread1 = new Thread(my_thread_1);
-            //myThread1.Start();
+            this.WindowState = FormWindowState.Maximized;
+            Thread myThread1 = new Thread(new ThreadStart(my_thread_1));
+            myThread1.IsBackground = true;
+            myThread1.Start();
         }
-        private int row_count()
+        private int row_count(string readfile)
         {
-            string[] rtfStrings = richTextBox1.Text.Split(new char[] { '\n' });
-            return rtfStrings.Length;
+            int notEmptyCount = readfile
+                .Split('\n')
+                .Count(x => !string.IsNullOrEmpty(x));
+
+            return notEmptyCount;
         }
 
         private void serial_reconnect()
@@ -337,13 +343,13 @@ namespace utc2
                         }
                         else if (i < 3)
                         {
-                            stack_voltages[(id - 0x100) / 8] = voltage*100;
+                            stack_voltages[(id - 0x100) / 8] = voltage * 100;
                             summary_voltage = 0;
                             for (int j = 0; j < 8; j++)
                                 summary_voltage += stack_voltages[j];
                             total_voltage_box.Text = (summary_voltage).ToString("F2");
-                            stackboxes[(id - 0x100) / 8].Text = Convert.ToString(voltage*100);
-                            stackboxes_u[(id - 0x100) / 8].Text = "Stack voltage: " + (voltage*100).ToString("F2") + " V";
+                            stackboxes[(id - 0x100) / 8].Text = Convert.ToString(voltage * 100);
+                            stackboxes_u[(id - 0x100) / 8].Text = "Stack voltage: " + (voltage * 100).ToString("F2") + " V";
                         }
                     }
                 }
@@ -352,7 +358,8 @@ namespace utc2
             {
                 if ((id - 0x100 + 1) % 8 == 0) copy_of_dlc = 2;
                 else copy_of_dlc = 8;
-                for (int i = 0; i < copy_of_dlc; i++) {
+                for (int i = 0; i < copy_of_dlc; i++)
+                {
                     symbol1 = str[5 + (i * 2)];
                     symbol2 = str[5 + (i * 2) + 1];
                     temp = hexascii_to_halfbyte(symbol1) * 16 + hexascii_to_halfbyte(symbol2);
@@ -404,10 +411,10 @@ namespace utc2
         {
             if (copy_of_dlc >= 8) { }
             else return;
-            int  status;
+            int status;
             for (int i = 0; i < 8; i++)
             {
-                status = hexascii_to_halfbyte(str[i*2 + 5]) * 16 + hexascii_to_halfbyte(str[i*2 + 6]);
+                status = hexascii_to_halfbyte(str[i * 2 + 5]) * 16 + hexascii_to_halfbyte(str[i * 2 + 6]);
                 if (status < 14)
                 {
                     slave_number[i].Text = slave_statuses_messages[status].ToString();
@@ -419,13 +426,31 @@ namespace utc2
 
         private void ams_master_status_show(string str, int copy_of_dlc)
         {
-            int status;
-            if (copy_of_dlc >= 1) { }
+            int byte_1 = 0, byte_2 = 0;
+            int mask = 0;
+            if (copy_of_dlc >= 2) { }
             else return;
-            status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
-            if (status < 10)
+            byte_1 = (hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]));
+            byte_2 = (hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]));
+            richTextBox_master.Clear();
+            if (byte_2 > 0)
             {
-                master_status_box.Text = master_statuses[status].ToString();
+                for (int i = 0; i < 8; i++)
+                {
+                    mask = 1 << i;
+                    if ((byte_2 & (mask)) == (1 << i))
+                        richTextBox_master.AppendText(master_statuses[i] + "\n");
+                    //richTextBox_master.BeginInvoke(new Action(() => richTextBox_master.AppendText(master_statuses[i] + "\n")));
+                }
+            }
+            if (byte_1 > 0)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    mask = 1 << i;
+                    if ((byte_1 & (mask)) == (1 << i))
+                        richTextBox_master.AppendText(master_statuses[i + 8] + "\n");
+                }
             }
         }
 
@@ -437,7 +462,7 @@ namespace utc2
             status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
             if (status < 4)
                 actuator_status_box.Text = actuator_statuses[status].ToString();
-            else 
+            else
                 return;
         }
 
@@ -456,16 +481,16 @@ namespace utc2
             }
 
             status = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
-            
-                switch (status)
-                {
-                    case 1: airminus_box.Text = state[0]; airplus_box.Text = state[0]; prechrelay_box.Text = state[0]; break;
-                    case 2: airminus_box.Text = state[1]; airplus_box.Text = state[0]; prechrelay_box.Text = state[0]; break;
-                    case 3: airminus_box.Text = state[1]; airplus_box.Text = state[0]; prechrelay_box.Text = state[1]; break;
-                    case 4: airminus_box.Text = state[1]; airplus_box.Text = state[1]; prechrelay_box.Text = state[0]; break;
-                }
 
-           
+            switch (status)
+            {
+                case 1: airminus_box.Text = state[0]; airplus_box.Text = state[0]; prechrelay_box.Text = state[0]; break;
+                case 2: airminus_box.Text = state[1]; airplus_box.Text = state[0]; prechrelay_box.Text = state[0]; break;
+                case 3: airminus_box.Text = state[1]; airplus_box.Text = state[0]; prechrelay_box.Text = state[1]; break;
+                case 4: airminus_box.Text = state[1]; airplus_box.Text = state[1]; prechrelay_box.Text = state[0]; break;
+            }
+
+
         }
 
         private void ams_lv_show(string str, int copy_of_dlc, int id)
@@ -484,7 +509,8 @@ namespace utc2
                             voltage = (byte1 + byte2 * 0x100) / 10000f;
                             ams_lv_voltage[i].Text = voltage.ToString("F2");
                         }
-                    } break;
+                    }
+                    break;
 
                 case 0x701:
                     {
@@ -496,28 +522,32 @@ namespace utc2
                             voltage = (byte1 + byte2 * 0x100) / 10000f;
                             ams_lv_voltage[i + 3].Text = voltage.ToString("F2");
                         }
-                    } break;
+                    }
+                    break;
 
                 case 0x702: // temp
                     {
                         for (int i = 0; i < 6; i++)
                         {
-                            temp = hexascii_to_halfbyte(str[i*2 + 5]) * 16 + hexascii_to_halfbyte(str[i*2 + 6]);
+                            temp = hexascii_to_halfbyte(str[i * 2 + 5]) * 16 + hexascii_to_halfbyte(str[i * 2 + 6]);
                             ams_lv_temp[i].Text = temp.ToString();
                         }
-                    } break;
+                    }
+                    break;
 
                 case 0x703: // status
                     {
                         status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
                         ams_lv_status_box.Text = status.ToString();
-                    } break;
+                    }
+                    break;
 
                 case 0x704: // max temp
                     {
                         temp = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
                         lv_hottest_cell_box.Text = temp.ToString();
-                    } break;
+                    }
+                    break;
             }
         }
 
@@ -538,8 +568,21 @@ namespace utc2
         {
             if (copy_of_dlc >= 2) { }
             else return;
+            int byte1, byte2;
             int status;
-            status = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
+            byte1 = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
+            byte2 = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
+            status = (byte)((byte1 * 256) + byte2);
+
+
+            for (int i = 0; i <= 15; i++)
+            {
+                /*if (status & (1 << i))
+                {
+
+                }*/
+            }
+
             if (status < 12)
             {
                 vcu_status_box.Text = vcu_statuses[status];
@@ -557,7 +600,7 @@ namespace utc2
                     delta *= 16;
                 id += delta;
             }
-            return id; 
+            return id;
         }
 
         private void charging_status_show(string str, int copy_of_dlc)
@@ -583,7 +626,7 @@ namespace utc2
 
             //if (message.Length >= 5) id = get_id_from_str(message);
             //else return;
-                dlc = message[4] - '0';
+            dlc = message[4] - '0';
 
             if ((id >= 0x100) && (id <= 0x13F))
                 ams_show(message, dlc, id); // delta 288
@@ -614,112 +657,6 @@ namespace utc2
             }
         }
 
-        /*private void feedback_firmware(int status, string message)
-        {
-            int id = get_id_from_str(message);
-
-            if (status == 1) // статус 1 - ответ устройств на query
-            {
-                switch (id)
-                {
-                    case 0x30: precharge_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x31: discharge_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x32: vcu_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x33: bcu_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x34: ams_lv_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x35: brake_light_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x36: can_multiplexer_front_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x37: can_multiplexer_rear_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x38: ami_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x39: assi_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x3A: fan_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x3B: ams_master_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x3C: ebs_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x3D: steering_wheel_radio.ForeColor = Color.LawnGreen; break;
-                    case 0x3E: vcdu_radio.ForeColor = Color.LawnGreen; break;
-                    default: break;
-                }
-            }
-
-            else if (status == 2) // статус 2 - ответ от устройства после каждой строки прошивки
-            {
-                feedback_flag = true;
-            }
-        }
-
-        private void download_firmware(int id)
-        {
-            char[] buff = new char[8];
-            char[] read_buf = new char[76475];
-            char[] data_tx_0 = new char[8] { 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F' };
-            char[] data_tx_1 = new char[8] { 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F' };
-            char[] data_tx_2 = new char[8] { 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F' };
-            char[] data_tx_3 = new char[8] { 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F' };
-            string str = "";
-            int row_counter = row_count();
-            int counter = 0;
-
-            if (start_flag)
-            {
-                buff[0] = 's';
-                buff[1] = (char)('a' + id - 0x30);
-                serialPort1.Write(buff, 0, 2);
-                start_flag = false;
-            }
-            while (feedback_flag == false) { rpm2_box.Text = "false"; }
-            rpm2_box.Text = "true";
-            //while (String.IsNullOrEmpty(str)) //пропуск всех пустых строк
-            //{
-            //    str = richTextBox1.Lines[counter++];
-            //}
-            while (counter < row_counter)
-            {
-                str = richTextBox1.Lines[counter++];
-                //if (String.IsNullOrEmpty(str)) continue;
-                read_buf = str.ToCharArray();
-                for (int i = 0; i <= 7; i++)
-                {
-                    if (read_buf[1] == '1' && read_buf[2] == '0')
-                    {
-                        data_tx_0[i] = read_buf[i + 9];
-                        data_tx_1[i] = read_buf[i + 17];
-                        data_tx_2[i] = read_buf[i + 25];
-                        data_tx_3[i] = read_buf[i + 33];
-                    }
-                    else
-                    {
-                        int last_position = 42;
-                        int difference = 0;
-                        label9.Text = Convert.ToString(last_position);
-                        label9.Text = Convert.ToString(last_position);
-                        while (read_buf[last_position] == '0' || read_buf[last_position] == '\0')
-                        {
-                            label9.Text = Convert.ToString(last_position);
-                            last_position--;
-                        }
-                        read_buf[1] = '1';
-                        read_buf[2] = '0';
-                        difference = 42 - last_position;
-                        read_buf[41] = read_buf[last_position - 1];
-                        read_buf[42] = read_buf[last_position];
-                        for (int y = last_position - 1; y < 41; y++)
-                            read_buf[y] = 'F';
-                        data_tx_0[i] = read_buf[i + 9];
-                        data_tx_1[i] = read_buf[i + 17];
-                        data_tx_2[i] = read_buf[i + 25];
-                        data_tx_3[i] = read_buf[i + 33];
-                    }
-                }
-                serialPort1.Write(data_tx_0, 0, 8);
-                serialPort1.Write(data_tx_1, 0, 8);
-                serialPort1.Write(data_tx_2, 0, 8);
-                serialPort1.Write(data_tx_3, 0, 8);
-                label9.Text = Convert.ToString(counter);
-                progressBar1.BeginInvoke(new Action(() => progressBar1.Value = counter / row_counter * 100));
-
-            }
-        }*/
-
         private void Form1_Load(object sender, EventArgs e)
         {
             string[] ports = SerialPort.GetPortNames();
@@ -732,66 +669,79 @@ namespace utc2
             }
         }
 
-        private void open_file_Click(object sender, EventArgs e)
+
+        public void open_file_Click(object sender, EventArgs e)
         {
-
-            if (download_process_flag == false)
+            int row_quantity = 0;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                myfile = string.Empty;
-                readfile = string.Empty;
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    myfile = openFileDialog1.FileName;
-                    readfile = File.ReadAllText(myfile);
-                }
+                myfile = openFileDialog1.FileName;
                 textBox1.Text = myfile;
+                readfile = File.ReadAllText(myfile);
+                label9.Text = "Strings: ";
+                progressBar1.BeginInvoke(new Action(() => progressBar1.Value = 0));
+                row_quantity = row_count(readfile);
                 richTextBox1.BeginInvoke(new Action(() => richTextBox1.Text = readfile));
-                //byte.Parse("hex", NumberStyles.HexNumber);
-                label9.BeginInvoke(new Action(() => label9.Text = "Strings: " + Convert.ToString(row_count())));
-
+                label9.BeginInvoke(new Action(() => label9.Text = "Strings: " + Convert.ToString(row_quantity)));
             }
         }
 
         private void close_file_Click(object sender, EventArgs e)
         {
-            if (download_process_flag == false)
-            {
-                textBox1.Clear();
-                richTextBox1.Clear();
-            }
+            download_button_flag = false;
+            download_process_flag = false;
+            myfile = string.Empty;
+            readfile = string.Empty;
+            textBox1.Clear();
+            richTextBox1.Clear();
+            progressBar1.BeginInvoke(new Action(() => progressBar1.Value = 0));
         }
 
         private void download_Click(object sender, EventArgs e)
         {
-            /*int id = 0;
-            rogressBar1.Value += 10;
-            if (progressBar1.Value == 100)
-                progressBar1.Value = 0;
-            
-            if (download_process_flag == false && readfile != "")
-            {
-                if (precharge_radio.Checked) id = 0x30;
-                else if (discharge_radio.Checked) id = 0x31;
-                else if (vcu_radio.Checked) id = 0x32;
-                else if (bcu_radio.Checked) id = 0x33;
-                else if (ams_lv_radio.Checked) id = 0x34;
-                else if (brake_light_radio.Checked) id = 0x35;
-                else if (can_multiplexer_front_radio.Checked) id = 0x36;
-                else if (can_multiplexer_rear_radio.Checked) id = 0x37;
-                else if (ami_radio.Checked) id = 0x38;
-                else if (assi_radio.Checked) id = 0x39;
-                else if (fan_radio.Checked) id = 0x3A;
-                else if (ams_master_radio.Checked) id = 0x3B;
-                else if (ebs_radio.Checked) id = 0x3C;
-                else if (steering_wheel_radio.Checked) id = 0x3D;
-                else if (vcdu_radio.Checked) id = 0x3E;
-                else return;
 
-                download_process_flag = true;
-                progressBar1.BeginInvoke(new Action(() => progressBar1.Value = 10));
-                download_firmware(id);
+            node_id = -1;
+            foreach (Control control in nodes_groupBox.Controls)
+            {
+                // Проверка на принадлежность элемента управления к классу RadioButton:
+                if (control.GetType() == typeof(System.Windows.Forms.RadioButton))
+                {
+                    // Создание отдельного (именованного) объекта класса RadioButton:
+                    RadioButton rbControl = (RadioButton)control;
+                    // Вывод сообщения, содержащего текст выбранного элемента:
+                    if (rbControl.Checked)
+                    {
+                        node_id = rbControl.TabIndex;
+                    }
+                }
             }
-            else return;*/
+
+            if (node_id != -1) { }  //  continue
+            else
+            {
+                MessageBox.Show(this,
+                    "Node not selected",
+                    "Firmware Update",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button1,  // specify "Yes" as the default
+                    (MessageBoxOptions)0x40000);
+                return;
+            }
+
+            if (serialPort1.IsOpen)
+                download_button_flag = true;
+            else
+            {
+                MessageBox.Show(this,
+                                    "Serial port is not open",
+                                    "Firmware Update",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning,
+                                    MessageBoxDefaultButton.Button1,  // specify "Yes" as the default
+                                    (MessageBoxOptions)0x40000);
+                return;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -871,34 +821,133 @@ namespace utc2
             input_message = "";
             input_message = serialPort1.ReadLine();
             int id = 0;
+            int load = 0;
 
             if (input_message.Length > 1) start_symbol = input_message[0];
             else return;
 
-            if (download_process_flag == false) // обычная информация, обрабатываем и выводим на экран
+
+            if (start_symbol == 't')
             {
-                if (start_symbol == 't')
+                id = get_id_from_str(input_message);
+                if ((id >= filter_id_low) && (id <= filter_id_high)) //filter_id_low filter_id_high
                 {
-                    id = get_id_from_str(input_message);
-                    if ((id >= filter_id_low) && (id <= filter_id_high)) //filter_id_low filter_id_high
+                    if ((message_counter++) > 1000)
                     {
-                        if ((message_counter++) > 1000)
-                        {
-                            message_counter = 0;
-                            richTextBox2.BeginInvoke(new Action(() => richTextBox2.Clear()));
-                        }
-                        richTextBox2.BeginInvoke(new Action(() => richTextBox2.AppendText(input_message)));
-                        show_data(input_message, id);               // вывести полученную информацию в соответствующую ячейку
+                        message_counter = 0;
+                        richTextBox2.BeginInvoke(new Action(() => richTextBox2.Clear()));
                     }
+                    richTextBox2.BeginInvoke(new Action(() => richTextBox2.AppendText(input_message)));
+                    show_data(input_message, id);               // вывести полученную информацию в соответствующую ячейку
                 }
-                //else if (start_symbol == 'f') feedback_firmware(1, input_message);
+            }
+            else if (start_symbol == 'w')   //  загруженность CAN шины
+            {
+                load = hexascii_to_halfbyte(input_message[1]) * 16 + hexascii_to_halfbyte(input_message[2]);
+                can_bus_load.BeginInvoke(new Action(() => can_bus_load.Text = load.ToString() + "%"));
+            }
+            else if (start_symbol == 'b')
+            {
+                richTextBox2.BeginInvoke(new Action(() => richTextBox2.AppendText("Sent to CAN bootloader\n")));
+                feedback_boot_flag = true;
+            }
+            else if (start_symbol == 'f')
+            {
+                richTextBox2.BeginInvoke(new Action(() => richTextBox2.AppendText("Received from usb\n")));
+                feedback_usb_flag = true;
             }
         }
 
         void my_thread_1() // thread
         {
+            int mem_transmit = 0, goal = 0;
+            int row_counter = 0, row_quantity = 0;
+            string line = string.Empty;
+            StreamReader sr;
+            string data_tx = string.Empty;
+            var watch = new System.Diagnostics.Stopwatch();
             while (true)
-            { 
+            {
+                if (download_button_flag == true)
+                {
+                    download_process_flag = true;
+                    try
+                    {
+                        //Pass the file path and file name to the StreamReader constructor
+                        sr = new StreamReader(myfile);
+                        //Read the first line of text
+                        row_quantity = 0;
+                        row_counter = 0;
+                        row_quantity = row_count(readfile);
+                        richTextBox1.BeginInvoke(new Action(() => richTextBox1.Text = readfile));
+                        label9.BeginInvoke(new Action(() => label9.Text = "Strings: " + Convert.ToString(row_quantity)));
+
+                        watch.Reset();
+                        watch.Start();
+                        serialPort1.WriteLine("START" + Convert.ToChar('A' + node_id)); //  send a message to start downloading
+                        line = sr.ReadLine();
+                        //Continue to read until you reach end of file
+                        while (line != null)
+                        {
+                            int counter_sent_lines = 64;
+                            while (counter_sent_lines > 0) // send 64 lines
+                            {
+                                if (line != null)
+                                {
+                                    if (line[0] == ':')
+                                    {
+                                        mem_transmit = line[1] * 16 + line[2];
+                                        if (mem_transmit > 0)
+                                        {
+                                            if ((hexascii_to_halfbyte(line[7]) * 16 + hexascii_to_halfbyte(line[8])) == 0)
+                                            {
+                                                serialPort1.WriteLine(line);
+                                                row_counter++;
+                                                counter_sent_lines--;
+                                            }
+                                        }
+                                    }
+                                    //Read the next line
+                                    line = sr.ReadLine();
+                                }
+                                else
+                                {
+                                    serialPort1.WriteLine("END");
+                                    break;
+                                }
+                            }
+                            while ((feedback_usb_flag == false) || (feedback_boot_flag == false))  // waiting for a successful write of 1024 bytes (64 lines)
+                                Thread.Sleep(1);
+                            feedback_usb_flag = false; // allow sending the following 1024 bytes
+                            feedback_boot_flag = false;
+
+                            progressBar1.BeginInvoke(new Action(() => progressBar1.Value = row_counter * 100 / row_quantity));
+                        }
+                        //serialPort1.WriteLine("END");
+                        download_button_flag = false;
+                        download_process_flag = false;
+                        progressBar1.BeginInvoke(new Action(() => progressBar1.Value = 100));
+                        //close the file
+                        sr.Close();
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Exception: " + e.Message);
+                    }
+                    finally
+                    {
+                        watch.Stop();
+                        MessageBox.Show(this,
+                            row_counter.ToString() + " lines sent\n\rTime: " + watch.ElapsedMilliseconds.ToString() + " ms",
+                            "Firmware Update",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information,
+                            MessageBoxDefaultButton.Button1,  // specify "Yes" as the default
+                            (MessageBoxOptions)0x40000);
+                    }
+                }
+                else
+                    Thread.Sleep(100);
             }
         }
 
@@ -989,7 +1038,7 @@ namespace utc2
             {
                 tb[i + list].Text = "";
             }
-            stackboxes_u[0].Text = "Stack voltage: -"; 
+            stackboxes_u[0].Text = "Stack voltage: -";
         }
 
         private void clear_2_Click(object sender, EventArgs e)
@@ -1074,83 +1123,7 @@ namespace utc2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            stack1_box.Clear();
-            stack2_box.Clear();
-            stack3_box.Clear();
-            stack4_box.Clear();
-            stack5_box.Clear();
-            stack6_box.Clear();
-            stack7_box.Clear();
-            stack8_box.Clear();
-            brake_pressure_box.Clear();
-            sb_pressure_box.Clear();
-            ebs_pressure_box.Clear();
-            rpm1_box.Clear();
-            rpm2_box.Clear();
-            motor_temp_box.Clear();
-            inverter_temp_box.Clear();
-            hotcell.Clear();
-            current_box.Clear();
-            slave_status_box_1.Clear();
-            slave_status_box_2.Clear();
-            slave_status_box_3.Clear();
-            slave_status_box_4.Clear();
-            slave_status_box_5.Clear();
-            slave_status_box_6.Clear();
-            slave_status_box_7.Clear();
-            slave_status_box_8.Clear();
-            vcdu_status_box.Clear();
-            brake_system_status_box.Clear();
-            airminus_box.Clear();
-            airplus_box.Clear();
-            prechrelay_box.Clear();
-            precharge_status_box.Clear();
-            total_voltage_box.Clear();
-            lcs_current_box.Clear();
-            inverter_current_box.Clear();
-            tsal_current_box.Clear();
-            cooling_pump_current_box.Clear();
-            vcdu_current_box.Clear();
-            brake_light_current_box.Clear();
-            fan1_current_box.Clear();
-            fan2_current_box.Clear();
-            vcu_status_box.Clear();
-            master_status_box.Clear();
-            actuator_status_box.Clear();
-            lv_hottest_cell_box.Clear();
-            lv_temp_cell_1_box.Clear();
-            lv_temp_cell_2_box.Clear();
-            lv_temp_cell_3_box.Clear();
-            lv_temp_cell_4_box.Clear();
-            lv_temp_cell_5_box.Clear();
-            lv_temp_cell_6_box.Clear();
-            lv_voltage_cell_1_box.Clear();
-            lv_voltage_cell_2_box.Clear();
-            lv_voltage_cell_3_box.Clear();
-            lv_voltage_cell_4_box.Clear();
-            lv_voltage_cell_5_box.Clear();
-            lv_voltage_cell_6_box.Clear();
-            ams_lv_status_box.Clear();
-            actuator_current_box.Clear();
-            ebs_current_box.Clear();
-            gps_current_box.Clear();
-            cameras_current_box.Clear();
-            lidar_current_box.Clear();
-            assi_current_box.Clear();
-            res_current_box.Clear();
-            assi_current_box.Clear();   
-            vcdu_current_box.Clear();
-            brake_light_current_box.Clear();
-            charging_current_box.Clear();
-            charging_status_box.Clear();
-            voltage_min_box.Clear();
-            voltage_max_box.Clear();
-            cell_min_number.Text = "Cell: -";
-            cell_max_number.Text = "Cell: -";
-            stack_min_number.Text = "Stack: -";
-            stack_max_number.Text = "Stack: -";
-            max_cell_voltage = 0;
-            min_cell_voltage = 1000;
+
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
@@ -1272,7 +1245,7 @@ namespace utc2
 
         private void filter_id_low_box_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
         private void filter_id_high_box_TextChanged(object sender, EventArgs e)
         {
@@ -1419,9 +1392,131 @@ namespace utc2
 
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void steering_wheel_radio_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void precharge_radio_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox12_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void label526_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label554_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitontainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            stack1_box.Clear();
+            stack2_box.Clear();
+            stack3_box.Clear();
+            stack4_box.Clear();
+            stack5_box.Clear();
+            stack6_box.Clear();
+            stack7_box.Clear();
+            stack8_box.Clear();
+            brake_pressure_box.Clear();
+            sb_pressure_box.Clear();
+            ebs_pressure_box.Clear();
+            rpm1_box.Clear();
+            rpm2_box.Clear();
+            motor_temp_box.Clear();
+            inverter_temp_box.Clear();
+            hotcell.Clear();
+            current_box.Clear();
+            slave_status_box_1.Clear();
+            slave_status_box_2.Clear();
+            slave_status_box_3.Clear();
+            slave_status_box_4.Clear();
+            slave_status_box_5.Clear();
+            slave_status_box_6.Clear();
+            slave_status_box_7.Clear();
+            slave_status_box_8.Clear();
+            vcdu_status_box.Clear();
+            brake_system_status_box.Clear();
+            airminus_box.Clear();
+            airplus_box.Clear();
+            prechrelay_box.Clear();
+            precharge_status_box.Clear();
+            total_voltage_box.Clear();
+            lcs_current_box.Clear();
+            inverter_current_box.Clear();
+            tsal_current_box.Clear();
+            cooling_pump_current_box.Clear();
+            vcdu_current_box.Clear();
+            brake_light_current_box.Clear();
+            fan1_current_box.Clear();
+            fan2_current_box.Clear();
+            vcu_status_box.Clear();
+            master_status_box.Clear();
+            actuator_status_box.Clear();
+            lv_hottest_cell_box.Clear();
+            lv_temp_cell_1_box.Clear();
+            lv_temp_cell_2_box.Clear();
+            lv_temp_cell_3_box.Clear();
+            lv_temp_cell_4_box.Clear();
+            lv_temp_cell_5_box.Clear();
+            lv_temp_cell_6_box.Clear();
+            lv_voltage_cell_1_box.Clear();
+            lv_voltage_cell_2_box.Clear();
+            lv_voltage_cell_3_box.Clear();
+            lv_voltage_cell_4_box.Clear();
+            lv_voltage_cell_5_box.Clear();
+            lv_voltage_cell_6_box.Clear();
+            ams_lv_status_box.Clear();
+            actuator_current_box.Clear();
+            ebs_current_box.Clear();
+            gps_current_box.Clear();
+            cameras_current_box.Clear();
+            lidar_current_box.Clear();
+            assi_current_box.Clear();
+            res_current_box.Clear();
+            assi_current_box.Clear();
+            vcdu_current_box.Clear();
+            brake_light_current_box.Clear();
+            charging_current_box.Clear();
+            charging_status_box.Clear();
+            voltage_min_box.Clear();
+            voltage_max_box.Clear();
+            cell_min_number.Text = "Cell: -";
+            cell_max_number.Text = "Cell: -";
+            stack_min_number.Text = "Stack: -";
+            stack_max_number.Text = "Stack: -";
+            max_cell_voltage = 0;
+            min_cell_voltage = 1000;
+            richTextBox_master.Clear();
         }
 
         private void timer2_Tick(object sender, EventArgs e)

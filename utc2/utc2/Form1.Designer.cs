@@ -30,44 +30,58 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.reset_button = new System.Windows.Forms.Button();
+            this.disconnect = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.filter_id_high_box = new System.Windows.Forms.TextBox();
+            this.filter_id_low_box = new System.Windows.Forms.TextBox();
+            this.label448 = new System.Windows.Forms.Label();
+            this.label554 = new System.Windows.Forms.Label();
+            this.update = new System.Windows.Forms.Button();
+            this.can_bus_load = new System.Windows.Forms.Label();
+            this.connect = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabcontrol1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.query_button = new System.Windows.Forms.Button();
+            this.nodes_groupBox = new System.Windows.Forms.GroupBox();
+            this.steering_wheel_radio = new System.Windows.Forms.RadioButton();
+            this.brake_light_radio = new System.Windows.Forms.RadioButton();
+            this.fan_radio = new System.Windows.Forms.RadioButton();
+            this.ams_lv_radio = new System.Windows.Forms.RadioButton();
+            this.can_multiplexer_front_radio = new System.Windows.Forms.RadioButton();
+            this.bcu_radio = new System.Windows.Forms.RadioButton();
+            this.empty_radio = new System.Windows.Forms.RadioButton();
+            this.can_multiplexer_rear_radio = new System.Windows.Forms.RadioButton();
+            this.vcu_radio = new System.Windows.Forms.RadioButton();
+            this.vcdu_radio = new System.Windows.Forms.RadioButton();
+            this.ami_radio = new System.Windows.Forms.RadioButton();
+            this.discharge_radio = new System.Windows.Forms.RadioButton();
+            this.assi_radio = new System.Windows.Forms.RadioButton();
+            this.precharge_radio = new System.Windows.Forms.RadioButton();
+            this.ebs_radio = new System.Windows.Forms.RadioButton();
+            this.ams_master_radio = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.open_file = new System.Windows.Forms.Button();
             this.close_file = new System.Windows.Forms.Button();
             this.download = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.update = new System.Windows.Forms.Button();
-            this.connect = new System.Windows.Forms.Button();
-            this.precharge_radio = new System.Windows.Forms.RadioButton();
-            this.discharge_radio = new System.Windows.Forms.RadioButton();
-            this.vcu_radio = new System.Windows.Forms.RadioButton();
-            this.bcu_radio = new System.Windows.Forms.RadioButton();
-            this.ams_lv_radio = new System.Windows.Forms.RadioButton();
-            this.brake_light_radio = new System.Windows.Forms.RadioButton();
-            this.can_multiplexer_front_radio = new System.Windows.Forms.RadioButton();
-            this.can_multiplexer_rear_radio = new System.Windows.Forms.RadioButton();
-            this.ami_radio = new System.Windows.Forms.RadioButton();
-            this.assi_radio = new System.Windows.Forms.RadioButton();
-            this.ams_master_radio = new System.Windows.Forms.RadioButton();
-            this.ebs_radio = new System.Windows.Forms.RadioButton();
-            this.steering_wheel_radio = new System.Windows.Forms.RadioButton();
-            this.vcdu_radio = new System.Windows.Forms.RadioButton();
-            this.empty_radio = new System.Windows.Forms.RadioButton();
-            this.tabcontrol1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
-            this.fan_radio = new System.Windows.Forms.RadioButton();
-            this.query_button = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.charging_current_box = new System.Windows.Forms.TextBox();
             this.label553 = new System.Windows.Forms.Label();
             this.label552 = new System.Windows.Forms.Label();
             this.charging_status_box = new System.Windows.Forms.TextBox();
             this.label551 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label492 = new System.Windows.Forms.Label();
             this.label540 = new System.Windows.Forms.Label();
@@ -199,6 +213,18 @@
             this.label467 = new System.Windows.Forms.Label();
             this.label465 = new System.Windows.Forms.Label();
             this.label466 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.brake_system_status_box = new System.Windows.Forms.TextBox();
+            this.brake_pressure_box = new System.Windows.Forms.TextBox();
+            this.label496 = new System.Windows.Forms.Label();
+            this.ebs_pressure_box = new System.Windows.Forms.TextBox();
+            this.label454 = new System.Windows.Forms.Label();
+            this.sb_pressure_box = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.group_vcu = new System.Windows.Forms.GroupBox();
             this.label550 = new System.Windows.Forms.Label();
             this.label549 = new System.Windows.Forms.Label();
@@ -250,19 +276,6 @@
             this.cooling_pump_current_box = new System.Windows.Forms.TextBox();
             this.inverter_current_box = new System.Windows.Forms.TextBox();
             this.tsal_current_box = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.brake_system_status_box = new System.Windows.Forms.TextBox();
-            this.brake_pressure_box = new System.Windows.Forms.TextBox();
-            this.label496 = new System.Windows.Forms.Label();
-            this.ebs_pressure_box = new System.Windows.Forms.TextBox();
-            this.label454 = new System.Windows.Forms.Label();
-            this.sb_pressure_box = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.stack1 = new System.Windows.Forms.TabPage();
             this.stack_1u = new System.Windows.Forms.Label();
             this.clear_1 = new System.Windows.Forms.Button();
@@ -1015,16 +1028,14 @@
             this.label440 = new System.Windows.Forms.Label();
             this.textBox_260 = new System.Windows.Forms.TextBox();
             this.textBox_259 = new System.Windows.Forms.TextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.disconnect = new System.Windows.Forms.Button();
-            this.label448 = new System.Windows.Forms.Label();
-            this.filter_id_low_box = new System.Windows.Forms.TextBox();
-            this.filter_id_high_box = new System.Windows.Forms.TextBox();
-            this.reset_button = new System.Windows.Forms.Button();
+            this.richTextBox_master = new System.Windows.Forms.RichTextBox();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.tabcontrol1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.nodes_groupBox.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -1035,8 +1046,8 @@
             this.groupBox1.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            this.group_vcu.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.group_vcu.SuspendLayout();
             this.stack1.SuspendLayout();
             this.stack2.SuspendLayout();
             this.stack3.SuspendLayout();
@@ -1046,84 +1057,6 @@
             this.stack7.SuspendLayout();
             this.stack8.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // open_file
-            // 
-            this.open_file.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.open_file.Font = new System.Drawing.Font("3ds Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.open_file.Location = new System.Drawing.Point(6, 7);
-            this.open_file.Name = "open_file";
-            this.open_file.Size = new System.Drawing.Size(190, 50);
-            this.open_file.TabIndex = 0;
-            this.open_file.Text = "Open .hex file";
-            this.open_file.UseVisualStyleBackColor = false;
-            this.open_file.Click += new System.EventHandler(this.open_file_Click);
-            // 
-            // close_file
-            // 
-            this.close_file.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.close_file.Font = new System.Drawing.Font("3ds Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close_file.Location = new System.Drawing.Point(202, 7);
-            this.close_file.Name = "close_file";
-            this.close_file.Size = new System.Drawing.Size(90, 50);
-            this.close_file.TabIndex = 1;
-            this.close_file.Text = "Close";
-            this.close_file.UseVisualStyleBackColor = false;
-            this.close_file.Click += new System.EventHandler(this.close_file_Click);
-            // 
-            // download
-            // 
-            this.download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.download.Font = new System.Drawing.Font("3ds Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.download.Location = new System.Drawing.Point(298, 7);
-            this.download.Name = "download";
-            this.download.Size = new System.Drawing.Size(190, 50);
-            this.download.TabIndex = 2;
-            this.download.Text = "Download";
-            this.download.UseVisualStyleBackColor = false;
-            this.download.Click += new System.EventHandler(this.download_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
-            this.comboBox1.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(559, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(123, 38);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.Font = new System.Drawing.Font("3ds Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(480, 27);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("3ds Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(6, 96);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(480, 200);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(6, 302);
-            this.progressBar1.MarqueeAnimationSpeed = 1000;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(482, 10);
-            this.progressBar1.TabIndex = 7;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // openFileDialog1
             // 
@@ -1135,11 +1068,116 @@
             this.serialPort1.ReadBufferSize = 65536;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(3, 187);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(425, 727);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
+            this.richTextBox2.HScroll += new System.EventHandler(this.Form1_Load);
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            // 
+            // reset_button
+            // 
+            this.reset_button.BackColor = System.Drawing.SystemColors.Control;
+            this.reset_button.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.reset_button.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.reset_button.Location = new System.Drawing.Point(155, 89);
+            this.reset_button.Name = "reset_button";
+            this.reset_button.Size = new System.Drawing.Size(117, 34);
+            this.reset_button.TabIndex = 187;
+            this.reset_button.Text = "Reset filter";
+            this.reset_button.UseVisualStyleBackColor = false;
+            this.reset_button.Click += new System.EventHandler(this.reset_button_Click);
+            // 
+            // disconnect
+            // 
+            this.disconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.disconnect.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disconnect.Location = new System.Drawing.Point(189, 3);
+            this.disconnect.Name = "disconnect";
+            this.disconnect.Size = new System.Drawing.Size(180, 36);
+            this.disconnect.TabIndex = 27;
+            this.disconnect.Text = "Disconnect";
+            this.disconnect.UseVisualStyleBackColor = false;
+            this.disconnect.Click += new System.EventHandler(this.disconnect_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
+            this.comboBox1.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(189, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(180, 38);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // filter_id_high_box
+            // 
+            this.filter_id_high_box.BackColor = System.Drawing.SystemColors.Control;
+            this.filter_id_high_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.filter_id_high_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.filter_id_high_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
+            this.filter_id_high_box.Location = new System.Drawing.Point(79, 89);
+            this.filter_id_high_box.MaxLength = 3;
+            this.filter_id_high_box.Multiline = true;
+            this.filter_id_high_box.Name = "filter_id_high_box";
+            this.filter_id_high_box.Size = new System.Drawing.Size(70, 30);
+            this.filter_id_high_box.TabIndex = 186;
+            this.filter_id_high_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.filter_id_high_box.TextChanged += new System.EventHandler(this.filter_id_high_box_TextChanged);
+            // 
+            // filter_id_low_box
+            // 
+            this.filter_id_low_box.BackColor = System.Drawing.SystemColors.Control;
+            this.filter_id_low_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.filter_id_low_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.filter_id_low_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
+            this.filter_id_low_box.Location = new System.Drawing.Point(3, 89);
+            this.filter_id_low_box.MaxLength = 3;
+            this.filter_id_low_box.Multiline = true;
+            this.filter_id_low_box.Name = "filter_id_low_box";
+            this.filter_id_low_box.Size = new System.Drawing.Size(70, 30);
+            this.filter_id_low_box.TabIndex = 185;
+            this.filter_id_low_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.filter_id_low_box.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+            // 
+            // label448
+            // 
+            this.label448.AutoSize = true;
+            this.label448.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label448.Location = new System.Drawing.Point(3, 126);
+            this.label448.Name = "label448";
+            this.label448.Size = new System.Drawing.Size(387, 58);
+            this.label448.TabIndex = 184;
+            this.label448.Text = "Recieve CAN messages with ID from \r\n0x                    to  0x";
+            this.label448.Click += new System.EventHandler(this.label448_Click);
+            // 
+            // label554
+            // 
+            this.label554.AutoSize = true;
+            this.label554.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label554.Location = new System.Drawing.Point(3, 917);
+            this.label554.Name = "label554";
+            this.label554.Size = new System.Drawing.Size(206, 38);
+            this.label554.TabIndex = 188;
+            this.label554.Text = "CAN bus load:";
+            this.label554.Click += new System.EventHandler(this.label554_Click);
+            // 
             // update
             // 
             this.update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.update.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update.Location = new System.Drawing.Point(1, 9);
+            this.update.Location = new System.Drawing.Point(3, 45);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(180, 36);
             this.update.TabIndex = 8;
@@ -1147,11 +1185,21 @@
             this.update.UseVisualStyleBackColor = false;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
+            // can_bus_load
+            // 
+            this.can_bus_load.AutoSize = true;
+            this.can_bus_load.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.can_bus_load.Location = new System.Drawing.Point(215, 917);
+            this.can_bus_load.Name = "can_bus_load";
+            this.can_bus_load.Size = new System.Drawing.Size(60, 38);
+            this.can_bus_load.TabIndex = 189;
+            this.can_bus_load.Text = "0%";
+            // 
             // connect
             // 
             this.connect.BackColor = System.Drawing.Color.LightPink;
             this.connect.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connect.Location = new System.Drawing.Point(187, 9);
+            this.connect.Location = new System.Drawing.Point(3, 3);
             this.connect.Name = "connect";
             this.connect.Size = new System.Drawing.Size(180, 36);
             this.connect.TabIndex = 9;
@@ -1159,187 +1207,33 @@
             this.connect.UseVisualStyleBackColor = false;
             this.connect.Click += new System.EventHandler(this.connect_Click);
             // 
-            // precharge_radio
+            // flowLayoutPanel1
             // 
-            this.precharge_radio.AutoSize = true;
-            this.precharge_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precharge_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.precharge_radio.Location = new System.Drawing.Point(45, 440);
-            this.precharge_radio.Name = "precharge_radio";
-            this.precharge_radio.Size = new System.Drawing.Size(122, 30);
-            this.precharge_radio.TabIndex = 10;
-            this.precharge_radio.Text = "Precharge";
-            this.precharge_radio.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.Controls.Add(this.connect);
+            this.flowLayoutPanel1.Controls.Add(this.disconnect);
+            this.flowLayoutPanel1.Controls.Add(this.update);
+            this.flowLayoutPanel1.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel1.Controls.Add(this.filter_id_low_box);
+            this.flowLayoutPanel1.Controls.Add(this.filter_id_high_box);
+            this.flowLayoutPanel1.Controls.Add(this.reset_button);
+            this.flowLayoutPanel1.Controls.Add(this.label448);
+            this.flowLayoutPanel1.Controls.Add(this.richTextBox2);
+            this.flowLayoutPanel1.Controls.Add(this.label554);
+            this.flowLayoutPanel1.Controls.Add(this.can_bus_load);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(435, 1009);
+            this.flowLayoutPanel1.TabIndex = 190;
             // 
-            // discharge_radio
+            // flowLayoutPanel2
             // 
-            this.discharge_radio.AutoSize = true;
-            this.discharge_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discharge_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.discharge_radio.Location = new System.Drawing.Point(45, 470);
-            this.discharge_radio.Name = "discharge_radio";
-            this.discharge_radio.Size = new System.Drawing.Size(120, 30);
-            this.discharge_radio.TabIndex = 11;
-            this.discharge_radio.Text = "Discharge";
-            this.discharge_radio.UseVisualStyleBackColor = true;
-            this.discharge_radio.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // vcu_radio
-            // 
-            this.vcu_radio.AutoSize = true;
-            this.vcu_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vcu_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.vcu_radio.Location = new System.Drawing.Point(45, 500);
-            this.vcu_radio.Name = "vcu_radio";
-            this.vcu_radio.Size = new System.Drawing.Size(70, 30);
-            this.vcu_radio.TabIndex = 12;
-            this.vcu_radio.Text = "VCU";
-            this.vcu_radio.UseVisualStyleBackColor = true;
-            // 
-            // bcu_radio
-            // 
-            this.bcu_radio.AutoSize = true;
-            this.bcu_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bcu_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.bcu_radio.Location = new System.Drawing.Point(45, 530);
-            this.bcu_radio.Name = "bcu_radio";
-            this.bcu_radio.Size = new System.Drawing.Size(72, 30);
-            this.bcu_radio.TabIndex = 13;
-            this.bcu_radio.Text = "BCU";
-            this.bcu_radio.UseVisualStyleBackColor = true;
-            // 
-            // ams_lv_radio
-            // 
-            this.ams_lv_radio.AutoSize = true;
-            this.ams_lv_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ams_lv_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.ams_lv_radio.Location = new System.Drawing.Point(45, 560);
-            this.ams_lv_radio.Name = "ams_lv_radio";
-            this.ams_lv_radio.Size = new System.Drawing.Size(101, 30);
-            this.ams_lv_radio.TabIndex = 14;
-            this.ams_lv_radio.Text = "AMS LV";
-            this.ams_lv_radio.UseVisualStyleBackColor = true;
-            // 
-            // brake_light_radio
-            // 
-            this.brake_light_radio.AutoSize = true;
-            this.brake_light_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brake_light_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.brake_light_radio.Location = new System.Drawing.Point(45, 590);
-            this.brake_light_radio.Name = "brake_light_radio";
-            this.brake_light_radio.Size = new System.Drawing.Size(133, 30);
-            this.brake_light_radio.TabIndex = 15;
-            this.brake_light_radio.Text = "Brake Light";
-            this.brake_light_radio.UseVisualStyleBackColor = true;
-            // 
-            // can_multiplexer_front_radio
-            // 
-            this.can_multiplexer_front_radio.AutoSize = true;
-            this.can_multiplexer_front_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.can_multiplexer_front_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.can_multiplexer_front_radio.Location = new System.Drawing.Point(45, 620);
-            this.can_multiplexer_front_radio.Name = "can_multiplexer_front_radio";
-            this.can_multiplexer_front_radio.Size = new System.Drawing.Size(230, 30);
-            this.can_multiplexer_front_radio.TabIndex = 16;
-            this.can_multiplexer_front_radio.Text = "CAN Multiplexer Front";
-            this.can_multiplexer_front_radio.UseVisualStyleBackColor = true;
-            // 
-            // can_multiplexer_rear_radio
-            // 
-            this.can_multiplexer_rear_radio.AutoSize = true;
-            this.can_multiplexer_rear_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.can_multiplexer_rear_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.can_multiplexer_rear_radio.Location = new System.Drawing.Point(45, 650);
-            this.can_multiplexer_rear_radio.Name = "can_multiplexer_rear_radio";
-            this.can_multiplexer_rear_radio.Size = new System.Drawing.Size(222, 30);
-            this.can_multiplexer_rear_radio.TabIndex = 17;
-            this.can_multiplexer_rear_radio.Text = "CAN Multiplexer Rear";
-            this.can_multiplexer_rear_radio.UseVisualStyleBackColor = true;
-            // 
-            // ami_radio
-            // 
-            this.ami_radio.AutoSize = true;
-            this.ami_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ami_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.ami_radio.Location = new System.Drawing.Point(337, 440);
-            this.ami_radio.Name = "ami_radio";
-            this.ami_radio.Size = new System.Drawing.Size(71, 30);
-            this.ami_radio.TabIndex = 18;
-            this.ami_radio.Text = "AMI";
-            this.ami_radio.UseVisualStyleBackColor = true;
-            // 
-            // assi_radio
-            // 
-            this.assi_radio.AutoSize = true;
-            this.assi_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assi_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.assi_radio.Location = new System.Drawing.Point(337, 470);
-            this.assi_radio.Name = "assi_radio";
-            this.assi_radio.Size = new System.Drawing.Size(75, 30);
-            this.assi_radio.TabIndex = 19;
-            this.assi_radio.Text = "ASSI";
-            this.assi_radio.UseVisualStyleBackColor = true;
-            // 
-            // ams_master_radio
-            // 
-            this.ams_master_radio.AutoSize = true;
-            this.ams_master_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ams_master_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.ams_master_radio.Location = new System.Drawing.Point(337, 530);
-            this.ams_master_radio.Name = "ams_master_radio";
-            this.ams_master_radio.Size = new System.Drawing.Size(142, 30);
-            this.ams_master_radio.TabIndex = 21;
-            this.ams_master_radio.Text = "AMS Master\r\n";
-            this.ams_master_radio.UseVisualStyleBackColor = true;
-            this.ams_master_radio.CheckedChanged += new System.EventHandler(this.ams_master_radio_CheckedChanged);
-            // 
-            // ebs_radio
-            // 
-            this.ebs_radio.AutoSize = true;
-            this.ebs_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ebs_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.ebs_radio.Location = new System.Drawing.Point(337, 560);
-            this.ebs_radio.Name = "ebs_radio";
-            this.ebs_radio.Size = new System.Drawing.Size(68, 30);
-            this.ebs_radio.TabIndex = 22;
-            this.ebs_radio.Text = "EBS";
-            this.ebs_radio.UseVisualStyleBackColor = true;
-            // 
-            // steering_wheel_radio
-            // 
-            this.steering_wheel_radio.AutoSize = true;
-            this.steering_wheel_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.steering_wheel_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.steering_wheel_radio.Location = new System.Drawing.Point(337, 590);
-            this.steering_wheel_radio.Name = "steering_wheel_radio";
-            this.steering_wheel_radio.Size = new System.Drawing.Size(166, 30);
-            this.steering_wheel_radio.TabIndex = 23;
-            this.steering_wheel_radio.Text = "Steering Wheel";
-            this.steering_wheel_radio.UseVisualStyleBackColor = true;
-            // 
-            // vcdu_radio
-            // 
-            this.vcdu_radio.AutoSize = true;
-            this.vcdu_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vcdu_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.vcdu_radio.Location = new System.Drawing.Point(337, 620);
-            this.vcdu_radio.Name = "vcdu_radio";
-            this.vcdu_radio.Size = new System.Drawing.Size(84, 30);
-            this.vcdu_radio.TabIndex = 24;
-            this.vcdu_radio.Text = "VCDU";
-            this.vcdu_radio.UseVisualStyleBackColor = true;
-            // 
-            // empty_radio
-            // 
-            this.empty_radio.AutoSize = true;
-            this.empty_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empty_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.empty_radio.Location = new System.Drawing.Point(337, 650);
-            this.empty_radio.Name = "empty_radio";
-            this.empty_radio.Size = new System.Drawing.Size(91, 30);
-            this.empty_radio.TabIndex = 25;
-            this.empty_radio.Text = "Empty";
-            this.empty_radio.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.Controls.Add(this.tabcontrol1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(445, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1379, 988);
+            this.flowLayoutPanel2.TabIndex = 190;
             // 
             // tabcontrol1
             // 
@@ -1354,48 +1248,260 @@
             this.tabcontrol1.Controls.Add(this.stack7);
             this.tabcontrol1.Controls.Add(this.stack8);
             this.tabcontrol1.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabcontrol1.Location = new System.Drawing.Point(438, 56);
+            this.tabcontrol1.Location = new System.Drawing.Point(3, 3);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(1169, 928);
-            this.tabcontrol1.TabIndex = 26;
+            this.tabcontrol1.Size = new System.Drawing.Size(1373, 953);
+            this.tabcontrol1.TabIndex = 27;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.fan_radio);
             this.tabPage1.Controls.Add(this.query_button);
+            this.tabPage1.Controls.Add(this.nodes_groupBox);
+            this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.richTextBox1);
-            this.tabPage1.Controls.Add(this.empty_radio);
             this.tabPage1.Controls.Add(this.open_file);
-            this.tabPage1.Controls.Add(this.vcdu_radio);
             this.tabPage1.Controls.Add(this.close_file);
-            this.tabPage1.Controls.Add(this.steering_wheel_radio);
             this.tabPage1.Controls.Add(this.download);
-            this.tabPage1.Controls.Add(this.ebs_radio);
             this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.ams_master_radio);
             this.tabPage1.Controls.Add(this.progressBar1);
-            this.tabPage1.Controls.Add(this.precharge_radio);
-            this.tabPage1.Controls.Add(this.assi_radio);
-            this.tabPage1.Controls.Add(this.discharge_radio);
-            this.tabPage1.Controls.Add(this.ami_radio);
-            this.tabPage1.Controls.Add(this.vcu_radio);
-            this.tabPage1.Controls.Add(this.can_multiplexer_rear_radio);
-            this.tabPage1.Controls.Add(this.bcu_radio);
-            this.tabPage1.Controls.Add(this.can_multiplexer_front_radio);
-            this.tabPage1.Controls.Add(this.ams_lv_radio);
-            this.tabPage1.Controls.Add(this.brake_light_radio);
             this.tabPage1.Font = new System.Drawing.Font("3ds Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1161, 885);
+            this.tabPage1.Size = new System.Drawing.Size(1365, 910);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Firmware";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // query_button
+            // 
+            this.query_button.AutoSize = true;
+            this.query_button.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.query_button.Location = new System.Drawing.Point(107, 366);
+            this.query_button.Name = "query_button";
+            this.query_button.Size = new System.Drawing.Size(287, 35);
+            this.query_button.TabIndex = 26;
+            this.query_button.Text = "request for device availability";
+            this.query_button.UseVisualStyleBackColor = true;
+            // 
+            // nodes_groupBox
+            // 
+            this.nodes_groupBox.Controls.Add(this.steering_wheel_radio);
+            this.nodes_groupBox.Controls.Add(this.brake_light_radio);
+            this.nodes_groupBox.Controls.Add(this.fan_radio);
+            this.nodes_groupBox.Controls.Add(this.ams_lv_radio);
+            this.nodes_groupBox.Controls.Add(this.can_multiplexer_front_radio);
+            this.nodes_groupBox.Controls.Add(this.bcu_radio);
+            this.nodes_groupBox.Controls.Add(this.empty_radio);
+            this.nodes_groupBox.Controls.Add(this.can_multiplexer_rear_radio);
+            this.nodes_groupBox.Controls.Add(this.vcu_radio);
+            this.nodes_groupBox.Controls.Add(this.vcdu_radio);
+            this.nodes_groupBox.Controls.Add(this.ami_radio);
+            this.nodes_groupBox.Controls.Add(this.discharge_radio);
+            this.nodes_groupBox.Controls.Add(this.assi_radio);
+            this.nodes_groupBox.Controls.Add(this.precharge_radio);
+            this.nodes_groupBox.Controls.Add(this.ebs_radio);
+            this.nodes_groupBox.Controls.Add(this.ams_master_radio);
+            this.nodes_groupBox.Location = new System.Drawing.Point(20, 439);
+            this.nodes_groupBox.Name = "nodes_groupBox";
+            this.nodes_groupBox.Size = new System.Drawing.Size(509, 315);
+            this.nodes_groupBox.TabIndex = 29;
+            this.nodes_groupBox.TabStop = false;
+            this.nodes_groupBox.Text = "Nodes";
+            // 
+            // steering_wheel_radio
+            // 
+            this.steering_wheel_radio.AutoSize = true;
+            this.steering_wheel_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.steering_wheel_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.steering_wheel_radio.Location = new System.Drawing.Point(315, 201);
+            this.steering_wheel_radio.Name = "steering_wheel_radio";
+            this.steering_wheel_radio.Size = new System.Drawing.Size(166, 30);
+            this.steering_wheel_radio.TabIndex = 13;
+            this.steering_wheel_radio.Text = "Steering Wheel";
+            this.steering_wheel_radio.UseVisualStyleBackColor = true;
+            // 
+            // brake_light_radio
+            // 
+            this.brake_light_radio.AutoSize = true;
+            this.brake_light_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brake_light_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.brake_light_radio.Location = new System.Drawing.Point(23, 201);
+            this.brake_light_radio.Name = "brake_light_radio";
+            this.brake_light_radio.Size = new System.Drawing.Size(133, 30);
+            this.brake_light_radio.TabIndex = 5;
+            this.brake_light_radio.Text = "Brake Light";
+            this.brake_light_radio.UseVisualStyleBackColor = true;
+            // 
+            // fan_radio
+            // 
+            this.fan_radio.AutoSize = true;
+            this.fan_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fan_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.fan_radio.Location = new System.Drawing.Point(315, 111);
+            this.fan_radio.Name = "fan_radio";
+            this.fan_radio.Size = new System.Drawing.Size(149, 30);
+            this.fan_radio.TabIndex = 10;
+            this.fan_radio.Text = "Fan regulator";
+            this.fan_radio.UseVisualStyleBackColor = true;
+            // 
+            // ams_lv_radio
+            // 
+            this.ams_lv_radio.AutoSize = true;
+            this.ams_lv_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ams_lv_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.ams_lv_radio.Location = new System.Drawing.Point(23, 171);
+            this.ams_lv_radio.Name = "ams_lv_radio";
+            this.ams_lv_radio.Size = new System.Drawing.Size(101, 30);
+            this.ams_lv_radio.TabIndex = 4;
+            this.ams_lv_radio.Text = "AMS LV";
+            this.ams_lv_radio.UseVisualStyleBackColor = true;
+            // 
+            // can_multiplexer_front_radio
+            // 
+            this.can_multiplexer_front_radio.AutoSize = true;
+            this.can_multiplexer_front_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.can_multiplexer_front_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.can_multiplexer_front_radio.Location = new System.Drawing.Point(23, 231);
+            this.can_multiplexer_front_radio.Name = "can_multiplexer_front_radio";
+            this.can_multiplexer_front_radio.Size = new System.Drawing.Size(141, 30);
+            this.can_multiplexer_front_radio.TabIndex = 6;
+            this.can_multiplexer_front_radio.Text = "CMUX Front";
+            this.can_multiplexer_front_radio.UseVisualStyleBackColor = true;
+            // 
+            // bcu_radio
+            // 
+            this.bcu_radio.AutoSize = true;
+            this.bcu_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bcu_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.bcu_radio.Location = new System.Drawing.Point(23, 141);
+            this.bcu_radio.Name = "bcu_radio";
+            this.bcu_radio.Size = new System.Drawing.Size(72, 30);
+            this.bcu_radio.TabIndex = 3;
+            this.bcu_radio.Text = "BCU";
+            this.bcu_radio.UseVisualStyleBackColor = true;
+            // 
+            // empty_radio
+            // 
+            this.empty_radio.AutoSize = true;
+            this.empty_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empty_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.empty_radio.Location = new System.Drawing.Point(315, 261);
+            this.empty_radio.Name = "empty_radio";
+            this.empty_radio.Size = new System.Drawing.Size(91, 30);
+            this.empty_radio.TabIndex = 15;
+            this.empty_radio.Text = "Empty";
+            this.empty_radio.UseVisualStyleBackColor = true;
+            // 
+            // can_multiplexer_rear_radio
+            // 
+            this.can_multiplexer_rear_radio.AutoSize = true;
+            this.can_multiplexer_rear_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.can_multiplexer_rear_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.can_multiplexer_rear_radio.Location = new System.Drawing.Point(23, 261);
+            this.can_multiplexer_rear_radio.Name = "can_multiplexer_rear_radio";
+            this.can_multiplexer_rear_radio.Size = new System.Drawing.Size(133, 30);
+            this.can_multiplexer_rear_radio.TabIndex = 7;
+            this.can_multiplexer_rear_radio.Text = "CMUX Rear";
+            this.can_multiplexer_rear_radio.UseVisualStyleBackColor = true;
+            // 
+            // vcu_radio
+            // 
+            this.vcu_radio.AutoSize = true;
+            this.vcu_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vcu_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.vcu_radio.Location = new System.Drawing.Point(23, 111);
+            this.vcu_radio.Name = "vcu_radio";
+            this.vcu_radio.Size = new System.Drawing.Size(70, 30);
+            this.vcu_radio.TabIndex = 2;
+            this.vcu_radio.Text = "VCU";
+            this.vcu_radio.UseVisualStyleBackColor = true;
+            // 
+            // vcdu_radio
+            // 
+            this.vcdu_radio.AutoSize = true;
+            this.vcdu_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vcdu_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.vcdu_radio.Location = new System.Drawing.Point(315, 231);
+            this.vcdu_radio.Name = "vcdu_radio";
+            this.vcdu_radio.Size = new System.Drawing.Size(84, 30);
+            this.vcdu_radio.TabIndex = 14;
+            this.vcdu_radio.Text = "VCDU";
+            this.vcdu_radio.UseVisualStyleBackColor = true;
+            // 
+            // ami_radio
+            // 
+            this.ami_radio.AutoSize = true;
+            this.ami_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ami_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.ami_radio.Location = new System.Drawing.Point(315, 51);
+            this.ami_radio.Name = "ami_radio";
+            this.ami_radio.Size = new System.Drawing.Size(71, 30);
+            this.ami_radio.TabIndex = 8;
+            this.ami_radio.Text = "AMI";
+            this.ami_radio.UseVisualStyleBackColor = true;
+            // 
+            // discharge_radio
+            // 
+            this.discharge_radio.AutoSize = true;
+            this.discharge_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discharge_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.discharge_radio.Location = new System.Drawing.Point(23, 81);
+            this.discharge_radio.Name = "discharge_radio";
+            this.discharge_radio.Size = new System.Drawing.Size(120, 30);
+            this.discharge_radio.TabIndex = 1;
+            this.discharge_radio.Text = "Discharge";
+            this.discharge_radio.UseVisualStyleBackColor = true;
+            // 
+            // assi_radio
+            // 
+            this.assi_radio.AutoSize = true;
+            this.assi_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assi_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.assi_radio.Location = new System.Drawing.Point(315, 81);
+            this.assi_radio.Name = "assi_radio";
+            this.assi_radio.Size = new System.Drawing.Size(75, 30);
+            this.assi_radio.TabIndex = 9;
+            this.assi_radio.Text = "ASSI";
+            this.assi_radio.UseVisualStyleBackColor = true;
+            // 
+            // precharge_radio
+            // 
+            this.precharge_radio.AutoSize = true;
+            this.precharge_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precharge_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.precharge_radio.Location = new System.Drawing.Point(23, 51);
+            this.precharge_radio.Name = "precharge_radio";
+            this.precharge_radio.Size = new System.Drawing.Size(122, 30);
+            this.precharge_radio.TabIndex = 0;
+            this.precharge_radio.Text = "Precharge";
+            this.precharge_radio.UseVisualStyleBackColor = true;
+            // 
+            // ebs_radio
+            // 
+            this.ebs_radio.AutoSize = true;
+            this.ebs_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ebs_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.ebs_radio.Location = new System.Drawing.Point(315, 171);
+            this.ebs_radio.Name = "ebs_radio";
+            this.ebs_radio.Size = new System.Drawing.Size(68, 30);
+            this.ebs_radio.TabIndex = 12;
+            this.ebs_radio.Text = "EBS";
+            this.ebs_radio.UseVisualStyleBackColor = true;
+            // 
+            // ams_master_radio
+            // 
+            this.ams_master_radio.AutoSize = true;
+            this.ams_master_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ams_master_radio.ForeColor = System.Drawing.Color.DarkRed;
+            this.ams_master_radio.Location = new System.Drawing.Point(315, 141);
+            this.ams_master_radio.Name = "ams_master_radio";
+            this.ams_master_radio.Size = new System.Drawing.Size(142, 30);
+            this.ams_master_radio.TabIndex = 11;
+            this.ams_master_radio.Text = "AMS Master\r\n";
+            this.ams_master_radio.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -1407,53 +1513,101 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "Strings:";
             // 
-            // fan_radio
+            // richTextBox1
             // 
-            this.fan_radio.AutoSize = true;
-            this.fan_radio.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fan_radio.ForeColor = System.Drawing.Color.DarkRed;
-            this.fan_radio.Location = new System.Drawing.Point(337, 500);
-            this.fan_radio.Name = "fan_radio";
-            this.fan_radio.Size = new System.Drawing.Size(149, 30);
-            this.fan_radio.TabIndex = 27;
-            this.fan_radio.Text = "Fan regulator";
-            this.fan_radio.UseVisualStyleBackColor = true;
+            this.richTextBox1.Font = new System.Drawing.Font("3ds Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(6, 96);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(480, 200);
+            this.richTextBox1.TabIndex = 6;
+            this.richTextBox1.Text = "";
             // 
-            // query_button
+            // open_file
             // 
-            this.query_button.AutoSize = true;
-            this.query_button.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.query_button.Location = new System.Drawing.Point(99, 389);
-            this.query_button.Name = "query_button";
-            this.query_button.Size = new System.Drawing.Size(287, 35);
-            this.query_button.TabIndex = 26;
-            this.query_button.Text = "request for device availability";
-            this.query_button.UseVisualStyleBackColor = true;
-            this.query_button.Click += new System.EventHandler(this.query_button_Click);
+            this.open_file.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.open_file.Font = new System.Drawing.Font("3ds Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.open_file.Location = new System.Drawing.Point(6, 7);
+            this.open_file.Name = "open_file";
+            this.open_file.Size = new System.Drawing.Size(190, 50);
+            this.open_file.TabIndex = 0;
+            this.open_file.Text = "Open .hex file";
+            this.open_file.UseVisualStyleBackColor = false;
+            // 
+            // close_file
+            // 
+            this.close_file.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.close_file.Font = new System.Drawing.Font("3ds Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_file.Location = new System.Drawing.Point(202, 7);
+            this.close_file.Name = "close_file";
+            this.close_file.Size = new System.Drawing.Size(90, 50);
+            this.close_file.TabIndex = 1;
+            this.close_file.Text = "Close";
+            this.close_file.UseVisualStyleBackColor = false;
+            // 
+            // download
+            // 
+            this.download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.download.Font = new System.Drawing.Font("3ds Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.download.Location = new System.Drawing.Point(298, 7);
+            this.download.Name = "download";
+            this.download.Size = new System.Drawing.Size(190, 50);
+            this.download.TabIndex = 2;
+            this.download.Text = "Download";
+            this.download.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1.Font = new System.Drawing.Font("3ds Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(6, 63);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(480, 27);
+            this.textBox1.TabIndex = 5;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(6, 302);
+            this.progressBar1.MarqueeAnimationSpeed = 1000;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(482, 10);
+            this.progressBar1.TabIndex = 7;
             // 
             // tabPage2
             // 
+            this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.groupBox9);
-            this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.groupBox7);
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox5);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.group_vcu);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1161, 885);
+            this.tabPage2.Size = new System.Drawing.Size(1365, 910);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "General";
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.richTextBox_master);
+            this.panel1.Controls.Add(this.group_vcu);
+            this.panel1.Controls.Add(this.groupBox9);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.groupBox8);
+            this.panel1.Controls.Add(this.groupBox7);
+            this.panel1.Controls.Add(this.groupBox6);
+            this.panel1.Controls.Add(this.groupBox4);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox5);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1330, 1126);
+            this.panel1.TabIndex = 190;
             // 
             // groupBox9
             // 
@@ -1463,10 +1617,10 @@
             this.groupBox9.Controls.Add(this.charging_status_box);
             this.groupBox9.Controls.Add(this.label551);
             this.groupBox9.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox9.Location = new System.Drawing.Point(575, 710);
+            this.groupBox9.Location = new System.Drawing.Point(883, 698);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(335, 126);
-            this.groupBox9.TabIndex = 211;
+            this.groupBox9.TabIndex = 222;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Charging";
             // 
@@ -1474,7 +1628,7 @@
             // 
             this.charging_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.charging_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.charging_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.charging_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.charging_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.charging_current_box.Location = new System.Drawing.Point(188, 91);
             this.charging_current_box.Multiline = true;
@@ -1493,7 +1647,6 @@
             this.label553.Size = new System.Drawing.Size(26, 26);
             this.label553.TabIndex = 214;
             this.label553.Text = "A";
-            this.label553.Click += new System.EventHandler(this.label553_Click);
             // 
             // label552
             // 
@@ -1527,6 +1680,19 @@
             this.label551.Size = new System.Drawing.Size(73, 26);
             this.label551.TabIndex = 211;
             this.label551.Text = "Status:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1252, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 1126);
+            this.button1.TabIndex = 212;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // groupBox8
             // 
@@ -1572,10 +1738,10 @@
             this.groupBox8.Controls.Add(this.lv_temp_cell_3_box);
             this.groupBox8.Controls.Add(this.lv_temp_cell_2_box);
             this.groupBox8.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox8.Location = new System.Drawing.Point(916, 142);
+            this.groupBox8.Location = new System.Drawing.Point(914, 140);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(198, 544);
-            this.groupBox8.TabIndex = 210;
+            this.groupBox8.TabIndex = 221;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "AMS LV";
             // 
@@ -1638,7 +1804,6 @@
             this.label482.Size = new System.Drawing.Size(67, 26);
             this.label482.TabIndex = 246;
             this.label482.Text = "Cell 2:";
-            this.label482.Click += new System.EventHandler(this.label482_Click);
             // 
             // label525
             // 
@@ -1692,7 +1857,6 @@
             this.ams_lv_status_box.Size = new System.Drawing.Size(189, 25);
             this.ams_lv_status_box.TabIndex = 216;
             this.ams_lv_status_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ams_lv_status_box.TextChanged += new System.EventHandler(this.ams_lv_status_box_TextChanged);
             // 
             // label521
             // 
@@ -1713,7 +1877,6 @@
             this.label501.Size = new System.Drawing.Size(146, 26);
             this.label501.TabIndex = 217;
             this.label501.Text = "AMS LV Status:";
-            this.label501.Click += new System.EventHandler(this.label501_Click);
             // 
             // label520
             // 
@@ -1759,7 +1922,7 @@
             // 
             this.lv_voltage_cell_6_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_voltage_cell_6_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_voltage_cell_6_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_voltage_cell_6_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_voltage_cell_6_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_voltage_cell_6_box.Location = new System.Drawing.Point(100, 404);
             this.lv_voltage_cell_6_box.Multiline = true;
@@ -1773,7 +1936,7 @@
             // 
             this.lv_temp_cell_6_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_temp_cell_6_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_temp_cell_6_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_temp_cell_6_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_temp_cell_6_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_temp_cell_6_box.Location = new System.Drawing.Point(100, 218);
             this.lv_temp_cell_6_box.Multiline = true;
@@ -1807,7 +1970,7 @@
             // 
             this.lv_temp_cell_5_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_temp_cell_5_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_temp_cell_5_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_temp_cell_5_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_temp_cell_5_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_temp_cell_5_box.Location = new System.Drawing.Point(100, 187);
             this.lv_temp_cell_5_box.Multiline = true;
@@ -1821,7 +1984,7 @@
             // 
             this.lv_voltage_cell_5_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_voltage_cell_5_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_voltage_cell_5_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_voltage_cell_5_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_voltage_cell_5_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_voltage_cell_5_box.Location = new System.Drawing.Point(100, 373);
             this.lv_voltage_cell_5_box.Multiline = true;
@@ -1855,7 +2018,7 @@
             // 
             this.lv_temp_cell_4_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_temp_cell_4_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_temp_cell_4_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_temp_cell_4_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_temp_cell_4_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_temp_cell_4_box.Location = new System.Drawing.Point(100, 156);
             this.lv_temp_cell_4_box.Multiline = true;
@@ -1909,7 +2072,7 @@
             // 
             this.lv_voltage_cell_4_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_voltage_cell_4_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_voltage_cell_4_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_voltage_cell_4_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_voltage_cell_4_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_voltage_cell_4_box.Location = new System.Drawing.Point(100, 342);
             this.lv_voltage_cell_4_box.Multiline = true;
@@ -1933,7 +2096,7 @@
             // 
             this.lv_voltage_cell_2_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_voltage_cell_2_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_voltage_cell_2_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_voltage_cell_2_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_voltage_cell_2_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_voltage_cell_2_box.Location = new System.Drawing.Point(100, 280);
             this.lv_voltage_cell_2_box.Multiline = true;
@@ -1942,13 +2105,12 @@
             this.lv_voltage_cell_2_box.Size = new System.Drawing.Size(60, 25);
             this.lv_voltage_cell_2_box.TabIndex = 222;
             this.lv_voltage_cell_2_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lv_voltage_cell_2_box.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // lv_voltage_cell_3_box
             // 
             this.lv_voltage_cell_3_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_voltage_cell_3_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_voltage_cell_3_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_voltage_cell_3_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_voltage_cell_3_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_voltage_cell_3_box.Location = new System.Drawing.Point(100, 311);
             this.lv_voltage_cell_3_box.Multiline = true;
@@ -1962,7 +2124,7 @@
             // 
             this.lv_voltage_cell_1_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_voltage_cell_1_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_voltage_cell_1_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_voltage_cell_1_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_voltage_cell_1_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_voltage_cell_1_box.Location = new System.Drawing.Point(100, 249);
             this.lv_voltage_cell_1_box.Multiline = true;
@@ -1971,13 +2133,12 @@
             this.lv_voltage_cell_1_box.Size = new System.Drawing.Size(60, 25);
             this.lv_voltage_cell_1_box.TabIndex = 220;
             this.lv_voltage_cell_1_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lv_voltage_cell_1_box.TextChanged += new System.EventHandler(this.textBox6_TextChanged_1);
             // 
             // lv_hottest_cell_box
             // 
             this.lv_hottest_cell_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_hottest_cell_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_hottest_cell_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_hottest_cell_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_hottest_cell_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_hottest_cell_box.Location = new System.Drawing.Point(100, 32);
             this.lv_hottest_cell_box.Multiline = true;
@@ -2006,13 +2167,12 @@
             this.label503.Size = new System.Drawing.Size(84, 26);
             this.label503.TabIndex = 218;
             this.label503.Text = "Hottest:";
-            this.label503.Click += new System.EventHandler(this.label503_Click);
             // 
             // lv_temp_cell_1_box
             // 
             this.lv_temp_cell_1_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_temp_cell_1_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_temp_cell_1_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_temp_cell_1_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_temp_cell_1_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_temp_cell_1_box.Location = new System.Drawing.Point(100, 63);
             this.lv_temp_cell_1_box.Multiline = true;
@@ -2026,7 +2186,7 @@
             // 
             this.lv_temp_cell_3_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_temp_cell_3_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_temp_cell_3_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_temp_cell_3_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_temp_cell_3_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_temp_cell_3_box.Location = new System.Drawing.Point(100, 125);
             this.lv_temp_cell_3_box.Multiline = true;
@@ -2040,7 +2200,7 @@
             // 
             this.lv_temp_cell_2_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lv_temp_cell_2_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_temp_cell_2_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lv_temp_cell_2_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lv_temp_cell_2_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lv_temp_cell_2_box.Location = new System.Drawing.Point(100, 94);
             this.lv_temp_cell_2_box.Multiline = true;
@@ -2054,10 +2214,10 @@
             // 
             this.groupBox7.Controls.Add(this.actuator_status_box);
             this.groupBox7.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox7.Location = new System.Drawing.Point(575, 6);
+            this.groupBox7.Location = new System.Drawing.Point(573, 4);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(335, 67);
-            this.groupBox7.TabIndex = 209;
+            this.groupBox7.TabIndex = 220;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Actuator";
             // 
@@ -2081,13 +2241,12 @@
             this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Controls.Add(this.label5);
             this.groupBox6.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox6.Location = new System.Drawing.Point(916, 6);
+            this.groupBox6.Location = new System.Drawing.Point(914, 4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(198, 99);
-            this.groupBox6.TabIndex = 208;
+            this.groupBox6.TabIndex = 219;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "FAN Regulator";
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // rpm2_box
             // 
@@ -2106,7 +2265,7 @@
             // 
             this.rpm1_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rpm1_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rpm1_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rpm1_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.rpm1_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.rpm1_box.Location = new System.Drawing.Point(86, 36);
             this.rpm1_box.Multiline = true;
@@ -2115,7 +2274,6 @@
             this.rpm1_box.Size = new System.Drawing.Size(75, 25);
             this.rpm1_box.TabIndex = 8;
             this.rpm1_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.rpm1_box.TextChanged += new System.EventHandler(this.rpm1_box_TextChanged);
             // 
             // label6
             // 
@@ -2148,10 +2306,10 @@
             this.groupBox4.Controls.Add(this.airplus_box);
             this.groupBox4.Controls.Add(this.prechrelay_box);
             this.groupBox4.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox4.Location = new System.Drawing.Point(575, 270);
+            this.groupBox4.Location = new System.Drawing.Point(573, 268);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(335, 201);
-            this.groupBox4.TabIndex = 206;
+            this.groupBox4.TabIndex = 217;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "PreCharge";
             // 
@@ -2182,7 +2340,7 @@
             // 
             this.airminus_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.airminus_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.airminus_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.airminus_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.airminus_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.airminus_box.Location = new System.Drawing.Point(196, 36);
             this.airminus_box.Multiline = true;
@@ -2216,18 +2374,17 @@
             // 
             this.label475.AutoSize = true;
             this.label475.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label475.Location = new System.Drawing.Point(46, 100);
+            this.label475.Location = new System.Drawing.Point(29, 100);
             this.label475.Name = "label475";
             this.label475.Size = new System.Drawing.Size(155, 26);
             this.label475.TabIndex = 193;
             this.label475.Text = "Precharge relay:";
-            this.label475.Click += new System.EventHandler(this.label475_Click);
             // 
             // airplus_box
             // 
             this.airplus_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.airplus_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.airplus_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.airplus_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.airplus_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.airplus_box.Location = new System.Drawing.Point(196, 67);
             this.airplus_box.Multiline = true;
@@ -2241,7 +2398,7 @@
             // 
             this.prechrelay_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.prechrelay_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prechrelay_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.prechrelay_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.prechrelay_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.prechrelay_box.Location = new System.Drawing.Point(196, 98);
             this.prechrelay_box.Multiline = true;
@@ -2279,10 +2436,10 @@
             this.groupBox3.Controls.Add(this.label476);
             this.groupBox3.Controls.Add(this.label497);
             this.groupBox3.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox3.Location = new System.Drawing.Point(243, 6);
+            this.groupBox3.Location = new System.Drawing.Point(241, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(317, 465);
-            this.groupBox3.TabIndex = 205;
+            this.groupBox3.TabIndex = 216;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "AMS Service";
             // 
@@ -2484,7 +2641,7 @@
             // 
             this.hotcell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.hotcell.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.hotcell.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.hotcell.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.hotcell.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.hotcell.Location = new System.Drawing.Point(167, 31);
             this.hotcell.Multiline = true;
@@ -2518,7 +2675,7 @@
             // 
             this.current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.current_box.Location = new System.Drawing.Point(167, 63);
             this.current_box.Multiline = true;
@@ -2545,7 +2702,7 @@
             // 
             this.label477.AutoSize = true;
             this.label477.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label477.Location = new System.Drawing.Point(41, 65);
+            this.label477.Location = new System.Drawing.Point(38, 65);
             this.label477.Name = "label477";
             this.label477.Size = new System.Drawing.Size(132, 26);
             this.label477.TabIndex = 199;
@@ -2560,7 +2717,6 @@
             this.label476.Size = new System.Drawing.Size(26, 26);
             this.label476.TabIndex = 198;
             this.label476.Text = "A";
-            this.label476.Click += new System.EventHandler(this.label476_Click);
             // 
             // label497
             // 
@@ -2571,7 +2727,6 @@
             this.label497.Size = new System.Drawing.Size(124, 26);
             this.label497.TabIndex = 200;
             this.label497.Text = "Slave Status:";
-            this.label497.Click += new System.EventHandler(this.label497_Click);
             // 
             // groupBox5
             // 
@@ -2584,13 +2739,12 @@
             this.groupBox5.Controls.Add(this.label452);
             this.groupBox5.Controls.Add(this.label453);
             this.groupBox5.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox5.Location = new System.Drawing.Point(575, 85);
+            this.groupBox5.Location = new System.Drawing.Point(573, 83);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(335, 170);
-            this.groupBox5.TabIndex = 207;
+            this.groupBox5.TabIndex = 218;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "VCDU";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // label8
             // 
@@ -2619,7 +2773,7 @@
             // 
             this.motor_temp_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.motor_temp_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.motor_temp_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.motor_temp_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.motor_temp_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.motor_temp_box.Location = new System.Drawing.Point(168, 32);
             this.motor_temp_box.Multiline = true;
@@ -2628,13 +2782,12 @@
             this.motor_temp_box.Size = new System.Drawing.Size(75, 25);
             this.motor_temp_box.TabIndex = 15;
             this.motor_temp_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.motor_temp_box.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // inverter_temp_box
             // 
             this.inverter_temp_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.inverter_temp_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inverter_temp_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.inverter_temp_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.inverter_temp_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.inverter_temp_box.Location = new System.Drawing.Point(168, 63);
             this.inverter_temp_box.Multiline = true;
@@ -2643,7 +2796,6 @@
             this.inverter_temp_box.Size = new System.Drawing.Size(75, 25);
             this.inverter_temp_box.TabIndex = 16;
             this.inverter_temp_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.inverter_temp_box.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label451
             // 
@@ -2659,7 +2811,7 @@
             // 
             this.label450.AutoSize = true;
             this.label450.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label450.Location = new System.Drawing.Point(34, 65);
+            this.label450.Location = new System.Drawing.Point(31, 65);
             this.label450.Name = "label450";
             this.label450.Size = new System.Drawing.Size(138, 26);
             this.label450.TabIndex = 18;
@@ -2717,10 +2869,10 @@
             this.groupBox1.Controls.Add(this.label465);
             this.groupBox1.Controls.Add(this.label466);
             this.groupBox1.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(229, 465);
-            this.groupBox1.TabIndex = 201;
+            this.groupBox1.TabIndex = 214;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Battery";
             // 
@@ -2772,7 +2924,7 @@
             // 
             this.voltage_max_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.voltage_max_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.voltage_max_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.voltage_max_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.voltage_max_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.voltage_max_box.Location = new System.Drawing.Point(6, 29);
             this.voltage_max_box.Multiline = true;
@@ -2795,7 +2947,6 @@
             this.groupBox10.TabIndex = 212;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Min cell";
-            this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
             // label558
             // 
@@ -2806,7 +2957,6 @@
             this.label558.Size = new System.Drawing.Size(23, 26);
             this.label558.TabIndex = 219;
             this.label558.Text = "V";
-            this.label558.Click += new System.EventHandler(this.label558_Click);
             // 
             // cell_min_number
             // 
@@ -2827,13 +2977,12 @@
             this.stack_min_number.Size = new System.Drawing.Size(78, 26);
             this.stack_min_number.TabIndex = 220;
             this.stack_min_number.Text = "Stack: -";
-            this.stack_min_number.Click += new System.EventHandler(this.stack_min_box_Click);
             // 
             // voltage_min_box
             // 
             this.voltage_min_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.voltage_min_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.voltage_min_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.voltage_min_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.voltage_min_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.voltage_min_box.Location = new System.Drawing.Point(6, 29);
             this.voltage_min_box.Multiline = true;
@@ -2847,9 +2996,9 @@
             // 
             this.total_voltage_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.total_voltage_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.total_voltage_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.total_voltage_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.total_voltage_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 16F, System.Drawing.FontStyle.Bold);
-            this.total_voltage_box.Location = new System.Drawing.Point(84, 28);
+            this.total_voltage_box.Location = new System.Drawing.Point(88, 29);
             this.total_voltage_box.MaxLength = 8;
             this.total_voltage_box.Multiline = true;
             this.total_voltage_box.Name = "total_voltage_box";
@@ -2882,7 +3031,7 @@
             // 
             this.stack5_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.stack5_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stack5_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stack5_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.stack5_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stack5_box.Location = new System.Drawing.Point(101, 203);
             this.stack5_box.Multiline = true;
@@ -2896,7 +3045,7 @@
             // 
             this.stack1_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.stack1_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stack1_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stack1_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.stack1_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stack1_box.Location = new System.Drawing.Point(101, 79);
             this.stack1_box.Multiline = true;
@@ -2920,7 +3069,7 @@
             // 
             this.stack2_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.stack2_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stack2_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stack2_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.stack2_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stack2_box.Location = new System.Drawing.Point(101, 110);
             this.stack2_box.Multiline = true;
@@ -2944,7 +3093,7 @@
             // 
             this.stack3_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.stack3_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stack3_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stack3_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.stack3_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stack3_box.Location = new System.Drawing.Point(101, 141);
             this.stack3_box.Multiline = true;
@@ -2968,7 +3117,7 @@
             // 
             this.stack4_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.stack4_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stack4_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stack4_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.stack4_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stack4_box.Location = new System.Drawing.Point(101, 172);
             this.stack4_box.Multiline = true;
@@ -3002,7 +3151,7 @@
             // 
             this.stack6_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.stack6_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stack6_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stack6_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.stack6_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stack6_box.Location = new System.Drawing.Point(101, 234);
             this.stack6_box.Multiline = true;
@@ -3026,7 +3175,7 @@
             // 
             this.stack7_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.stack7_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stack7_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stack7_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.stack7_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stack7_box.Location = new System.Drawing.Point(101, 265);
             this.stack7_box.Multiline = true;
@@ -3050,7 +3199,7 @@
             // 
             this.stack8_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.stack8_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stack8_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stack8_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.stack8_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stack8_box.Location = new System.Drawing.Point(101, 296);
             this.stack8_box.Multiline = true;
@@ -3099,7 +3248,6 @@
             this.label463.Size = new System.Drawing.Size(82, 26);
             this.label463.TabIndex = 74;
             this.label463.Text = "Stack 1:";
-            this.label463.Click += new System.EventHandler(this.label463_Click);
             // 
             // label468
             // 
@@ -3151,8 +3299,155 @@
             this.label466.TabIndex = 77;
             this.label466.Text = "Stack 5:";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.brake_system_status_box);
+            this.groupBox2.Controls.Add(this.brake_pressure_box);
+            this.groupBox2.Controls.Add(this.label496);
+            this.groupBox2.Controls.Add(this.ebs_pressure_box);
+            this.groupBox2.Controls.Add(this.label454);
+            this.groupBox2.Controls.Add(this.sb_pressure_box);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
+            this.groupBox2.Location = new System.Drawing.Point(573, 484);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(335, 200);
+            this.groupBox2.TabIndex = 215;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Brake System";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label7.Location = new System.Drawing.Point(83, 134);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(211, 26);
+            this.label7.TabIndex = 205;
+            this.label7.Text = "EBS Supervisor Status:";
+            // 
+            // brake_system_status_box
+            // 
+            this.brake_system_status_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.brake_system_status_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.brake_system_status_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.brake_system_status_box.Location = new System.Drawing.Point(8, 164);
+            this.brake_system_status_box.Multiline = true;
+            this.brake_system_status_box.Name = "brake_system_status_box";
+            this.brake_system_status_box.ReadOnly = true;
+            this.brake_system_status_box.Size = new System.Drawing.Size(321, 25);
+            this.brake_system_status_box.TabIndex = 204;
+            this.brake_system_status_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // brake_pressure_box
+            // 
+            this.brake_pressure_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.brake_pressure_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.brake_pressure_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.brake_pressure_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.brake_pressure_box.Location = new System.Drawing.Point(167, 36);
+            this.brake_pressure_box.Multiline = true;
+            this.brake_pressure_box.Name = "brake_pressure_box";
+            this.brake_pressure_box.ReadOnly = true;
+            this.brake_pressure_box.Size = new System.Drawing.Size(75, 25);
+            this.brake_pressure_box.TabIndex = 1;
+            this.brake_pressure_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label496
+            // 
+            this.label496.AutoSize = true;
+            this.label496.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label496.Location = new System.Drawing.Point(248, 35);
+            this.label496.Name = "label496";
+            this.label496.Size = new System.Drawing.Size(40, 26);
+            this.label496.TabIndex = 203;
+            this.label496.Text = "bar";
+            // 
+            // ebs_pressure_box
+            // 
+            this.ebs_pressure_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ebs_pressure_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ebs_pressure_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.ebs_pressure_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ebs_pressure_box.Location = new System.Drawing.Point(167, 68);
+            this.ebs_pressure_box.Multiline = true;
+            this.ebs_pressure_box.Name = "ebs_pressure_box";
+            this.ebs_pressure_box.ReadOnly = true;
+            this.ebs_pressure_box.Size = new System.Drawing.Size(75, 25);
+            this.ebs_pressure_box.TabIndex = 2;
+            this.ebs_pressure_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label454
+            // 
+            this.label454.AutoSize = true;
+            this.label454.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label454.Location = new System.Drawing.Point(248, 99);
+            this.label454.Name = "label454";
+            this.label454.Size = new System.Drawing.Size(40, 26);
+            this.label454.TabIndex = 202;
+            this.label454.Text = "bar";
+            // 
+            // sb_pressure_box
+            // 
+            this.sb_pressure_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.sb_pressure_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sb_pressure_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.sb_pressure_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.sb_pressure_box.Location = new System.Drawing.Point(167, 100);
+            this.sb_pressure_box.Multiline = true;
+            this.sb_pressure_box.Name = "sb_pressure_box";
+            this.sb_pressure_box.ReadOnly = true;
+            this.sb_pressure_box.Size = new System.Drawing.Size(75, 25);
+            this.sb_pressure_box.TabIndex = 3;
+            this.sb_pressure_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label1.Location = new System.Drawing.Point(18, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 26);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Brake pressure:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label2.Location = new System.Drawing.Point(33, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 26);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "EBS pressure:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label3.Location = new System.Drawing.Point(44, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 26);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "SB pressure:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label4.Location = new System.Drawing.Point(248, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 26);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "bar";
+            // 
             // group_vcu
             // 
+            this.group_vcu.AutoSize = true;
             this.group_vcu.Controls.Add(this.label550);
             this.group_vcu.Controls.Add(this.label549);
             this.group_vcu.Controls.Add(this.label526);
@@ -3204,13 +3499,12 @@
             this.group_vcu.Controls.Add(this.inverter_current_box);
             this.group_vcu.Controls.Add(this.tsal_current_box);
             this.group_vcu.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.group_vcu.Location = new System.Drawing.Point(6, 486);
+            this.group_vcu.Location = new System.Drawing.Point(0, 484);
             this.group_vcu.Name = "group_vcu";
-            this.group_vcu.Size = new System.Drawing.Size(554, 350);
-            this.group_vcu.TabIndex = 200;
+            this.group_vcu.Size = new System.Drawing.Size(567, 392);
+            this.group_vcu.TabIndex = 213;
             this.group_vcu.TabStop = false;
             this.group_vcu.Text = "VCU";
-            this.group_vcu.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label550
             // 
@@ -3226,7 +3520,7 @@
             // 
             this.label549.AutoSize = true;
             this.label549.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label549.Location = new System.Drawing.Point(83, 165);
+            this.label549.Location = new System.Drawing.Point(92, 165);
             this.label549.Name = "label549";
             this.label549.Size = new System.Drawing.Size(69, 26);
             this.label549.TabIndex = 248;
@@ -3241,18 +3535,16 @@
             this.label526.Size = new System.Drawing.Size(94, 26);
             this.label526.TabIndex = 242;
             this.label526.Text = "Cameras:";
-            this.label526.Click += new System.EventHandler(this.label526_Click);
             // 
             // label528
             // 
             this.label528.AutoSize = true;
             this.label528.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label528.Location = new System.Drawing.Point(374, 258);
+            this.label528.Location = new System.Drawing.Point(385, 258);
             this.label528.Name = "label528";
             this.label528.Size = new System.Drawing.Size(43, 26);
             this.label528.TabIndex = 239;
             this.label528.Text = "AS:";
-            this.label528.Click += new System.EventHandler(this.label528_Click);
             // 
             // label530
             // 
@@ -3263,18 +3555,16 @@
             this.label530.Size = new System.Drawing.Size(26, 26);
             this.label530.TabIndex = 247;
             this.label530.Text = "A";
-            this.label530.Click += new System.EventHandler(this.label530_Click);
             // 
             // label531
             // 
             this.label531.AutoSize = true;
             this.label531.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label531.Location = new System.Drawing.Point(366, 227);
+            this.label531.Location = new System.Drawing.Point(375, 227);
             this.label531.Name = "label531";
             this.label531.Size = new System.Drawing.Size(53, 26);
             this.label531.TabIndex = 237;
             this.label531.Text = "RES:";
-            this.label531.Click += new System.EventHandler(this.label531_Click);
             // 
             // label532
             // 
@@ -3285,18 +3575,16 @@
             this.label532.Size = new System.Drawing.Size(26, 26);
             this.label532.TabIndex = 246;
             this.label532.Text = "A";
-            this.label532.Click += new System.EventHandler(this.label532_Click);
             // 
             // label533
             // 
             this.label533.AutoSize = true;
             this.label533.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label533.Location = new System.Drawing.Point(360, 196);
+            this.label533.Location = new System.Drawing.Point(368, 196);
             this.label533.Name = "label533";
             this.label533.Size = new System.Drawing.Size(60, 26);
             this.label533.TabIndex = 236;
             this.label533.Text = "ASSI:";
-            this.label533.Click += new System.EventHandler(this.label533_Click);
             // 
             // label534
             // 
@@ -3307,18 +3595,16 @@
             this.label534.Size = new System.Drawing.Size(26, 26);
             this.label534.TabIndex = 245;
             this.label534.Text = "A";
-            this.label534.Click += new System.EventHandler(this.label534_Click);
             // 
             // label535
             // 
             this.label535.AutoSize = true;
             this.label535.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label535.Location = new System.Drawing.Point(359, 165);
+            this.label535.Location = new System.Drawing.Point(367, 165);
             this.label535.Name = "label535";
             this.label535.Size = new System.Drawing.Size(61, 26);
             this.label535.TabIndex = 234;
             this.label535.Text = "Lidar:";
-            this.label535.Click += new System.EventHandler(this.label535_Click);
             // 
             // label536
             // 
@@ -3329,18 +3615,16 @@
             this.label536.Size = new System.Drawing.Size(26, 26);
             this.label536.TabIndex = 244;
             this.label536.Text = "A";
-            this.label536.Click += new System.EventHandler(this.label536_Click);
             // 
             // label537
             // 
             this.label537.AutoSize = true;
             this.label537.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label537.Location = new System.Drawing.Point(364, 103);
+            this.label537.Location = new System.Drawing.Point(372, 103);
             this.label537.Name = "label537";
             this.label537.Size = new System.Drawing.Size(56, 26);
             this.label537.TabIndex = 231;
             this.label537.Text = "GPS:";
-            this.label537.Click += new System.EventHandler(this.label537_Click);
             // 
             // label538
             // 
@@ -3351,7 +3635,6 @@
             this.label538.Size = new System.Drawing.Size(26, 26);
             this.label538.TabIndex = 243;
             this.label538.Text = "A";
-            this.label538.Click += new System.EventHandler(this.label538_Click);
             // 
             // label539
             // 
@@ -3362,13 +3645,12 @@
             this.label539.Size = new System.Drawing.Size(26, 26);
             this.label539.TabIndex = 232;
             this.label539.Text = "A";
-            this.label539.Click += new System.EventHandler(this.label539_Click);
             // 
             // assi_current_box
             // 
             this.assi_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.assi_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.assi_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.assi_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.assi_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.assi_current_box.Location = new System.Drawing.Point(436, 194);
             this.assi_current_box.Multiline = true;
@@ -3377,13 +3659,12 @@
             this.assi_current_box.Size = new System.Drawing.Size(75, 25);
             this.assi_current_box.TabIndex = 238;
             this.assi_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.assi_current_box.TextChanged += new System.EventHandler(this.assi_current_box_TextChanged);
             // 
             // gps_current_box
             // 
             this.gps_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gps_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gps_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gps_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.gps_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.gps_current_box.Location = new System.Drawing.Point(436, 101);
             this.gps_current_box.Multiline = true;
@@ -3392,13 +3673,12 @@
             this.gps_current_box.Size = new System.Drawing.Size(75, 25);
             this.gps_current_box.TabIndex = 230;
             this.gps_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gps_current_box.TextChanged += new System.EventHandler(this.gps_current_box_TextChanged);
             // 
             // as_current_box
             // 
             this.as_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.as_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.as_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.as_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.as_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.as_current_box.Location = new System.Drawing.Point(436, 256);
             this.as_current_box.Multiline = true;
@@ -3407,13 +3687,12 @@
             this.as_current_box.Size = new System.Drawing.Size(75, 25);
             this.as_current_box.TabIndex = 241;
             this.as_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.as_current_box.TextChanged += new System.EventHandler(this.as_current_box_TextChanged);
             // 
             // cameras_current_box
             // 
             this.cameras_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.cameras_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cameras_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cameras_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.cameras_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cameras_current_box.Location = new System.Drawing.Point(436, 132);
             this.cameras_current_box.Multiline = true;
@@ -3422,13 +3701,12 @@
             this.cameras_current_box.Size = new System.Drawing.Size(75, 25);
             this.cameras_current_box.TabIndex = 233;
             this.cameras_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cameras_current_box.TextChanged += new System.EventHandler(this.cameras_current_box_TextChanged);
             // 
             // res_current_box
             // 
             this.res_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.res_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.res_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.res_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.res_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.res_current_box.Location = new System.Drawing.Point(436, 225);
             this.res_current_box.Multiline = true;
@@ -3437,13 +3715,12 @@
             this.res_current_box.Size = new System.Drawing.Size(75, 25);
             this.res_current_box.TabIndex = 240;
             this.res_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.res_current_box.TextChanged += new System.EventHandler(this.res_current_box_TextChanged);
             // 
             // lidar_current_box
             // 
             this.lidar_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lidar_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lidar_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lidar_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lidar_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lidar_current_box.Location = new System.Drawing.Point(436, 163);
             this.lidar_current_box.Multiline = true;
@@ -3452,13 +3729,12 @@
             this.lidar_current_box.Size = new System.Drawing.Size(75, 25);
             this.lidar_current_box.TabIndex = 235;
             this.lidar_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.lidar_current_box.TextChanged += new System.EventHandler(this.lidar_current_box_TextChanged);
             // 
             // label527
             // 
             this.label527.AutoSize = true;
             this.label527.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label527.Location = new System.Drawing.Point(239, 194);
+            this.label527.Location = new System.Drawing.Point(248, 193);
             this.label527.Name = "label527";
             this.label527.Size = new System.Drawing.Size(26, 26);
             this.label527.TabIndex = 229;
@@ -3468,7 +3744,7 @@
             // 
             this.label529.AutoSize = true;
             this.label529.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label529.Location = new System.Drawing.Point(239, 163);
+            this.label529.Location = new System.Drawing.Point(248, 162);
             this.label529.Name = "label529";
             this.label529.Size = new System.Drawing.Size(26, 26);
             this.label529.TabIndex = 228;
@@ -3478,9 +3754,9 @@
             // 
             this.brake_light_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.brake_light_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.brake_light_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.brake_light_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.brake_light_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.brake_light_current_box.Location = new System.Drawing.Point(158, 195);
+            this.brake_light_current_box.Location = new System.Drawing.Point(167, 194);
             this.brake_light_current_box.Multiline = true;
             this.brake_light_current_box.Name = "brake_light_current_box";
             this.brake_light_current_box.ReadOnly = true;
@@ -3492,9 +3768,9 @@
             // 
             this.vcdu_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.vcdu_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vcdu_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.vcdu_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.vcdu_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.vcdu_current_box.Location = new System.Drawing.Point(158, 164);
+            this.vcdu_current_box.Location = new System.Drawing.Point(167, 163);
             this.vcdu_current_box.Multiline = true;
             this.vcdu_current_box.Name = "vcdu_current_box";
             this.vcdu_current_box.ReadOnly = true;
@@ -3506,12 +3782,11 @@
             // 
             this.label513.AutoSize = true;
             this.label513.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label513.Location = new System.Drawing.Point(366, 72);
+            this.label513.Location = new System.Drawing.Point(375, 72);
             this.label513.Name = "label513";
             this.label513.Size = new System.Drawing.Size(53, 26);
             this.label513.TabIndex = 219;
             this.label513.Text = "EBS:";
-            this.label513.Click += new System.EventHandler(this.label513_Click);
             // 
             // label514
             // 
@@ -3522,18 +3797,16 @@
             this.label514.Size = new System.Drawing.Size(26, 26);
             this.label514.TabIndex = 223;
             this.label514.Text = "A";
-            this.label514.Click += new System.EventHandler(this.label514_Click);
             // 
             // label515
             // 
             this.label515.AutoSize = true;
             this.label515.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label515.Location = new System.Drawing.Point(332, 41);
+            this.label515.Location = new System.Drawing.Point(334, 41);
             this.label515.Name = "label515";
             this.label515.Size = new System.Drawing.Size(94, 26);
             this.label515.TabIndex = 218;
             this.label515.Text = "Actuator:";
-            this.label515.Click += new System.EventHandler(this.label515_Click);
             // 
             // label516
             // 
@@ -3544,13 +3817,12 @@
             this.label516.Size = new System.Drawing.Size(26, 26);
             this.label516.TabIndex = 222;
             this.label516.Text = "A";
-            this.label516.Click += new System.EventHandler(this.label516_Click);
             // 
             // ebs_current_box
             // 
             this.ebs_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ebs_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ebs_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ebs_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.ebs_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ebs_current_box.Location = new System.Drawing.Point(436, 70);
             this.ebs_current_box.Multiline = true;
@@ -3559,13 +3831,12 @@
             this.ebs_current_box.Size = new System.Drawing.Size(75, 25);
             this.ebs_current_box.TabIndex = 221;
             this.ebs_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ebs_current_box.TextChanged += new System.EventHandler(this.ebs_current_box_TextChanged);
             // 
             // actuator_current_box
             // 
             this.actuator_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.actuator_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.actuator_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.actuator_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.actuator_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.actuator_current_box.Location = new System.Drawing.Point(436, 39);
             this.actuator_current_box.Multiline = true;
@@ -3574,18 +3845,16 @@
             this.actuator_current_box.Size = new System.Drawing.Size(75, 25);
             this.actuator_current_box.TabIndex = 220;
             this.actuator_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.actuator_current_box.TextChanged += new System.EventHandler(this.actuator_current_box_TextChanged);
             // 
             // label449
             // 
             this.label449.AutoSize = true;
             this.label449.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label449.Location = new System.Drawing.Point(232, 282);
+            this.label449.Location = new System.Drawing.Point(241, 281);
             this.label449.Name = "label449";
             this.label449.Size = new System.Drawing.Size(115, 26);
             this.label449.TabIndex = 217;
             this.label449.Text = "VCU Status:";
-            this.label449.Click += new System.EventHandler(this.label449_Click);
             // 
             // vcu_status_box
             // 
@@ -3604,29 +3873,27 @@
             // 
             this.label487.AutoSize = true;
             this.label487.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label487.Location = new System.Drawing.Point(67, 71);
+            this.label487.Location = new System.Drawing.Point(74, 71);
             this.label487.Name = "label487";
             this.label487.Size = new System.Drawing.Size(87, 26);
             this.label487.TabIndex = 208;
             this.label487.Text = "Inverter:";
-            this.label487.Click += new System.EventHandler(this.label487_Click);
             // 
             // label488
             // 
             this.label488.AutoSize = true;
             this.label488.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label488.Location = new System.Drawing.Point(83, 258);
+            this.label488.Location = new System.Drawing.Point(94, 258);
             this.label488.Name = "label488";
             this.label488.Size = new System.Drawing.Size(67, 26);
             this.label488.TabIndex = 207;
             this.label488.Text = "Fan 2:";
-            this.label488.Click += new System.EventHandler(this.label488_Click);
             // 
             // label485
             // 
             this.label485.AutoSize = true;
             this.label485.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label485.Location = new System.Drawing.Point(239, 256);
+            this.label485.Location = new System.Drawing.Point(248, 255);
             this.label485.Name = "label485";
             this.label485.Size = new System.Drawing.Size(26, 26);
             this.label485.TabIndex = 215;
@@ -3636,18 +3903,17 @@
             // 
             this.label489.AutoSize = true;
             this.label489.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label489.Location = new System.Drawing.Point(83, 227);
+            this.label489.Location = new System.Drawing.Point(94, 227);
             this.label489.Name = "label489";
             this.label489.Size = new System.Drawing.Size(67, 26);
             this.label489.TabIndex = 206;
             this.label489.Text = "Fan 1:";
-            this.label489.Click += new System.EventHandler(this.label489_Click);
             // 
             // label484
             // 
             this.label484.AutoSize = true;
             this.label484.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label484.Location = new System.Drawing.Point(239, 225);
+            this.label484.Location = new System.Drawing.Point(248, 224);
             this.label484.Name = "label484";
             this.label484.Size = new System.Drawing.Size(26, 26);
             this.label484.TabIndex = 214;
@@ -3657,18 +3923,17 @@
             // 
             this.label490.AutoSize = true;
             this.label490.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label490.Location = new System.Drawing.Point(24, 134);
+            this.label490.Location = new System.Drawing.Point(18, 134);
             this.label490.Name = "label490";
             this.label490.Size = new System.Drawing.Size(143, 26);
             this.label490.TabIndex = 205;
             this.label490.Text = "Cooling Pump:";
-            this.label490.Click += new System.EventHandler(this.label490_Click);
             // 
             // label483
             // 
             this.label483.AutoSize = true;
             this.label483.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label483.Location = new System.Drawing.Point(239, 132);
+            this.label483.Location = new System.Drawing.Point(248, 131);
             this.label483.Name = "label483";
             this.label483.Size = new System.Drawing.Size(26, 26);
             this.label483.TabIndex = 213;
@@ -3678,18 +3943,17 @@
             // 
             this.label493.AutoSize = true;
             this.label493.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label493.Location = new System.Drawing.Point(86, 102);
+            this.label493.Location = new System.Drawing.Point(97, 102);
             this.label493.Name = "label493";
             this.label493.Size = new System.Drawing.Size(64, 26);
             this.label493.TabIndex = 202;
             this.label493.Text = "TSAL:";
-            this.label493.Click += new System.EventHandler(this.label493_Click);
             // 
             // label480
             // 
             this.label480.AutoSize = true;
             this.label480.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label480.Location = new System.Drawing.Point(239, 100);
+            this.label480.Location = new System.Drawing.Point(248, 99);
             this.label480.Name = "label480";
             this.label480.Size = new System.Drawing.Size(26, 26);
             this.label480.TabIndex = 210;
@@ -3699,18 +3963,17 @@
             // 
             this.label494.AutoSize = true;
             this.label494.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label494.Location = new System.Drawing.Point(97, 40);
+            this.label494.Location = new System.Drawing.Point(110, 40);
             this.label494.Name = "label494";
             this.label494.Size = new System.Drawing.Size(51, 26);
             this.label494.TabIndex = 201;
             this.label494.Text = "LCS:";
-            this.label494.Click += new System.EventHandler(this.label494_Click);
             // 
             // label479
             // 
             this.label479.AutoSize = true;
             this.label479.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label479.Location = new System.Drawing.Point(239, 69);
+            this.label479.Location = new System.Drawing.Point(248, 68);
             this.label479.Name = "label479";
             this.label479.Size = new System.Drawing.Size(26, 26);
             this.label479.TabIndex = 209;
@@ -3720,20 +3983,19 @@
             // 
             this.label478.AutoSize = true;
             this.label478.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label478.Location = new System.Drawing.Point(239, 38);
+            this.label478.Location = new System.Drawing.Point(248, 37);
             this.label478.Name = "label478";
             this.label478.Size = new System.Drawing.Size(26, 26);
             this.label478.TabIndex = 201;
             this.label478.Text = "A";
-            this.label478.Click += new System.EventHandler(this.label478_Click);
             // 
             // fan2_current_box
             // 
             this.fan2_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.fan2_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fan2_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fan2_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.fan2_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.fan2_current_box.Location = new System.Drawing.Point(158, 257);
+            this.fan2_current_box.Location = new System.Drawing.Point(167, 256);
             this.fan2_current_box.Multiline = true;
             this.fan2_current_box.Name = "fan2_current_box";
             this.fan2_current_box.ReadOnly = true;
@@ -3745,9 +4007,9 @@
             // 
             this.fan1_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.fan1_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fan1_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fan1_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.fan1_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.fan1_current_box.Location = new System.Drawing.Point(158, 226);
+            this.fan1_current_box.Location = new System.Drawing.Point(167, 225);
             this.fan1_current_box.Multiline = true;
             this.fan1_current_box.Name = "fan1_current_box";
             this.fan1_current_box.ReadOnly = true;
@@ -3759,9 +4021,9 @@
             // 
             this.lcs_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lcs_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lcs_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lcs_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lcs_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lcs_current_box.Location = new System.Drawing.Point(158, 39);
+            this.lcs_current_box.Location = new System.Drawing.Point(167, 38);
             this.lcs_current_box.Multiline = true;
             this.lcs_current_box.Name = "lcs_current_box";
             this.lcs_current_box.ReadOnly = true;
@@ -3773,9 +4035,9 @@
             // 
             this.cooling_pump_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.cooling_pump_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cooling_pump_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cooling_pump_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.cooling_pump_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.cooling_pump_current_box.Location = new System.Drawing.Point(158, 133);
+            this.cooling_pump_current_box.Location = new System.Drawing.Point(167, 132);
             this.cooling_pump_current_box.Multiline = true;
             this.cooling_pump_current_box.Name = "cooling_pump_current_box";
             this.cooling_pump_current_box.ReadOnly = true;
@@ -3787,9 +4049,9 @@
             // 
             this.inverter_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.inverter_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inverter_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.inverter_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.inverter_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.inverter_current_box.Location = new System.Drawing.Point(158, 70);
+            this.inverter_current_box.Location = new System.Drawing.Point(167, 69);
             this.inverter_current_box.Multiline = true;
             this.inverter_current_box.Name = "inverter_current_box";
             this.inverter_current_box.ReadOnly = true;
@@ -3801,176 +4063,15 @@
             // 
             this.tsal_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tsal_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tsal_current_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tsal_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.tsal_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tsal_current_box.Location = new System.Drawing.Point(158, 101);
+            this.tsal_current_box.Location = new System.Drawing.Point(167, 100);
             this.tsal_current_box.Multiline = true;
             this.tsal_current_box.Name = "tsal_current_box";
             this.tsal_current_box.ReadOnly = true;
             this.tsal_current_box.Size = new System.Drawing.Size(75, 25);
             this.tsal_current_box.TabIndex = 203;
             this.tsal_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(959, 766);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 60);
-            this.button1.TabIndex = 186;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.brake_system_status_box);
-            this.groupBox2.Controls.Add(this.brake_pressure_box);
-            this.groupBox2.Controls.Add(this.label496);
-            this.groupBox2.Controls.Add(this.ebs_pressure_box);
-            this.groupBox2.Controls.Add(this.label454);
-            this.groupBox2.Controls.Add(this.sb_pressure_box);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox2.Location = new System.Drawing.Point(575, 486);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(335, 200);
-            this.groupBox2.TabIndex = 204;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Brake System";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label7.Location = new System.Drawing.Point(83, 134);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(211, 26);
-            this.label7.TabIndex = 205;
-            this.label7.Text = "EBS Supervisor Status:";
-            // 
-            // brake_system_status_box
-            // 
-            this.brake_system_status_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.brake_system_status_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.brake_system_status_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.brake_system_status_box.Location = new System.Drawing.Point(8, 164);
-            this.brake_system_status_box.Multiline = true;
-            this.brake_system_status_box.Name = "brake_system_status_box";
-            this.brake_system_status_box.ReadOnly = true;
-            this.brake_system_status_box.Size = new System.Drawing.Size(321, 25);
-            this.brake_system_status_box.TabIndex = 204;
-            this.brake_system_status_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // brake_pressure_box
-            // 
-            this.brake_pressure_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.brake_pressure_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.brake_pressure_box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.brake_pressure_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.brake_pressure_box.Location = new System.Drawing.Point(167, 36);
-            this.brake_pressure_box.Multiline = true;
-            this.brake_pressure_box.Name = "brake_pressure_box";
-            this.brake_pressure_box.ReadOnly = true;
-            this.brake_pressure_box.Size = new System.Drawing.Size(75, 25);
-            this.brake_pressure_box.TabIndex = 1;
-            this.brake_pressure_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label496
-            // 
-            this.label496.AutoSize = true;
-            this.label496.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label496.Location = new System.Drawing.Point(248, 35);
-            this.label496.Name = "label496";
-            this.label496.Size = new System.Drawing.Size(40, 26);
-            this.label496.TabIndex = 203;
-            this.label496.Text = "bar";
-            // 
-            // ebs_pressure_box
-            // 
-            this.ebs_pressure_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ebs_pressure_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ebs_pressure_box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ebs_pressure_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ebs_pressure_box.Location = new System.Drawing.Point(167, 68);
-            this.ebs_pressure_box.Multiline = true;
-            this.ebs_pressure_box.Name = "ebs_pressure_box";
-            this.ebs_pressure_box.ReadOnly = true;
-            this.ebs_pressure_box.Size = new System.Drawing.Size(75, 25);
-            this.ebs_pressure_box.TabIndex = 2;
-            this.ebs_pressure_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label454
-            // 
-            this.label454.AutoSize = true;
-            this.label454.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label454.Location = new System.Drawing.Point(248, 99);
-            this.label454.Name = "label454";
-            this.label454.Size = new System.Drawing.Size(40, 26);
-            this.label454.TabIndex = 202;
-            this.label454.Text = "bar";
-            // 
-            // sb_pressure_box
-            // 
-            this.sb_pressure_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.sb_pressure_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sb_pressure_box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sb_pressure_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.sb_pressure_box.Location = new System.Drawing.Point(167, 100);
-            this.sb_pressure_box.Multiline = true;
-            this.sb_pressure_box.Name = "sb_pressure_box";
-            this.sb_pressure_box.ReadOnly = true;
-            this.sb_pressure_box.Size = new System.Drawing.Size(75, 25);
-            this.sb_pressure_box.TabIndex = 3;
-            this.sb_pressure_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label1.Location = new System.Drawing.Point(18, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 26);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Brake pressure:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label2.Location = new System.Drawing.Point(30, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 26);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "EBS pressure:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label3.Location = new System.Drawing.Point(39, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 26);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "SB pressure:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label4.Location = new System.Drawing.Point(248, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 26);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "bar";
             // 
             // stack1
             // 
@@ -4070,10 +4171,9 @@
             this.stack1.Controls.Add(this.textBox_7);
             this.stack1.Location = new System.Drawing.Point(4, 39);
             this.stack1.Name = "stack1";
-            this.stack1.Size = new System.Drawing.Size(1161, 885);
+            this.stack1.Size = new System.Drawing.Size(1365, 910);
             this.stack1.TabIndex = 3;
             this.stack1.Text = "Stack 1";
-            this.stack1.Click += new System.EventHandler(this.stack1_Click);
             // 
             // stack_1u
             // 
@@ -4094,7 +4194,6 @@
             this.clear_1.TabIndex = 185;
             this.clear_1.Text = "Clear";
             this.clear_1.UseVisualStyleBackColor = false;
-            this.clear_1.Click += new System.EventHandler(this.clear_1_Click);
             // 
             // label61
             // 
@@ -4443,7 +4542,7 @@
             // 
             this.textBox_34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_34.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_34.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_34.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_34.Location = new System.Drawing.Point(901, 592);
             this.textBox_34.Multiline = true;
@@ -4457,7 +4556,7 @@
             // 
             this.textBox_33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_33.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_33.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_33.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_33.Location = new System.Drawing.Point(901, 561);
             this.textBox_33.Multiline = true;
@@ -4480,7 +4579,7 @@
             // 
             this.textBox_36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_36.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_36.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_36.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_36.Location = new System.Drawing.Point(901, 692);
             this.textBox_36.Multiline = true;
@@ -4494,7 +4593,7 @@
             // 
             this.textBox_35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_35.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_35.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_35.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_35.Location = new System.Drawing.Point(901, 661);
             this.textBox_35.Multiline = true;
@@ -4517,7 +4616,7 @@
             // 
             this.textBox_30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_30.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_30.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_30.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_30.Location = new System.Drawing.Point(901, 392);
             this.textBox_30.Multiline = true;
@@ -4531,7 +4630,7 @@
             // 
             this.textBox_29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_29.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_29.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_29.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_29.Location = new System.Drawing.Point(901, 361);
             this.textBox_29.Multiline = true;
@@ -4554,7 +4653,7 @@
             // 
             this.textBox_28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_28.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_28.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_28.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_28.Location = new System.Drawing.Point(901, 292);
             this.textBox_28.Multiline = true;
@@ -4568,7 +4667,7 @@
             // 
             this.textBox_27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_27.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_27.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_27.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_27.Location = new System.Drawing.Point(901, 261);
             this.textBox_27.Multiline = true;
@@ -4591,7 +4690,7 @@
             // 
             this.textBox_26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_26.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_26.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_26.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_26.Location = new System.Drawing.Point(901, 192);
             this.textBox_26.Multiline = true;
@@ -4605,7 +4704,7 @@
             // 
             this.textBox_25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_25.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_25.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_25.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_25.Location = new System.Drawing.Point(901, 161);
             this.textBox_25.Multiline = true;
@@ -4628,7 +4727,7 @@
             // 
             this.textBox_32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_32.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_32.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_32.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_32.Location = new System.Drawing.Point(901, 492);
             this.textBox_32.Multiline = true;
@@ -4642,7 +4741,7 @@
             // 
             this.textBox_31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_31.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_31.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_31.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_31.Location = new System.Drawing.Point(901, 461);
             this.textBox_31.Multiline = true;
@@ -4665,7 +4764,7 @@
             // 
             this.textBox_22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_22.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_22.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_22.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_22.Location = new System.Drawing.Point(551, 592);
             this.textBox_22.Multiline = true;
@@ -4679,7 +4778,7 @@
             // 
             this.textBox_21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_21.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_21.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_21.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_21.Location = new System.Drawing.Point(551, 561);
             this.textBox_21.Multiline = true;
@@ -4702,7 +4801,7 @@
             // 
             this.textBox_24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_24.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_24.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_24.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_24.Location = new System.Drawing.Point(551, 692);
             this.textBox_24.Multiline = true;
@@ -4716,7 +4815,7 @@
             // 
             this.textBox_23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_23.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_23.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_23.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_23.Location = new System.Drawing.Point(551, 661);
             this.textBox_23.Multiline = true;
@@ -4739,7 +4838,7 @@
             // 
             this.textBox_18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_18.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_18.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_18.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_18.Location = new System.Drawing.Point(551, 392);
             this.textBox_18.Multiline = true;
@@ -4753,7 +4852,7 @@
             // 
             this.textBox_17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_17.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_17.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_17.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_17.Location = new System.Drawing.Point(551, 361);
             this.textBox_17.Multiline = true;
@@ -4776,7 +4875,7 @@
             // 
             this.textBox_16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_16.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_16.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_16.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_16.Location = new System.Drawing.Point(551, 292);
             this.textBox_16.Multiline = true;
@@ -4790,7 +4889,7 @@
             // 
             this.textBox_15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_15.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_15.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_15.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_15.Location = new System.Drawing.Point(551, 261);
             this.textBox_15.Multiline = true;
@@ -4813,7 +4912,7 @@
             // 
             this.textBox_14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_14.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_14.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_14.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_14.Location = new System.Drawing.Point(551, 192);
             this.textBox_14.Multiline = true;
@@ -4827,7 +4926,7 @@
             // 
             this.textBox_13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_13.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_13.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_13.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_13.Location = new System.Drawing.Point(551, 161);
             this.textBox_13.Multiline = true;
@@ -4850,7 +4949,7 @@
             // 
             this.textBox_20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_20.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_20.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_20.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_20.Location = new System.Drawing.Point(551, 492);
             this.textBox_20.Multiline = true;
@@ -4864,7 +4963,7 @@
             // 
             this.textBox_19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_19.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_19.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_19.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_19.Location = new System.Drawing.Point(551, 461);
             this.textBox_19.Multiline = true;
@@ -4887,7 +4986,7 @@
             // 
             this.textBox_10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_10.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_10.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_10.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_10.Location = new System.Drawing.Point(201, 592);
             this.textBox_10.Multiline = true;
@@ -4901,7 +5000,7 @@
             // 
             this.textBox_9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_9.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_9.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_9.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_9.Location = new System.Drawing.Point(201, 561);
             this.textBox_9.Multiline = true;
@@ -4924,7 +5023,7 @@
             // 
             this.textBox_12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_12.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_12.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_12.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_12.Location = new System.Drawing.Point(201, 692);
             this.textBox_12.Multiline = true;
@@ -4938,7 +5037,7 @@
             // 
             this.textBox_11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_11.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_11.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_11.Location = new System.Drawing.Point(201, 661);
             this.textBox_11.Multiline = true;
@@ -4961,7 +5060,7 @@
             // 
             this.textBox_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_6.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_6.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_6.Location = new System.Drawing.Point(201, 392);
             this.textBox_6.Multiline = true;
@@ -4975,7 +5074,7 @@
             // 
             this.textBox_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_5.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_5.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_5.Location = new System.Drawing.Point(201, 361);
             this.textBox_5.Multiline = true;
@@ -4998,7 +5097,7 @@
             // 
             this.textBox_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_4.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_4.Location = new System.Drawing.Point(201, 292);
             this.textBox_4.Multiline = true;
@@ -5007,13 +5106,12 @@
             this.textBox_4.Size = new System.Drawing.Size(75, 25);
             this.textBox_4.TabIndex = 9;
             this.textBox_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox_4.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox_3
             // 
             this.textBox_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_3.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_3.Location = new System.Drawing.Point(201, 261);
             this.textBox_3.Multiline = true;
@@ -5036,7 +5134,7 @@
             // 
             this.textBox_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_2.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_2.Location = new System.Drawing.Point(201, 192);
             this.textBox_2.Multiline = true;
@@ -5050,7 +5148,7 @@
             // 
             this.textBox_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_1.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_1.Location = new System.Drawing.Point(201, 161);
             this.textBox_1.Multiline = true;
@@ -5073,7 +5171,7 @@
             // 
             this.textBox_8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_8.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_8.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_8.Location = new System.Drawing.Point(201, 492);
             this.textBox_8.Multiline = true;
@@ -5087,7 +5185,7 @@
             // 
             this.textBox_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_7.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_7.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_7.Location = new System.Drawing.Point(201, 461);
             this.textBox_7.Multiline = true;
@@ -5195,7 +5293,7 @@
             this.stack2.Controls.Add(this.textBox_43);
             this.stack2.Location = new System.Drawing.Point(4, 39);
             this.stack2.Name = "stack2";
-            this.stack2.Size = new System.Drawing.Size(1161, 885);
+            this.stack2.Size = new System.Drawing.Size(1365, 910);
             this.stack2.TabIndex = 4;
             this.stack2.Text = "Stack 2";
             // 
@@ -5218,7 +5316,6 @@
             this.clear_2.TabIndex = 185;
             this.clear_2.Text = "Clear";
             this.clear_2.UseVisualStyleBackColor = false;
-            this.clear_2.Click += new System.EventHandler(this.clear_2_Click);
             // 
             // label441
             // 
@@ -5567,7 +5664,7 @@
             // 
             this.textBox_70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_70.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_70.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_70.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_70.Location = new System.Drawing.Point(901, 592);
             this.textBox_70.Multiline = true;
@@ -5581,7 +5678,7 @@
             // 
             this.textBox_69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_69.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_69.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_69.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_69.Location = new System.Drawing.Point(901, 561);
             this.textBox_69.Multiline = true;
@@ -5604,7 +5701,7 @@
             // 
             this.textBox_72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_72.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_72.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_72.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_72.Location = new System.Drawing.Point(901, 692);
             this.textBox_72.Multiline = true;
@@ -5618,7 +5715,7 @@
             // 
             this.textBox_71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_71.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_71.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_71.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_71.Location = new System.Drawing.Point(901, 661);
             this.textBox_71.Multiline = true;
@@ -5641,7 +5738,7 @@
             // 
             this.textBox_66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_66.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_66.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_66.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_66.Location = new System.Drawing.Point(901, 392);
             this.textBox_66.Multiline = true;
@@ -5655,7 +5752,7 @@
             // 
             this.textBox_65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_65.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_65.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_65.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_65.Location = new System.Drawing.Point(901, 361);
             this.textBox_65.Multiline = true;
@@ -5678,7 +5775,7 @@
             // 
             this.textBox_64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_64.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_64.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_64.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_64.Location = new System.Drawing.Point(901, 292);
             this.textBox_64.Multiline = true;
@@ -5692,7 +5789,7 @@
             // 
             this.textBox_63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_63.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_63.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_63.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_63.Location = new System.Drawing.Point(901, 261);
             this.textBox_63.Multiline = true;
@@ -5715,7 +5812,7 @@
             // 
             this.textBox_62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_62.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_62.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_62.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_62.Location = new System.Drawing.Point(901, 192);
             this.textBox_62.Multiline = true;
@@ -5729,7 +5826,7 @@
             // 
             this.textBox_61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_61.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_61.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_61.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_61.Location = new System.Drawing.Point(901, 161);
             this.textBox_61.Multiline = true;
@@ -5752,7 +5849,7 @@
             // 
             this.textBox_68.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_68.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_68.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_68.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_68.Location = new System.Drawing.Point(901, 492);
             this.textBox_68.Multiline = true;
@@ -5766,7 +5863,7 @@
             // 
             this.textBox_67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_67.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_67.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_67.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_67.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_67.Location = new System.Drawing.Point(901, 461);
             this.textBox_67.Multiline = true;
@@ -5789,7 +5886,7 @@
             // 
             this.textBox_58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_58.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_58.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_58.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_58.Location = new System.Drawing.Point(551, 592);
             this.textBox_58.Multiline = true;
@@ -5803,7 +5900,7 @@
             // 
             this.textBox_57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_57.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_57.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_57.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_57.Location = new System.Drawing.Point(551, 561);
             this.textBox_57.Multiline = true;
@@ -5826,7 +5923,7 @@
             // 
             this.textBox_60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_60.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_60.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_60.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_60.Location = new System.Drawing.Point(551, 692);
             this.textBox_60.Multiline = true;
@@ -5840,7 +5937,7 @@
             // 
             this.textBox_59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_59.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_59.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_59.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_59.Location = new System.Drawing.Point(551, 661);
             this.textBox_59.Multiline = true;
@@ -5863,7 +5960,7 @@
             // 
             this.textBox_54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_54.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_54.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_54.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_54.Location = new System.Drawing.Point(551, 392);
             this.textBox_54.Multiline = true;
@@ -5877,7 +5974,7 @@
             // 
             this.textBox_53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_53.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_53.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_53.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_53.Location = new System.Drawing.Point(551, 361);
             this.textBox_53.Multiline = true;
@@ -5900,7 +5997,7 @@
             // 
             this.textBox_52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_52.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_52.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_52.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_52.Location = new System.Drawing.Point(551, 292);
             this.textBox_52.Multiline = true;
@@ -5914,7 +6011,7 @@
             // 
             this.textBox_51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_51.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_51.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_51.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_51.Location = new System.Drawing.Point(551, 261);
             this.textBox_51.Multiline = true;
@@ -5937,7 +6034,7 @@
             // 
             this.textBox_50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_50.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_50.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_50.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_50.Location = new System.Drawing.Point(551, 192);
             this.textBox_50.Multiline = true;
@@ -5951,7 +6048,7 @@
             // 
             this.textBox_49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_49.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_49.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_49.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_49.Location = new System.Drawing.Point(551, 161);
             this.textBox_49.Multiline = true;
@@ -5974,7 +6071,7 @@
             // 
             this.textBox_56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_56.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_56.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_56.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_56.Location = new System.Drawing.Point(551, 492);
             this.textBox_56.Multiline = true;
@@ -5988,7 +6085,7 @@
             // 
             this.textBox_55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_55.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_55.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_55.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_55.Location = new System.Drawing.Point(551, 461);
             this.textBox_55.Multiline = true;
@@ -6011,7 +6108,7 @@
             // 
             this.textBox_46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_46.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_46.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_46.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_46.Location = new System.Drawing.Point(201, 592);
             this.textBox_46.Multiline = true;
@@ -6025,7 +6122,7 @@
             // 
             this.textBox_45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_45.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_45.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_45.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_45.Location = new System.Drawing.Point(201, 561);
             this.textBox_45.Multiline = true;
@@ -6048,7 +6145,7 @@
             // 
             this.textBox_48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_48.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_48.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_48.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_48.Location = new System.Drawing.Point(201, 692);
             this.textBox_48.Multiline = true;
@@ -6062,7 +6159,7 @@
             // 
             this.textBox_47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_47.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_47.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_47.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_47.Location = new System.Drawing.Point(201, 661);
             this.textBox_47.Multiline = true;
@@ -6085,7 +6182,7 @@
             // 
             this.textBox_42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_42.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_42.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_42.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_42.Location = new System.Drawing.Point(201, 392);
             this.textBox_42.Multiline = true;
@@ -6099,7 +6196,7 @@
             // 
             this.textBox_41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_41.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_41.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_41.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_41.Location = new System.Drawing.Point(201, 361);
             this.textBox_41.Multiline = true;
@@ -6122,7 +6219,7 @@
             // 
             this.textBox_40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_40.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_40.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_40.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_40.Location = new System.Drawing.Point(201, 292);
             this.textBox_40.Multiline = true;
@@ -6136,7 +6233,7 @@
             // 
             this.textBox_39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_39.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_39.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_39.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_39.Location = new System.Drawing.Point(201, 261);
             this.textBox_39.Multiline = true;
@@ -6159,7 +6256,7 @@
             // 
             this.textBox_38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_38.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_38.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_38.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_38.Location = new System.Drawing.Point(201, 192);
             this.textBox_38.Multiline = true;
@@ -6173,7 +6270,7 @@
             // 
             this.textBox_37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_37.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_37.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_37.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_37.Location = new System.Drawing.Point(201, 161);
             this.textBox_37.Multiline = true;
@@ -6196,7 +6293,7 @@
             // 
             this.textBox_44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_44.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_44.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_44.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_44.Location = new System.Drawing.Point(201, 492);
             this.textBox_44.Multiline = true;
@@ -6210,7 +6307,7 @@
             // 
             this.textBox_43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_43.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_43.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_43.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_43.Location = new System.Drawing.Point(201, 461);
             this.textBox_43.Multiline = true;
@@ -6318,7 +6415,7 @@
             this.stack3.Controls.Add(this.textBox_79);
             this.stack3.Location = new System.Drawing.Point(4, 39);
             this.stack3.Name = "stack3";
-            this.stack3.Size = new System.Drawing.Size(1161, 885);
+            this.stack3.Size = new System.Drawing.Size(1365, 910);
             this.stack3.TabIndex = 5;
             this.stack3.Text = "Stack 3";
             // 
@@ -6341,7 +6438,6 @@
             this.clear_3.TabIndex = 185;
             this.clear_3.Text = "Clear";
             this.clear_3.UseVisualStyleBackColor = false;
-            this.clear_3.Click += new System.EventHandler(this.clear_3_Click);
             // 
             // label442
             // 
@@ -6690,7 +6786,7 @@
             // 
             this.textBox_106.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_106.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_106.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_106.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_106.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_106.Location = new System.Drawing.Point(901, 592);
             this.textBox_106.Multiline = true;
@@ -6704,7 +6800,7 @@
             // 
             this.textBox_105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_105.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_105.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_105.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_105.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_105.Location = new System.Drawing.Point(901, 561);
             this.textBox_105.Multiline = true;
@@ -6727,7 +6823,7 @@
             // 
             this.textBox_108.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_108.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_108.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_108.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_108.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_108.Location = new System.Drawing.Point(901, 692);
             this.textBox_108.Multiline = true;
@@ -6741,7 +6837,7 @@
             // 
             this.textBox_107.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_107.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_107.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_107.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_107.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_107.Location = new System.Drawing.Point(901, 661);
             this.textBox_107.Multiline = true;
@@ -6764,7 +6860,7 @@
             // 
             this.textBox_102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_102.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_102.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_102.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_102.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_102.Location = new System.Drawing.Point(901, 392);
             this.textBox_102.Multiline = true;
@@ -6778,7 +6874,7 @@
             // 
             this.textBox_101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_101.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_101.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_101.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_101.Location = new System.Drawing.Point(901, 361);
             this.textBox_101.Multiline = true;
@@ -6801,7 +6897,7 @@
             // 
             this.textBox_100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_100.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_100.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_100.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_100.Location = new System.Drawing.Point(901, 292);
             this.textBox_100.Multiline = true;
@@ -6815,7 +6911,7 @@
             // 
             this.textBox_99.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_99.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_99.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_99.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_99.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_99.Location = new System.Drawing.Point(901, 261);
             this.textBox_99.Multiline = true;
@@ -6838,7 +6934,7 @@
             // 
             this.textBox_98.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_98.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_98.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_98.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_98.Location = new System.Drawing.Point(901, 192);
             this.textBox_98.Multiline = true;
@@ -6852,7 +6948,7 @@
             // 
             this.textBox_97.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_97.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_97.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_97.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_97.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_97.Location = new System.Drawing.Point(901, 161);
             this.textBox_97.Multiline = true;
@@ -6875,7 +6971,7 @@
             // 
             this.textBox_104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_104.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_104.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_104.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_104.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_104.Location = new System.Drawing.Point(901, 492);
             this.textBox_104.Multiline = true;
@@ -6889,7 +6985,7 @@
             // 
             this.textBox_103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_103.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_103.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_103.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_103.Location = new System.Drawing.Point(901, 461);
             this.textBox_103.Multiline = true;
@@ -6912,7 +7008,7 @@
             // 
             this.textBox_94.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_94.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_94.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_94.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_94.Location = new System.Drawing.Point(551, 592);
             this.textBox_94.Multiline = true;
@@ -6926,7 +7022,7 @@
             // 
             this.textBox_93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_93.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_93.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_93.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_93.Location = new System.Drawing.Point(551, 561);
             this.textBox_93.Multiline = true;
@@ -6949,7 +7045,7 @@
             // 
             this.textBox_96.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_96.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_96.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_96.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_96.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_96.Location = new System.Drawing.Point(551, 692);
             this.textBox_96.Multiline = true;
@@ -6963,7 +7059,7 @@
             // 
             this.textBox_95.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_95.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_95.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_95.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_95.Location = new System.Drawing.Point(551, 661);
             this.textBox_95.Multiline = true;
@@ -6986,7 +7082,7 @@
             // 
             this.textBox_90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_90.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_90.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_90.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_90.Location = new System.Drawing.Point(551, 392);
             this.textBox_90.Multiline = true;
@@ -7000,7 +7096,7 @@
             // 
             this.textBox_89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_89.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_89.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_89.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_89.Location = new System.Drawing.Point(551, 361);
             this.textBox_89.Multiline = true;
@@ -7023,7 +7119,7 @@
             // 
             this.textBox_88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_88.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_88.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_88.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_88.Location = new System.Drawing.Point(551, 292);
             this.textBox_88.Multiline = true;
@@ -7037,7 +7133,7 @@
             // 
             this.textBox_87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_87.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_87.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_87.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_87.Location = new System.Drawing.Point(551, 261);
             this.textBox_87.Multiline = true;
@@ -7060,7 +7156,7 @@
             // 
             this.textBox_86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_86.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_86.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_86.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_86.Location = new System.Drawing.Point(551, 192);
             this.textBox_86.Multiline = true;
@@ -7074,7 +7170,7 @@
             // 
             this.textBox_85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_85.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_85.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_85.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_85.Location = new System.Drawing.Point(551, 161);
             this.textBox_85.Multiline = true;
@@ -7097,7 +7193,7 @@
             // 
             this.textBox_92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_92.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_92.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_92.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_92.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_92.Location = new System.Drawing.Point(551, 492);
             this.textBox_92.Multiline = true;
@@ -7111,7 +7207,7 @@
             // 
             this.textBox_91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_91.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_91.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_91.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_91.Location = new System.Drawing.Point(551, 461);
             this.textBox_91.Multiline = true;
@@ -7134,7 +7230,7 @@
             // 
             this.textBox_82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_82.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_82.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_82.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_82.Location = new System.Drawing.Point(201, 592);
             this.textBox_82.Multiline = true;
@@ -7148,7 +7244,7 @@
             // 
             this.textBox_81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_81.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_81.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_81.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_81.Location = new System.Drawing.Point(201, 561);
             this.textBox_81.Multiline = true;
@@ -7171,7 +7267,7 @@
             // 
             this.textBox_84.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_84.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_84.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_84.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_84.Location = new System.Drawing.Point(201, 692);
             this.textBox_84.Multiline = true;
@@ -7185,7 +7281,7 @@
             // 
             this.textBox_83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_83.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_83.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_83.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_83.Location = new System.Drawing.Point(201, 661);
             this.textBox_83.Multiline = true;
@@ -7208,7 +7304,7 @@
             // 
             this.textBox_78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_78.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_78.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_78.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_78.Location = new System.Drawing.Point(201, 392);
             this.textBox_78.Multiline = true;
@@ -7222,7 +7318,7 @@
             // 
             this.textBox_77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_77.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_77.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_77.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_77.Location = new System.Drawing.Point(201, 361);
             this.textBox_77.Multiline = true;
@@ -7245,7 +7341,7 @@
             // 
             this.textBox_76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_76.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_76.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_76.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_76.Location = new System.Drawing.Point(201, 292);
             this.textBox_76.Multiline = true;
@@ -7254,13 +7350,12 @@
             this.textBox_76.Size = new System.Drawing.Size(75, 25);
             this.textBox_76.TabIndex = 100;
             this.textBox_76.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox_76.TextChanged += new System.EventHandler(this.textBox104_TextChanged);
             // 
             // textBox_75
             // 
             this.textBox_75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_75.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_75.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_75.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_75.Location = new System.Drawing.Point(201, 261);
             this.textBox_75.Multiline = true;
@@ -7283,7 +7378,7 @@
             // 
             this.textBox_74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_74.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_74.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_74.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_74.Location = new System.Drawing.Point(201, 192);
             this.textBox_74.Multiline = true;
@@ -7297,7 +7392,7 @@
             // 
             this.textBox_73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_73.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_73.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_73.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_73.Location = new System.Drawing.Point(201, 161);
             this.textBox_73.Multiline = true;
@@ -7320,7 +7415,7 @@
             // 
             this.textBox_80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_80.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_80.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_80.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_80.Location = new System.Drawing.Point(201, 492);
             this.textBox_80.Multiline = true;
@@ -7334,7 +7429,7 @@
             // 
             this.textBox_79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_79.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_79.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_79.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_79.Location = new System.Drawing.Point(201, 461);
             this.textBox_79.Multiline = true;
@@ -7442,7 +7537,7 @@
             this.stack4.Controls.Add(this.textBox_115);
             this.stack4.Location = new System.Drawing.Point(4, 39);
             this.stack4.Name = "stack4";
-            this.stack4.Size = new System.Drawing.Size(1161, 885);
+            this.stack4.Size = new System.Drawing.Size(1365, 910);
             this.stack4.TabIndex = 6;
             this.stack4.Text = "Stack 4";
             // 
@@ -7465,7 +7560,6 @@
             this.clear_4.TabIndex = 184;
             this.clear_4.Text = "Clear";
             this.clear_4.UseVisualStyleBackColor = false;
-            this.clear_4.Click += new System.EventHandler(this.clear_4_Click);
             // 
             // label443
             // 
@@ -7814,7 +7908,7 @@
             // 
             this.textBox_142.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_142.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_142.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_142.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_142.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_142.Location = new System.Drawing.Point(901, 592);
             this.textBox_142.Multiline = true;
@@ -7828,7 +7922,7 @@
             // 
             this.textBox_141.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_141.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_141.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_141.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_141.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_141.Location = new System.Drawing.Point(901, 561);
             this.textBox_141.Multiline = true;
@@ -7851,7 +7945,7 @@
             // 
             this.textBox_144.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_144.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_144.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_144.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_144.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_144.Location = new System.Drawing.Point(901, 692);
             this.textBox_144.Multiline = true;
@@ -7865,7 +7959,7 @@
             // 
             this.textBox_143.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_143.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_143.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_143.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_143.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_143.Location = new System.Drawing.Point(901, 661);
             this.textBox_143.Multiline = true;
@@ -7888,7 +7982,7 @@
             // 
             this.textBox_138.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_138.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_138.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_138.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_138.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_138.Location = new System.Drawing.Point(901, 392);
             this.textBox_138.Multiline = true;
@@ -7902,7 +7996,7 @@
             // 
             this.textBox_137.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_137.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_137.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_137.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_137.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_137.Location = new System.Drawing.Point(901, 361);
             this.textBox_137.Multiline = true;
@@ -7925,7 +8019,7 @@
             // 
             this.textBox_136.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_136.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_136.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_136.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_136.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_136.Location = new System.Drawing.Point(901, 292);
             this.textBox_136.Multiline = true;
@@ -7939,7 +8033,7 @@
             // 
             this.textBox_135.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_135.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_135.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_135.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_135.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_135.Location = new System.Drawing.Point(901, 261);
             this.textBox_135.Multiline = true;
@@ -7962,7 +8056,7 @@
             // 
             this.textBox_134.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_134.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_134.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_134.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_134.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_134.Location = new System.Drawing.Point(901, 192);
             this.textBox_134.Multiline = true;
@@ -7976,7 +8070,7 @@
             // 
             this.textBox_133.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_133.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_133.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_133.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_133.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_133.Location = new System.Drawing.Point(901, 161);
             this.textBox_133.Multiline = true;
@@ -7999,7 +8093,7 @@
             // 
             this.textBox_140.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_140.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_140.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_140.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_140.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_140.Location = new System.Drawing.Point(901, 492);
             this.textBox_140.Multiline = true;
@@ -8013,7 +8107,7 @@
             // 
             this.textBox_139.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_139.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_139.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_139.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_139.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_139.Location = new System.Drawing.Point(901, 461);
             this.textBox_139.Multiline = true;
@@ -8036,7 +8130,7 @@
             // 
             this.textBox_130.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_130.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_130.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_130.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_130.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_130.Location = new System.Drawing.Point(551, 592);
             this.textBox_130.Multiline = true;
@@ -8050,7 +8144,7 @@
             // 
             this.textBox_129.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_129.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_129.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_129.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_129.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_129.Location = new System.Drawing.Point(551, 561);
             this.textBox_129.Multiline = true;
@@ -8073,7 +8167,7 @@
             // 
             this.textBox_132.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_132.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_132.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_132.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_132.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_132.Location = new System.Drawing.Point(551, 692);
             this.textBox_132.Multiline = true;
@@ -8087,7 +8181,7 @@
             // 
             this.textBox_131.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_131.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_131.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_131.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_131.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_131.Location = new System.Drawing.Point(551, 661);
             this.textBox_131.Multiline = true;
@@ -8110,7 +8204,7 @@
             // 
             this.textBox_126.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_126.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_126.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_126.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_126.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_126.Location = new System.Drawing.Point(551, 392);
             this.textBox_126.Multiline = true;
@@ -8124,7 +8218,7 @@
             // 
             this.textBox_125.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_125.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_125.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_125.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_125.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_125.Location = new System.Drawing.Point(551, 361);
             this.textBox_125.Multiline = true;
@@ -8147,7 +8241,7 @@
             // 
             this.textBox_124.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_124.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_124.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_124.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_124.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_124.Location = new System.Drawing.Point(551, 292);
             this.textBox_124.Multiline = true;
@@ -8161,7 +8255,7 @@
             // 
             this.textBox_123.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_123.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_123.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_123.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_123.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_123.Location = new System.Drawing.Point(551, 261);
             this.textBox_123.Multiline = true;
@@ -8184,7 +8278,7 @@
             // 
             this.textBox_122.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_122.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_122.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_122.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_122.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_122.Location = new System.Drawing.Point(551, 192);
             this.textBox_122.Multiline = true;
@@ -8198,7 +8292,7 @@
             // 
             this.textBox_121.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_121.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_121.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_121.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_121.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_121.Location = new System.Drawing.Point(551, 161);
             this.textBox_121.Multiline = true;
@@ -8221,7 +8315,7 @@
             // 
             this.textBox_128.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_128.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_128.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_128.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_128.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_128.Location = new System.Drawing.Point(551, 492);
             this.textBox_128.Multiline = true;
@@ -8235,7 +8329,7 @@
             // 
             this.textBox_127.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_127.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_127.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_127.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_127.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_127.Location = new System.Drawing.Point(551, 461);
             this.textBox_127.Multiline = true;
@@ -8258,7 +8352,7 @@
             // 
             this.textBox_118.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_118.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_118.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_118.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_118.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_118.Location = new System.Drawing.Point(201, 592);
             this.textBox_118.Multiline = true;
@@ -8272,7 +8366,7 @@
             // 
             this.textBox_117.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_117.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_117.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_117.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_117.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_117.Location = new System.Drawing.Point(201, 561);
             this.textBox_117.Multiline = true;
@@ -8295,7 +8389,7 @@
             // 
             this.textBox_120.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_120.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_120.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_120.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_120.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_120.Location = new System.Drawing.Point(201, 692);
             this.textBox_120.Multiline = true;
@@ -8309,7 +8403,7 @@
             // 
             this.textBox_119.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_119.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_119.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_119.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_119.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_119.Location = new System.Drawing.Point(201, 661);
             this.textBox_119.Multiline = true;
@@ -8332,7 +8426,7 @@
             // 
             this.textBox_114.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_114.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_114.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_114.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_114.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_114.Location = new System.Drawing.Point(201, 392);
             this.textBox_114.Multiline = true;
@@ -8346,7 +8440,7 @@
             // 
             this.textBox_113.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_113.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_113.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_113.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_113.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_113.Location = new System.Drawing.Point(201, 361);
             this.textBox_113.Multiline = true;
@@ -8369,7 +8463,7 @@
             // 
             this.textBox_112.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_112.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_112.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_112.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_112.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_112.Location = new System.Drawing.Point(201, 292);
             this.textBox_112.Multiline = true;
@@ -8383,7 +8477,7 @@
             // 
             this.textBox_111.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_111.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_111.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_111.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_111.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_111.Location = new System.Drawing.Point(201, 261);
             this.textBox_111.Multiline = true;
@@ -8406,7 +8500,7 @@
             // 
             this.textBox_110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_110.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_110.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_110.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_110.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_110.Location = new System.Drawing.Point(201, 192);
             this.textBox_110.Multiline = true;
@@ -8420,7 +8514,7 @@
             // 
             this.textBox_109.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_109.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_109.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_109.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_109.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_109.Location = new System.Drawing.Point(201, 161);
             this.textBox_109.Multiline = true;
@@ -8443,7 +8537,7 @@
             // 
             this.textBox_116.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_116.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_116.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_116.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_116.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_116.Location = new System.Drawing.Point(201, 492);
             this.textBox_116.Multiline = true;
@@ -8457,7 +8551,7 @@
             // 
             this.textBox_115.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_115.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_115.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_115.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_115.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_115.Location = new System.Drawing.Point(201, 461);
             this.textBox_115.Multiline = true;
@@ -8565,7 +8659,7 @@
             this.stack5.Controls.Add(this.textBox_151);
             this.stack5.Location = new System.Drawing.Point(4, 39);
             this.stack5.Name = "stack5";
-            this.stack5.Size = new System.Drawing.Size(1161, 885);
+            this.stack5.Size = new System.Drawing.Size(1365, 933);
             this.stack5.TabIndex = 7;
             this.stack5.Text = "Stack 5";
             // 
@@ -8588,7 +8682,6 @@
             this.clear_5.TabIndex = 185;
             this.clear_5.Text = "Clear";
             this.clear_5.UseVisualStyleBackColor = false;
-            this.clear_5.Click += new System.EventHandler(this.clear_5_Click);
             // 
             // label444
             // 
@@ -8937,7 +9030,7 @@
             // 
             this.textBox_178.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_178.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_178.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_178.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_178.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_178.Location = new System.Drawing.Point(901, 592);
             this.textBox_178.Multiline = true;
@@ -8951,7 +9044,7 @@
             // 
             this.textBox_177.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_177.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_177.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_177.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_177.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_177.Location = new System.Drawing.Point(901, 561);
             this.textBox_177.Multiline = true;
@@ -8974,7 +9067,7 @@
             // 
             this.textBox_180.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_180.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_180.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_180.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_180.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_180.Location = new System.Drawing.Point(901, 692);
             this.textBox_180.Multiline = true;
@@ -8988,7 +9081,7 @@
             // 
             this.textBox_179.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_179.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_179.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_179.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_179.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_179.Location = new System.Drawing.Point(901, 661);
             this.textBox_179.Multiline = true;
@@ -9011,7 +9104,7 @@
             // 
             this.textBox_174.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_174.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_174.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_174.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_174.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_174.Location = new System.Drawing.Point(901, 392);
             this.textBox_174.Multiline = true;
@@ -9025,7 +9118,7 @@
             // 
             this.textBox_173.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_173.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_173.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_173.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_173.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_173.Location = new System.Drawing.Point(901, 361);
             this.textBox_173.Multiline = true;
@@ -9048,7 +9141,7 @@
             // 
             this.textBox_172.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_172.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_172.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_172.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_172.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_172.Location = new System.Drawing.Point(901, 292);
             this.textBox_172.Multiline = true;
@@ -9062,7 +9155,7 @@
             // 
             this.textBox_171.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_171.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_171.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_171.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_171.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_171.Location = new System.Drawing.Point(901, 261);
             this.textBox_171.Multiline = true;
@@ -9085,7 +9178,7 @@
             // 
             this.textBox_170.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_170.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_170.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_170.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_170.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_170.Location = new System.Drawing.Point(901, 192);
             this.textBox_170.Multiline = true;
@@ -9099,7 +9192,7 @@
             // 
             this.textBox_169.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_169.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_169.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_169.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_169.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_169.Location = new System.Drawing.Point(901, 161);
             this.textBox_169.Multiline = true;
@@ -9122,7 +9215,7 @@
             // 
             this.textBox_176.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_176.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_176.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_176.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_176.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_176.Location = new System.Drawing.Point(901, 492);
             this.textBox_176.Multiline = true;
@@ -9136,7 +9229,7 @@
             // 
             this.textBox_175.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_175.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_175.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_175.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_175.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_175.Location = new System.Drawing.Point(901, 461);
             this.textBox_175.Multiline = true;
@@ -9159,7 +9252,7 @@
             // 
             this.textBox_166.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_166.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_166.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_166.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_166.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_166.Location = new System.Drawing.Point(551, 592);
             this.textBox_166.Multiline = true;
@@ -9173,7 +9266,7 @@
             // 
             this.textBox_165.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_165.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_165.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_165.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_165.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_165.Location = new System.Drawing.Point(551, 561);
             this.textBox_165.Multiline = true;
@@ -9196,7 +9289,7 @@
             // 
             this.textBox_168.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_168.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_168.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_168.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_168.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_168.Location = new System.Drawing.Point(551, 692);
             this.textBox_168.Multiline = true;
@@ -9210,7 +9303,7 @@
             // 
             this.textBox_167.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_167.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_167.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_167.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_167.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_167.Location = new System.Drawing.Point(551, 661);
             this.textBox_167.Multiline = true;
@@ -9233,7 +9326,7 @@
             // 
             this.textBox_162.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_162.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_162.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_162.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_162.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_162.Location = new System.Drawing.Point(551, 392);
             this.textBox_162.Multiline = true;
@@ -9247,7 +9340,7 @@
             // 
             this.textBox_161.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_161.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_161.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_161.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_161.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_161.Location = new System.Drawing.Point(551, 361);
             this.textBox_161.Multiline = true;
@@ -9270,7 +9363,7 @@
             // 
             this.textBox_160.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_160.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_160.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_160.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_160.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_160.Location = new System.Drawing.Point(551, 292);
             this.textBox_160.Multiline = true;
@@ -9284,7 +9377,7 @@
             // 
             this.textBox_159.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_159.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_159.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_159.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_159.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_159.Location = new System.Drawing.Point(551, 261);
             this.textBox_159.Multiline = true;
@@ -9307,7 +9400,7 @@
             // 
             this.textBox_158.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_158.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_158.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_158.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_158.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_158.Location = new System.Drawing.Point(551, 192);
             this.textBox_158.Multiline = true;
@@ -9321,7 +9414,7 @@
             // 
             this.textBox_157.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_157.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_157.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_157.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_157.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_157.Location = new System.Drawing.Point(551, 161);
             this.textBox_157.Multiline = true;
@@ -9344,7 +9437,7 @@
             // 
             this.textBox_164.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_164.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_164.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_164.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_164.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_164.Location = new System.Drawing.Point(551, 492);
             this.textBox_164.Multiline = true;
@@ -9358,7 +9451,7 @@
             // 
             this.textBox_163.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_163.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_163.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_163.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_163.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_163.Location = new System.Drawing.Point(551, 461);
             this.textBox_163.Multiline = true;
@@ -9381,7 +9474,7 @@
             // 
             this.textBox_154.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_154.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_154.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_154.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_154.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_154.Location = new System.Drawing.Point(201, 592);
             this.textBox_154.Multiline = true;
@@ -9395,7 +9488,7 @@
             // 
             this.textBox_153.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_153.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_153.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_153.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_153.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_153.Location = new System.Drawing.Point(201, 561);
             this.textBox_153.Multiline = true;
@@ -9418,7 +9511,7 @@
             // 
             this.textBox_156.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_156.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_156.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_156.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_156.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_156.Location = new System.Drawing.Point(201, 692);
             this.textBox_156.Multiline = true;
@@ -9432,7 +9525,7 @@
             // 
             this.textBox_155.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_155.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_155.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_155.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_155.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_155.Location = new System.Drawing.Point(201, 661);
             this.textBox_155.Multiline = true;
@@ -9455,7 +9548,7 @@
             // 
             this.textBox_150.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_150.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_150.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_150.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_150.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_150.Location = new System.Drawing.Point(201, 392);
             this.textBox_150.Multiline = true;
@@ -9469,7 +9562,7 @@
             // 
             this.textBox_149.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_149.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_149.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_149.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_149.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_149.Location = new System.Drawing.Point(201, 361);
             this.textBox_149.Multiline = true;
@@ -9492,7 +9585,7 @@
             // 
             this.textBox_148.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_148.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_148.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_148.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_148.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_148.Location = new System.Drawing.Point(201, 292);
             this.textBox_148.Multiline = true;
@@ -9506,7 +9599,7 @@
             // 
             this.textBox_147.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_147.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_147.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_147.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_147.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_147.Location = new System.Drawing.Point(201, 261);
             this.textBox_147.Multiline = true;
@@ -9529,7 +9622,7 @@
             // 
             this.textBox_146.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_146.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_146.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_146.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_146.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_146.Location = new System.Drawing.Point(201, 192);
             this.textBox_146.Multiline = true;
@@ -9543,7 +9636,7 @@
             // 
             this.textBox_145.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_145.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_145.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_145.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_145.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_145.Location = new System.Drawing.Point(201, 161);
             this.textBox_145.Multiline = true;
@@ -9566,7 +9659,7 @@
             // 
             this.textBox_152.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_152.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_152.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_152.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_152.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_152.Location = new System.Drawing.Point(201, 492);
             this.textBox_152.Multiline = true;
@@ -9580,7 +9673,7 @@
             // 
             this.textBox_151.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_151.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_151.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_151.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_151.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_151.Location = new System.Drawing.Point(201, 461);
             this.textBox_151.Multiline = true;
@@ -9688,7 +9781,7 @@
             this.stack6.Controls.Add(this.textBox_187);
             this.stack6.Location = new System.Drawing.Point(4, 39);
             this.stack6.Name = "stack6";
-            this.stack6.Size = new System.Drawing.Size(1161, 885);
+            this.stack6.Size = new System.Drawing.Size(1365, 933);
             this.stack6.TabIndex = 8;
             this.stack6.Text = "Stack 6";
             // 
@@ -9711,7 +9804,6 @@
             this.clear_6.TabIndex = 185;
             this.clear_6.Text = "Clear";
             this.clear_6.UseVisualStyleBackColor = false;
-            this.clear_6.Click += new System.EventHandler(this.clear_6_Click);
             // 
             // label445
             // 
@@ -10060,7 +10152,7 @@
             // 
             this.textBox_214.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_214.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_214.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_214.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_214.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_214.Location = new System.Drawing.Point(901, 592);
             this.textBox_214.Multiline = true;
@@ -10074,7 +10166,7 @@
             // 
             this.textBox_213.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_213.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_213.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_213.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_213.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_213.Location = new System.Drawing.Point(901, 561);
             this.textBox_213.Multiline = true;
@@ -10097,7 +10189,7 @@
             // 
             this.textBox_216.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_216.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_216.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_216.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_216.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_216.Location = new System.Drawing.Point(901, 692);
             this.textBox_216.Multiline = true;
@@ -10111,7 +10203,7 @@
             // 
             this.textBox_215.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_215.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_215.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_215.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_215.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_215.Location = new System.Drawing.Point(901, 661);
             this.textBox_215.Multiline = true;
@@ -10134,7 +10226,7 @@
             // 
             this.textBox_210.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_210.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_210.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_210.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_210.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_210.Location = new System.Drawing.Point(901, 392);
             this.textBox_210.Multiline = true;
@@ -10148,7 +10240,7 @@
             // 
             this.textBox_209.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_209.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_209.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_209.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_209.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_209.Location = new System.Drawing.Point(901, 361);
             this.textBox_209.Multiline = true;
@@ -10171,7 +10263,7 @@
             // 
             this.textBox_208.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_208.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_208.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_208.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_208.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_208.Location = new System.Drawing.Point(901, 292);
             this.textBox_208.Multiline = true;
@@ -10185,7 +10277,7 @@
             // 
             this.textBox_207.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_207.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_207.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_207.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_207.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_207.Location = new System.Drawing.Point(901, 261);
             this.textBox_207.Multiline = true;
@@ -10208,7 +10300,7 @@
             // 
             this.textBox_206.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_206.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_206.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_206.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_206.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_206.Location = new System.Drawing.Point(901, 192);
             this.textBox_206.Multiline = true;
@@ -10222,7 +10314,7 @@
             // 
             this.textBox_205.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_205.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_205.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_205.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_205.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_205.Location = new System.Drawing.Point(901, 161);
             this.textBox_205.Multiline = true;
@@ -10245,7 +10337,7 @@
             // 
             this.textBox_212.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_212.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_212.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_212.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_212.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_212.Location = new System.Drawing.Point(901, 492);
             this.textBox_212.Multiline = true;
@@ -10259,7 +10351,7 @@
             // 
             this.textBox_211.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_211.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_211.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_211.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_211.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_211.Location = new System.Drawing.Point(901, 461);
             this.textBox_211.Multiline = true;
@@ -10282,7 +10374,7 @@
             // 
             this.textBox_202.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_202.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_202.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_202.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_202.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_202.Location = new System.Drawing.Point(551, 592);
             this.textBox_202.Multiline = true;
@@ -10296,7 +10388,7 @@
             // 
             this.textBox_201.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_201.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_201.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_201.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_201.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_201.Location = new System.Drawing.Point(551, 561);
             this.textBox_201.Multiline = true;
@@ -10319,7 +10411,7 @@
             // 
             this.textBox_204.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_204.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_204.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_204.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_204.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_204.Location = new System.Drawing.Point(551, 692);
             this.textBox_204.Multiline = true;
@@ -10333,7 +10425,7 @@
             // 
             this.textBox_203.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_203.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_203.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_203.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_203.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_203.Location = new System.Drawing.Point(551, 661);
             this.textBox_203.Multiline = true;
@@ -10356,7 +10448,7 @@
             // 
             this.textBox_198.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_198.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_198.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_198.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_198.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_198.Location = new System.Drawing.Point(551, 392);
             this.textBox_198.Multiline = true;
@@ -10370,7 +10462,7 @@
             // 
             this.textBox_197.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_197.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_197.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_197.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_197.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_197.Location = new System.Drawing.Point(551, 361);
             this.textBox_197.Multiline = true;
@@ -10393,7 +10485,7 @@
             // 
             this.textBox_196.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_196.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_196.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_196.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_196.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_196.Location = new System.Drawing.Point(551, 292);
             this.textBox_196.Multiline = true;
@@ -10407,7 +10499,7 @@
             // 
             this.textBox_195.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_195.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_195.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_195.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_195.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_195.Location = new System.Drawing.Point(551, 261);
             this.textBox_195.Multiline = true;
@@ -10430,7 +10522,7 @@
             // 
             this.textBox_194.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_194.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_194.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_194.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_194.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_194.Location = new System.Drawing.Point(551, 192);
             this.textBox_194.Multiline = true;
@@ -10444,7 +10536,7 @@
             // 
             this.textBox_193.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_193.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_193.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_193.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_193.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_193.Location = new System.Drawing.Point(551, 161);
             this.textBox_193.Multiline = true;
@@ -10467,7 +10559,7 @@
             // 
             this.textBox_200.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_200.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_200.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_200.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_200.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_200.Location = new System.Drawing.Point(551, 492);
             this.textBox_200.Multiline = true;
@@ -10481,7 +10573,7 @@
             // 
             this.textBox_199.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_199.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_199.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_199.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_199.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_199.Location = new System.Drawing.Point(551, 461);
             this.textBox_199.Multiline = true;
@@ -10504,7 +10596,7 @@
             // 
             this.textBox_190.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_190.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_190.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_190.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_190.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_190.Location = new System.Drawing.Point(201, 592);
             this.textBox_190.Multiline = true;
@@ -10518,7 +10610,7 @@
             // 
             this.textBox_189.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_189.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_189.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_189.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_189.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_189.Location = new System.Drawing.Point(201, 561);
             this.textBox_189.Multiline = true;
@@ -10541,7 +10633,7 @@
             // 
             this.textBox_192.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_192.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_192.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_192.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_192.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_192.Location = new System.Drawing.Point(201, 692);
             this.textBox_192.Multiline = true;
@@ -10555,7 +10647,7 @@
             // 
             this.textBox_191.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_191.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_191.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_191.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_191.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_191.Location = new System.Drawing.Point(201, 661);
             this.textBox_191.Multiline = true;
@@ -10578,7 +10670,7 @@
             // 
             this.textBox_186.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_186.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_186.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_186.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_186.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_186.Location = new System.Drawing.Point(201, 392);
             this.textBox_186.Multiline = true;
@@ -10592,7 +10684,7 @@
             // 
             this.textBox_185.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_185.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_185.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_185.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_185.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_185.Location = new System.Drawing.Point(201, 361);
             this.textBox_185.Multiline = true;
@@ -10615,7 +10707,7 @@
             // 
             this.textBox_184.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_184.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_184.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_184.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_184.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_184.Location = new System.Drawing.Point(201, 292);
             this.textBox_184.Multiline = true;
@@ -10629,7 +10721,7 @@
             // 
             this.textBox_183.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_183.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_183.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_183.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_183.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_183.Location = new System.Drawing.Point(201, 261);
             this.textBox_183.Multiline = true;
@@ -10652,7 +10744,7 @@
             // 
             this.textBox_182.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_182.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_182.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_182.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_182.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_182.Location = new System.Drawing.Point(201, 192);
             this.textBox_182.Multiline = true;
@@ -10666,7 +10758,7 @@
             // 
             this.textBox_181.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_181.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_181.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_181.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_181.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_181.Location = new System.Drawing.Point(201, 161);
             this.textBox_181.Multiline = true;
@@ -10689,7 +10781,7 @@
             // 
             this.textBox_188.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_188.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_188.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_188.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_188.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_188.Location = new System.Drawing.Point(201, 492);
             this.textBox_188.Multiline = true;
@@ -10703,7 +10795,7 @@
             // 
             this.textBox_187.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_187.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_187.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_187.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_187.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_187.Location = new System.Drawing.Point(201, 461);
             this.textBox_187.Multiline = true;
@@ -10811,7 +10903,7 @@
             this.stack7.Controls.Add(this.textBox_223);
             this.stack7.Location = new System.Drawing.Point(4, 39);
             this.stack7.Name = "stack7";
-            this.stack7.Size = new System.Drawing.Size(1161, 885);
+            this.stack7.Size = new System.Drawing.Size(1365, 933);
             this.stack7.TabIndex = 9;
             this.stack7.Text = "Stack 7";
             // 
@@ -10824,7 +10916,6 @@
             this.stack_7u.Size = new System.Drawing.Size(204, 36);
             this.stack_7u.TabIndex = 187;
             this.stack_7u.Text = "Stack voltage: -";
-            this.stack_7u.Click += new System.EventHandler(this.stack_7u_Click);
             // 
             // clear_7
             // 
@@ -10835,7 +10926,6 @@
             this.clear_7.TabIndex = 185;
             this.clear_7.Text = "Clear";
             this.clear_7.UseVisualStyleBackColor = false;
-            this.clear_7.Click += new System.EventHandler(this.clear_7_Click);
             // 
             // label446
             // 
@@ -11184,7 +11274,7 @@
             // 
             this.textBox_250.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_250.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_250.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_250.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_250.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_250.Location = new System.Drawing.Point(901, 592);
             this.textBox_250.Multiline = true;
@@ -11198,7 +11288,7 @@
             // 
             this.textBox_249.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_249.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_249.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_249.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_249.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_249.Location = new System.Drawing.Point(901, 561);
             this.textBox_249.Multiline = true;
@@ -11221,7 +11311,7 @@
             // 
             this.textBox_252.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_252.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_252.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_252.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_252.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_252.Location = new System.Drawing.Point(901, 692);
             this.textBox_252.Multiline = true;
@@ -11235,7 +11325,7 @@
             // 
             this.textBox_251.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_251.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_251.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_251.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_251.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_251.Location = new System.Drawing.Point(901, 661);
             this.textBox_251.Multiline = true;
@@ -11258,7 +11348,7 @@
             // 
             this.textBox_246.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_246.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_246.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_246.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_246.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_246.Location = new System.Drawing.Point(901, 392);
             this.textBox_246.Multiline = true;
@@ -11272,7 +11362,7 @@
             // 
             this.textBox_245.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_245.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_245.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_245.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_245.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_245.Location = new System.Drawing.Point(901, 361);
             this.textBox_245.Multiline = true;
@@ -11295,7 +11385,7 @@
             // 
             this.textBox_244.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_244.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_244.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_244.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_244.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_244.Location = new System.Drawing.Point(901, 292);
             this.textBox_244.Multiline = true;
@@ -11309,7 +11399,7 @@
             // 
             this.textBox_243.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_243.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_243.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_243.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_243.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_243.Location = new System.Drawing.Point(901, 261);
             this.textBox_243.Multiline = true;
@@ -11332,7 +11422,7 @@
             // 
             this.textBox_242.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_242.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_242.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_242.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_242.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_242.Location = new System.Drawing.Point(901, 192);
             this.textBox_242.Multiline = true;
@@ -11346,7 +11436,7 @@
             // 
             this.textBox_241.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_241.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_241.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_241.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_241.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_241.Location = new System.Drawing.Point(901, 161);
             this.textBox_241.Multiline = true;
@@ -11369,7 +11459,7 @@
             // 
             this.textBox_248.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_248.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_248.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_248.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_248.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_248.Location = new System.Drawing.Point(901, 492);
             this.textBox_248.Multiline = true;
@@ -11383,7 +11473,7 @@
             // 
             this.textBox_247.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_247.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_247.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_247.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_247.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_247.Location = new System.Drawing.Point(901, 461);
             this.textBox_247.Multiline = true;
@@ -11406,7 +11496,7 @@
             // 
             this.textBox_238.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_238.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_238.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_238.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_238.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_238.Location = new System.Drawing.Point(551, 592);
             this.textBox_238.Multiline = true;
@@ -11420,7 +11510,7 @@
             // 
             this.textBox_237.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_237.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_237.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_237.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_237.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_237.Location = new System.Drawing.Point(551, 561);
             this.textBox_237.Multiline = true;
@@ -11443,7 +11533,7 @@
             // 
             this.textBox_240.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_240.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_240.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_240.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_240.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_240.Location = new System.Drawing.Point(551, 692);
             this.textBox_240.Multiline = true;
@@ -11457,7 +11547,7 @@
             // 
             this.textBox_239.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_239.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_239.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_239.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_239.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_239.Location = new System.Drawing.Point(551, 661);
             this.textBox_239.Multiline = true;
@@ -11480,7 +11570,7 @@
             // 
             this.textBox_234.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_234.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_234.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_234.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_234.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_234.Location = new System.Drawing.Point(551, 392);
             this.textBox_234.Multiline = true;
@@ -11494,7 +11584,7 @@
             // 
             this.textBox_233.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_233.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_233.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_233.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_233.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_233.Location = new System.Drawing.Point(551, 361);
             this.textBox_233.Multiline = true;
@@ -11517,7 +11607,7 @@
             // 
             this.textBox_232.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_232.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_232.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_232.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_232.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_232.Location = new System.Drawing.Point(551, 292);
             this.textBox_232.Multiline = true;
@@ -11531,7 +11621,7 @@
             // 
             this.textBox_231.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_231.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_231.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_231.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_231.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_231.Location = new System.Drawing.Point(551, 261);
             this.textBox_231.Multiline = true;
@@ -11554,7 +11644,7 @@
             // 
             this.textBox_230.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_230.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_230.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_230.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_230.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_230.Location = new System.Drawing.Point(551, 192);
             this.textBox_230.Multiline = true;
@@ -11568,7 +11658,7 @@
             // 
             this.textBox_229.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_229.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_229.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_229.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_229.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_229.Location = new System.Drawing.Point(551, 161);
             this.textBox_229.Multiline = true;
@@ -11591,7 +11681,7 @@
             // 
             this.textBox_236.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_236.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_236.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_236.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_236.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_236.Location = new System.Drawing.Point(551, 492);
             this.textBox_236.Multiline = true;
@@ -11605,7 +11695,7 @@
             // 
             this.textBox_235.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_235.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_235.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_235.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_235.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_235.Location = new System.Drawing.Point(551, 461);
             this.textBox_235.Multiline = true;
@@ -11628,7 +11718,7 @@
             // 
             this.textBox_226.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_226.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_226.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_226.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_226.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_226.Location = new System.Drawing.Point(201, 592);
             this.textBox_226.Multiline = true;
@@ -11642,7 +11732,7 @@
             // 
             this.textBox_225.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_225.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_225.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_225.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_225.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_225.Location = new System.Drawing.Point(201, 561);
             this.textBox_225.Multiline = true;
@@ -11665,7 +11755,7 @@
             // 
             this.textBox_228.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_228.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_228.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_228.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_228.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_228.Location = new System.Drawing.Point(201, 692);
             this.textBox_228.Multiline = true;
@@ -11679,7 +11769,7 @@
             // 
             this.textBox_227.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_227.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_227.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_227.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_227.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_227.Location = new System.Drawing.Point(201, 661);
             this.textBox_227.Multiline = true;
@@ -11702,7 +11792,7 @@
             // 
             this.textBox_222.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_222.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_222.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_222.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_222.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_222.Location = new System.Drawing.Point(201, 392);
             this.textBox_222.Multiline = true;
@@ -11716,7 +11806,7 @@
             // 
             this.textBox_221.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_221.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_221.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_221.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_221.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_221.Location = new System.Drawing.Point(201, 361);
             this.textBox_221.Multiline = true;
@@ -11739,7 +11829,7 @@
             // 
             this.textBox_220.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_220.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_220.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_220.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_220.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_220.Location = new System.Drawing.Point(201, 292);
             this.textBox_220.Multiline = true;
@@ -11753,7 +11843,7 @@
             // 
             this.textBox_219.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_219.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_219.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_219.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_219.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_219.Location = new System.Drawing.Point(201, 261);
             this.textBox_219.Multiline = true;
@@ -11776,7 +11866,7 @@
             // 
             this.textBox_218.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_218.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_218.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_218.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_218.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_218.Location = new System.Drawing.Point(201, 192);
             this.textBox_218.Multiline = true;
@@ -11790,7 +11880,7 @@
             // 
             this.textBox_217.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_217.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_217.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_217.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_217.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_217.Location = new System.Drawing.Point(201, 161);
             this.textBox_217.Multiline = true;
@@ -11813,7 +11903,7 @@
             // 
             this.textBox_224.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_224.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_224.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_224.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_224.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_224.Location = new System.Drawing.Point(201, 492);
             this.textBox_224.Multiline = true;
@@ -11827,7 +11917,7 @@
             // 
             this.textBox_223.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_223.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_223.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_223.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_223.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_223.Location = new System.Drawing.Point(201, 461);
             this.textBox_223.Multiline = true;
@@ -11935,7 +12025,7 @@
             this.stack8.Controls.Add(this.textBox_259);
             this.stack8.Location = new System.Drawing.Point(4, 39);
             this.stack8.Name = "stack8";
-            this.stack8.Size = new System.Drawing.Size(1161, 885);
+            this.stack8.Size = new System.Drawing.Size(1365, 933);
             this.stack8.TabIndex = 10;
             this.stack8.Text = "Stack 8";
             // 
@@ -11958,7 +12048,6 @@
             this.clear_8.TabIndex = 185;
             this.clear_8.Text = "Clear";
             this.clear_8.UseVisualStyleBackColor = false;
-            this.clear_8.Click += new System.EventHandler(this.clear_8_Click);
             // 
             // label447
             // 
@@ -12307,7 +12396,7 @@
             // 
             this.textBox_286.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_286.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_286.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_286.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_286.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_286.Location = new System.Drawing.Point(901, 592);
             this.textBox_286.Multiline = true;
@@ -12321,7 +12410,7 @@
             // 
             this.textBox_285.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_285.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_285.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_285.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_285.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_285.Location = new System.Drawing.Point(901, 561);
             this.textBox_285.Multiline = true;
@@ -12344,7 +12433,7 @@
             // 
             this.textBox_288.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_288.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_288.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_288.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_288.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_288.Location = new System.Drawing.Point(901, 692);
             this.textBox_288.Multiline = true;
@@ -12358,7 +12447,7 @@
             // 
             this.textBox_287.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_287.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_287.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_287.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_287.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_287.Location = new System.Drawing.Point(901, 661);
             this.textBox_287.Multiline = true;
@@ -12381,7 +12470,7 @@
             // 
             this.textBox_282.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_282.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_282.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_282.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_282.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_282.Location = new System.Drawing.Point(901, 392);
             this.textBox_282.Multiline = true;
@@ -12395,7 +12484,7 @@
             // 
             this.textBox_281.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_281.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_281.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_281.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_281.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_281.Location = new System.Drawing.Point(901, 361);
             this.textBox_281.Multiline = true;
@@ -12418,7 +12507,7 @@
             // 
             this.textBox_280.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_280.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_280.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_280.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_280.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_280.Location = new System.Drawing.Point(901, 292);
             this.textBox_280.Multiline = true;
@@ -12432,7 +12521,7 @@
             // 
             this.textBox_279.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_279.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_279.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_279.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_279.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_279.Location = new System.Drawing.Point(901, 261);
             this.textBox_279.Multiline = true;
@@ -12455,7 +12544,7 @@
             // 
             this.textBox_278.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_278.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_278.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_278.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_278.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_278.Location = new System.Drawing.Point(901, 192);
             this.textBox_278.Multiline = true;
@@ -12469,7 +12558,7 @@
             // 
             this.textBox_277.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_277.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_277.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_277.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_277.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_277.Location = new System.Drawing.Point(901, 161);
             this.textBox_277.Multiline = true;
@@ -12492,7 +12581,7 @@
             // 
             this.textBox_284.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_284.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_284.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_284.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_284.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_284.Location = new System.Drawing.Point(901, 492);
             this.textBox_284.Multiline = true;
@@ -12506,7 +12595,7 @@
             // 
             this.textBox_283.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_283.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_283.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_283.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_283.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_283.Location = new System.Drawing.Point(901, 461);
             this.textBox_283.Multiline = true;
@@ -12529,7 +12618,7 @@
             // 
             this.textBox_274.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_274.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_274.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_274.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_274.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_274.Location = new System.Drawing.Point(551, 592);
             this.textBox_274.Multiline = true;
@@ -12543,7 +12632,7 @@
             // 
             this.textBox_273.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_273.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_273.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_273.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_273.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_273.Location = new System.Drawing.Point(551, 561);
             this.textBox_273.Multiline = true;
@@ -12566,7 +12655,7 @@
             // 
             this.textBox_276.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_276.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_276.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_276.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_276.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_276.Location = new System.Drawing.Point(551, 692);
             this.textBox_276.Multiline = true;
@@ -12580,7 +12669,7 @@
             // 
             this.textBox_275.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_275.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_275.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_275.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_275.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_275.Location = new System.Drawing.Point(551, 661);
             this.textBox_275.Multiline = true;
@@ -12603,7 +12692,7 @@
             // 
             this.textBox_270.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_270.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_270.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_270.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_270.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_270.Location = new System.Drawing.Point(551, 392);
             this.textBox_270.Multiline = true;
@@ -12617,7 +12706,7 @@
             // 
             this.textBox_269.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_269.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_269.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_269.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_269.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_269.Location = new System.Drawing.Point(551, 361);
             this.textBox_269.Multiline = true;
@@ -12640,7 +12729,7 @@
             // 
             this.textBox_268.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_268.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_268.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_268.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_268.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_268.Location = new System.Drawing.Point(551, 292);
             this.textBox_268.Multiline = true;
@@ -12654,7 +12743,7 @@
             // 
             this.textBox_267.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_267.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_267.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_267.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_267.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_267.Location = new System.Drawing.Point(551, 261);
             this.textBox_267.Multiline = true;
@@ -12677,7 +12766,7 @@
             // 
             this.textBox_266.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_266.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_266.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_266.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_266.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_266.Location = new System.Drawing.Point(551, 192);
             this.textBox_266.Multiline = true;
@@ -12691,7 +12780,7 @@
             // 
             this.textBox_265.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_265.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_265.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_265.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_265.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_265.Location = new System.Drawing.Point(551, 161);
             this.textBox_265.Multiline = true;
@@ -12714,7 +12803,7 @@
             // 
             this.textBox_272.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_272.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_272.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_272.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_272.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_272.Location = new System.Drawing.Point(551, 492);
             this.textBox_272.Multiline = true;
@@ -12728,7 +12817,7 @@
             // 
             this.textBox_271.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_271.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_271.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_271.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_271.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_271.Location = new System.Drawing.Point(551, 461);
             this.textBox_271.Multiline = true;
@@ -12751,7 +12840,7 @@
             // 
             this.textBox_262.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_262.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_262.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_262.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_262.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_262.Location = new System.Drawing.Point(201, 592);
             this.textBox_262.Multiline = true;
@@ -12765,7 +12854,7 @@
             // 
             this.textBox_261.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_261.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_261.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_261.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_261.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_261.Location = new System.Drawing.Point(201, 561);
             this.textBox_261.Multiline = true;
@@ -12788,7 +12877,7 @@
             // 
             this.textBox_264.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_264.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_264.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_264.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_264.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_264.Location = new System.Drawing.Point(201, 692);
             this.textBox_264.Multiline = true;
@@ -12802,7 +12891,7 @@
             // 
             this.textBox_263.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_263.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_263.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_263.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_263.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_263.Location = new System.Drawing.Point(201, 661);
             this.textBox_263.Multiline = true;
@@ -12825,7 +12914,7 @@
             // 
             this.textBox_258.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_258.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_258.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_258.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_258.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_258.Location = new System.Drawing.Point(201, 392);
             this.textBox_258.Multiline = true;
@@ -12839,7 +12928,7 @@
             // 
             this.textBox_257.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_257.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_257.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_257.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_257.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_257.Location = new System.Drawing.Point(201, 361);
             this.textBox_257.Multiline = true;
@@ -12862,7 +12951,7 @@
             // 
             this.textBox_256.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_256.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_256.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_256.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_256.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_256.Location = new System.Drawing.Point(201, 292);
             this.textBox_256.Multiline = true;
@@ -12876,7 +12965,7 @@
             // 
             this.textBox_255.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_255.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_255.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_255.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_255.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_255.Location = new System.Drawing.Point(201, 261);
             this.textBox_255.Multiline = true;
@@ -12899,7 +12988,7 @@
             // 
             this.textBox_254.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_254.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_254.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_254.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_254.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_254.Location = new System.Drawing.Point(201, 192);
             this.textBox_254.Multiline = true;
@@ -12913,7 +13002,7 @@
             // 
             this.textBox_253.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_253.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_253.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_253.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_253.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_253.Location = new System.Drawing.Point(201, 161);
             this.textBox_253.Multiline = true;
@@ -12936,7 +13025,7 @@
             // 
             this.textBox_260.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_260.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_260.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_260.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_260.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_260.Location = new System.Drawing.Point(201, 492);
             this.textBox_260.Multiline = true;
@@ -12950,7 +13039,7 @@
             // 
             this.textBox_259.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_259.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_259.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_259.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.textBox_259.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_259.Location = new System.Drawing.Point(201, 461);
             this.textBox_259.Multiline = true;
@@ -12960,88 +13049,16 @@
             this.textBox_259.TabIndex = 93;
             this.textBox_259.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // richTextBox2
+            // richTextBox_master
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(7, 131);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(429, 853);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
-            this.richTextBox2.HScroll += new System.EventHandler(this.Form1_Load);
-            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // disconnect
-            // 
-            this.disconnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.disconnect.Font = new System.Drawing.Font("3ds Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.disconnect.Location = new System.Drawing.Point(373, 9);
-            this.disconnect.Name = "disconnect";
-            this.disconnect.Size = new System.Drawing.Size(180, 36);
-            this.disconnect.TabIndex = 27;
-            this.disconnect.Text = "Disconnect";
-            this.disconnect.UseVisualStyleBackColor = false;
-            this.disconnect.Click += new System.EventHandler(this.disconnect_Click);
-            // 
-            // label448
-            // 
-            this.label448.AutoSize = true;
-            this.label448.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label448.Location = new System.Drawing.Point(2, 63);
-            this.label448.Name = "label448";
-            this.label448.Size = new System.Drawing.Size(387, 58);
-            this.label448.TabIndex = 184;
-            this.label448.Text = "Recieve CAN messages with ID from \r\n0x                    to  0x";
-            this.label448.Click += new System.EventHandler(this.label448_Click);
-            // 
-            // filter_id_low_box
-            // 
-            this.filter_id_low_box.BackColor = System.Drawing.SystemColors.Control;
-            this.filter_id_low_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.filter_id_low_box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.filter_id_low_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.filter_id_low_box.Location = new System.Drawing.Point(31, 85);
-            this.filter_id_low_box.MaxLength = 3;
-            this.filter_id_low_box.Multiline = true;
-            this.filter_id_low_box.Name = "filter_id_low_box";
-            this.filter_id_low_box.Size = new System.Drawing.Size(70, 30);
-            this.filter_id_low_box.TabIndex = 185;
-            this.filter_id_low_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.filter_id_low_box.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
-            // 
-            // filter_id_high_box
-            // 
-            this.filter_id_high_box.BackColor = System.Drawing.SystemColors.Control;
-            this.filter_id_high_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.filter_id_high_box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.filter_id_high_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.filter_id_high_box.Location = new System.Drawing.Point(158, 85);
-            this.filter_id_high_box.MaxLength = 3;
-            this.filter_id_high_box.Multiline = true;
-            this.filter_id_high_box.Name = "filter_id_high_box";
-            this.filter_id_high_box.Size = new System.Drawing.Size(70, 30);
-            this.filter_id_high_box.TabIndex = 186;
-            this.filter_id_high_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.filter_id_high_box.TextChanged += new System.EventHandler(this.filter_id_high_box_TextChanged);
-            // 
-            // reset_button
-            // 
-            this.reset_button.BackColor = System.Drawing.SystemColors.Control;
-            this.reset_button.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.reset_button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.reset_button.Location = new System.Drawing.Point(315, 83);
-            this.reset_button.Name = "reset_button";
-            this.reset_button.Size = new System.Drawing.Size(117, 34);
-            this.reset_button.TabIndex = 187;
-            this.reset_button.Text = "Reset filter";
-            this.reset_button.UseVisualStyleBackColor = false;
-            this.reset_button.Click += new System.EventHandler(this.reset_button_Click);
+            this.richTextBox_master.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_master.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold);
+            this.richTextBox_master.Location = new System.Drawing.Point(574, 833);
+            this.richTextBox_master.Name = "richTextBox_master";
+            this.richTextBox_master.ReadOnly = true;
+            this.richTextBox_master.Size = new System.Drawing.Size(326, 287);
+            this.richTextBox_master.TabIndex = 223;
+            this.richTextBox_master.Text = "";
             // 
             // Form1
             // 
@@ -13049,28 +13066,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1822, 1055);
-            this.Controls.Add(this.reset_button);
-            this.Controls.Add(this.filter_id_high_box);
-            this.Controls.Add(this.filter_id_low_box);
-            this.Controls.Add(this.label448);
-            this.Controls.Add(this.disconnect);
-            this.Controls.Add(this.connect);
-            this.Controls.Add(this.update);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.tabcontrol1);
-            this.Controls.Add(this.richTextBox2);
+            this.ClientSize = new System.Drawing.Size(1822, 1003);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Font = new System.Drawing.Font("3ds Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UTC 1.27";
+            this.Text = "UTC 2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.tabcontrol1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.nodes_groupBox.ResumeLayout(false);
+            this.nodes_groupBox.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -13091,10 +13108,10 @@
             this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            this.group_vcu.ResumeLayout(false);
-            this.group_vcu.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.group_vcu.ResumeLayout(false);
+            this.group_vcu.PerformLayout();
             this.stack1.ResumeLayout(false);
             this.stack1.PerformLayout();
             this.stack2.ResumeLayout(false);
@@ -13117,116 +13134,255 @@
         }
 
         #endregion
-
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Button reset_button;
+        private System.Windows.Forms.Button disconnect;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox filter_id_high_box;
+        private System.Windows.Forms.TextBox filter_id_low_box;
+        private System.Windows.Forms.Label label448;
+        private System.Windows.Forms.Label label554;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Label can_bus_load;
+        private System.Windows.Forms.Button connect;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TabControl tabcontrol1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button query_button;
+        private System.Windows.Forms.GroupBox nodes_groupBox;
+        private System.Windows.Forms.RadioButton steering_wheel_radio;
+        private System.Windows.Forms.RadioButton brake_light_radio;
+        private System.Windows.Forms.RadioButton fan_radio;
+        private System.Windows.Forms.RadioButton ams_lv_radio;
+        private System.Windows.Forms.RadioButton can_multiplexer_front_radio;
+        private System.Windows.Forms.RadioButton bcu_radio;
+        private System.Windows.Forms.RadioButton empty_radio;
+        private System.Windows.Forms.RadioButton can_multiplexer_rear_radio;
+        private System.Windows.Forms.RadioButton vcu_radio;
+        private System.Windows.Forms.RadioButton vcdu_radio;
+        private System.Windows.Forms.RadioButton ami_radio;
+        private System.Windows.Forms.RadioButton discharge_radio;
+        private System.Windows.Forms.RadioButton assi_radio;
+        private System.Windows.Forms.RadioButton precharge_radio;
+        private System.Windows.Forms.RadioButton ebs_radio;
+        private System.Windows.Forms.RadioButton ams_master_radio;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button open_file;
         private System.Windows.Forms.Button close_file;
         private System.Windows.Forms.Button download;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Button update;
-        private System.Windows.Forms.Button connect;
-        private System.Windows.Forms.RadioButton precharge_radio;
-        private System.Windows.Forms.RadioButton discharge_radio;
-        private System.Windows.Forms.RadioButton vcu_radio;
-        private System.Windows.Forms.RadioButton bcu_radio;
-        private System.Windows.Forms.RadioButton ams_lv_radio;
-        private System.Windows.Forms.RadioButton brake_light_radio;
-        private System.Windows.Forms.RadioButton can_multiplexer_front_radio;
-        private System.Windows.Forms.RadioButton can_multiplexer_rear_radio;
-        private System.Windows.Forms.RadioButton ami_radio;
-        private System.Windows.Forms.RadioButton assi_radio;
-        private System.Windows.Forms.RadioButton ams_master_radio;
-        private System.Windows.Forms.RadioButton ebs_radio;
-        private System.Windows.Forms.RadioButton steering_wheel_radio;
-        private System.Windows.Forms.RadioButton vcdu_radio;
-        private System.Windows.Forms.RadioButton empty_radio;
-        private System.Windows.Forms.TabControl tabcontrol1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox brake_pressure_box;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox sb_pressure_box;
-        private System.Windows.Forms.TextBox ebs_pressure_box;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.TextBox charging_current_box;
+        private System.Windows.Forms.Label label553;
+        private System.Windows.Forms.Label label552;
+        private System.Windows.Forms.TextBox charging_status_box;
+        private System.Windows.Forms.Label label551;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label492;
+        private System.Windows.Forms.Label label540;
+        private System.Windows.Forms.Label label541;
+        private System.Windows.Forms.Label label491;
+        private System.Windows.Forms.Label label486;
+        private System.Windows.Forms.Label label482;
+        private System.Windows.Forms.Label label525;
+        private System.Windows.Forms.Label label524;
+        private System.Windows.Forms.Label label523;
+        private System.Windows.Forms.Label label522;
+        private System.Windows.Forms.TextBox ams_lv_status_box;
+        private System.Windows.Forms.Label label521;
+        private System.Windows.Forms.Label label501;
+        private System.Windows.Forms.Label label520;
+        private System.Windows.Forms.Label label517;
+        private System.Windows.Forms.Label label518;
+        private System.Windows.Forms.Label label519;
+        private System.Windows.Forms.TextBox lv_voltage_cell_6_box;
+        private System.Windows.Forms.TextBox lv_temp_cell_6_box;
+        private System.Windows.Forms.Label label510;
+        private System.Windows.Forms.Label label509;
+        private System.Windows.Forms.TextBox lv_temp_cell_5_box;
+        private System.Windows.Forms.TextBox lv_voltage_cell_5_box;
+        private System.Windows.Forms.Label label511;
+        private System.Windows.Forms.Label label508;
+        private System.Windows.Forms.TextBox lv_temp_cell_4_box;
+        private System.Windows.Forms.Label label512;
+        private System.Windows.Forms.Label label507;
+        private System.Windows.Forms.Label label506;
+        private System.Windows.Forms.Label label505;
+        private System.Windows.Forms.TextBox lv_voltage_cell_4_box;
+        private System.Windows.Forms.Label label504;
+        private System.Windows.Forms.TextBox lv_voltage_cell_2_box;
+        private System.Windows.Forms.TextBox lv_voltage_cell_3_box;
+        private System.Windows.Forms.TextBox lv_voltage_cell_1_box;
+        private System.Windows.Forms.TextBox lv_hottest_cell_box;
+        private System.Windows.Forms.Label label502;
+        private System.Windows.Forms.Label label503;
+        private System.Windows.Forms.TextBox lv_temp_cell_1_box;
+        private System.Windows.Forms.TextBox lv_temp_cell_3_box;
+        private System.Windows.Forms.TextBox lv_temp_cell_2_box;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox actuator_status_box;
+        private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox rpm2_box;
         private System.Windows.Forms.TextBox rpm1_box;
-        private System.Windows.Forms.Button query_button;
-        private System.Windows.Forms.Button disconnect;
-        public System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RadioButton fan_radio;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label499;
+        private System.Windows.Forms.TextBox precharge_status_box;
+        private System.Windows.Forms.TextBox airminus_box;
+        private System.Windows.Forms.Label label473;
+        private System.Windows.Forms.Label label474;
+        private System.Windows.Forms.Label label475;
+        private System.Windows.Forms.TextBox airplus_box;
+        private System.Windows.Forms.TextBox prechrelay_box;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label548;
+        private System.Windows.Forms.Label label547;
+        private System.Windows.Forms.Label label546;
+        private System.Windows.Forms.Label label545;
+        private System.Windows.Forms.Label label544;
+        private System.Windows.Forms.Label label543;
+        private System.Windows.Forms.Label label542;
+        private System.Windows.Forms.TextBox slave_status_box_8;
+        private System.Windows.Forms.TextBox slave_status_box_7;
+        private System.Windows.Forms.TextBox slave_status_box_6;
+        private System.Windows.Forms.TextBox slave_status_box_5;
+        private System.Windows.Forms.TextBox slave_status_box_4;
+        private System.Windows.Forms.TextBox slave_status_box_3;
+        private System.Windows.Forms.Label label481;
+        private System.Windows.Forms.TextBox master_status_box;
+        private System.Windows.Forms.Label label500;
+        private System.Windows.Forms.TextBox slave_status_box_2;
+        private System.Windows.Forms.TextBox hotcell;
+        private System.Windows.Forms.Label label472;
+        private System.Windows.Forms.Label label471;
+        private System.Windows.Forms.TextBox current_box;
+        private System.Windows.Forms.TextBox slave_status_box_1;
+        private System.Windows.Forms.Label label477;
+        private System.Windows.Forms.Label label476;
+        private System.Windows.Forms.Label label497;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox vcdu_status_box;
+        private System.Windows.Forms.TextBox motor_temp_box;
+        private System.Windows.Forms.TextBox inverter_temp_box;
+        private System.Windows.Forms.Label label451;
+        private System.Windows.Forms.Label label450;
+        private System.Windows.Forms.Label label452;
+        private System.Windows.Forms.Label label453;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Label cell_max_number;
+        private System.Windows.Forms.Label stack_max_number;
+        private System.Windows.Forms.Label label556;
+        private System.Windows.Forms.TextBox voltage_max_box;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label558;
+        private System.Windows.Forms.Label cell_min_number;
+        private System.Windows.Forms.Label stack_min_number;
+        private System.Windows.Forms.TextBox voltage_min_box;
+        private System.Windows.Forms.TextBox total_voltage_box;
+        private System.Windows.Forms.Label label498;
+        private System.Windows.Forms.Label label495;
+        private System.Windows.Forms.TextBox stack5_box;
+        private System.Windows.Forms.TextBox stack1_box;
+        private System.Windows.Forms.Label label455;
+        private System.Windows.Forms.TextBox stack2_box;
+        private System.Windows.Forms.Label label456;
+        private System.Windows.Forms.TextBox stack3_box;
+        private System.Windows.Forms.Label label457;
+        private System.Windows.Forms.TextBox stack4_box;
+        private System.Windows.Forms.Label label458;
+        private System.Windows.Forms.Label label459;
+        private System.Windows.Forms.TextBox stack6_box;
+        private System.Windows.Forms.Label label460;
+        private System.Windows.Forms.TextBox stack7_box;
+        private System.Windows.Forms.Label label461;
+        private System.Windows.Forms.TextBox stack8_box;
+        private System.Windows.Forms.Label label470;
+        private System.Windows.Forms.Label label462;
+        private System.Windows.Forms.Label label469;
+        private System.Windows.Forms.Label label463;
+        private System.Windows.Forms.Label label468;
+        private System.Windows.Forms.Label label464;
+        private System.Windows.Forms.Label label467;
+        private System.Windows.Forms.Label label465;
+        private System.Windows.Forms.Label label466;
+        private System.Windows.Forms.GroupBox group_vcu;
+        private System.Windows.Forms.Label label550;
+        private System.Windows.Forms.Label label549;
+        private System.Windows.Forms.Label label526;
+        private System.Windows.Forms.Label label528;
+        private System.Windows.Forms.Label label530;
+        private System.Windows.Forms.Label label531;
+        private System.Windows.Forms.Label label532;
+        private System.Windows.Forms.Label label533;
+        private System.Windows.Forms.Label label534;
+        private System.Windows.Forms.Label label535;
+        private System.Windows.Forms.Label label536;
+        private System.Windows.Forms.Label label537;
+        private System.Windows.Forms.Label label538;
+        private System.Windows.Forms.Label label539;
+        private System.Windows.Forms.TextBox assi_current_box;
+        private System.Windows.Forms.TextBox gps_current_box;
+        private System.Windows.Forms.TextBox as_current_box;
+        private System.Windows.Forms.TextBox cameras_current_box;
+        private System.Windows.Forms.TextBox res_current_box;
+        private System.Windows.Forms.TextBox lidar_current_box;
+        private System.Windows.Forms.Label label527;
+        private System.Windows.Forms.Label label529;
+        private System.Windows.Forms.TextBox brake_light_current_box;
+        private System.Windows.Forms.TextBox vcdu_current_box;
+        private System.Windows.Forms.Label label513;
+        private System.Windows.Forms.Label label514;
+        private System.Windows.Forms.Label label515;
+        private System.Windows.Forms.Label label516;
+        private System.Windows.Forms.TextBox ebs_current_box;
+        private System.Windows.Forms.TextBox actuator_current_box;
+        private System.Windows.Forms.Label label449;
+        private System.Windows.Forms.TextBox vcu_status_box;
+        private System.Windows.Forms.Label label487;
+        private System.Windows.Forms.Label label488;
+        private System.Windows.Forms.Label label485;
+        private System.Windows.Forms.Label label489;
+        private System.Windows.Forms.Label label484;
+        private System.Windows.Forms.Label label490;
+        private System.Windows.Forms.Label label483;
+        private System.Windows.Forms.Label label493;
+        private System.Windows.Forms.Label label480;
+        private System.Windows.Forms.Label label494;
+        private System.Windows.Forms.Label label479;
+        private System.Windows.Forms.Label label478;
+        private System.Windows.Forms.TextBox fan2_current_box;
+        private System.Windows.Forms.TextBox fan1_current_box;
+        private System.Windows.Forms.TextBox lcs_current_box;
+        private System.Windows.Forms.TextBox cooling_pump_current_box;
+        private System.Windows.Forms.TextBox inverter_current_box;
+        private System.Windows.Forms.TextBox tsal_current_box;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox brake_system_status_box;
+        private System.Windows.Forms.TextBox brake_pressure_box;
+        private System.Windows.Forms.Label label496;
+        private System.Windows.Forms.TextBox ebs_pressure_box;
+        private System.Windows.Forms.Label label454;
+        private System.Windows.Forms.TextBox sb_pressure_box;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage stack1;
-        private System.Windows.Forms.TabPage stack2;
-        private System.Windows.Forms.TabPage stack3;
-        private System.Windows.Forms.TabPage stack4;
-        private System.Windows.Forms.TabPage stack5;
-        private System.Windows.Forms.TabPage stack6;
-        private System.Windows.Forms.TabPage stack7;
-        private System.Windows.Forms.TabPage stack8;
-        private System.Windows.Forms.Label stack1_2;
-        private System.Windows.Forms.TextBox textBox_2;
-        private System.Windows.Forms.TextBox textBox_1;
-        private System.Windows.Forms.Label stack1_1;
-        private System.Windows.Forms.TextBox textBox_8;
-        private System.Windows.Forms.TextBox textBox_7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox_6;
-        private System.Windows.Forms.TextBox textBox_5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox_4;
-        private System.Windows.Forms.TextBox textBox_3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox_10;
-        private System.Windows.Forms.TextBox textBox_9;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox_12;
-        private System.Windows.Forms.TextBox textBox_11;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox_34;
-        private System.Windows.Forms.TextBox textBox_33;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox_36;
-        private System.Windows.Forms.TextBox textBox_35;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox_30;
-        private System.Windows.Forms.TextBox textBox_29;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox_28;
-        private System.Windows.Forms.TextBox textBox_27;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox_26;
-        private System.Windows.Forms.TextBox textBox_25;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox_32;
-        private System.Windows.Forms.TextBox textBox_31;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox_22;
-        private System.Windows.Forms.TextBox textBox_21;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox_24;
-        private System.Windows.Forms.TextBox textBox_23;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox_18;
-        private System.Windows.Forms.TextBox textBox_17;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox_16;
-        private System.Windows.Forms.TextBox textBox_15;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox_14;
-        private System.Windows.Forms.TextBox textBox_13;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox_20;
-        private System.Windows.Forms.TextBox textBox_19;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label stack_1u;
+        private System.Windows.Forms.Button clear_1;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label59;
@@ -13263,6 +13419,65 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox_34;
+        private System.Windows.Forms.TextBox textBox_33;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox_36;
+        private System.Windows.Forms.TextBox textBox_35;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox_30;
+        private System.Windows.Forms.TextBox textBox_29;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox_28;
+        private System.Windows.Forms.TextBox textBox_27;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox_26;
+        private System.Windows.Forms.TextBox textBox_25;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox_32;
+        private System.Windows.Forms.TextBox textBox_31;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox_22;
+        private System.Windows.Forms.TextBox textBox_21;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox_24;
+        private System.Windows.Forms.TextBox textBox_23;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox_18;
+        private System.Windows.Forms.TextBox textBox_17;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox_16;
+        private System.Windows.Forms.TextBox textBox_15;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox_14;
+        private System.Windows.Forms.TextBox textBox_13;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox_20;
+        private System.Windows.Forms.TextBox textBox_19;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox_10;
+        private System.Windows.Forms.TextBox textBox_9;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox_12;
+        private System.Windows.Forms.TextBox textBox_11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox_6;
+        private System.Windows.Forms.TextBox textBox_5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox_4;
+        private System.Windows.Forms.TextBox textBox_3;
+        private System.Windows.Forms.Label stack1_2;
+        private System.Windows.Forms.TextBox textBox_2;
+        private System.Windows.Forms.TextBox textBox_1;
+        private System.Windows.Forms.Label stack1_1;
+        private System.Windows.Forms.TextBox textBox_8;
+        private System.Windows.Forms.TextBox textBox_7;
+        private System.Windows.Forms.TabPage stack2;
+        private System.Windows.Forms.Label stack_2u;
+        private System.Windows.Forms.Button clear_2;
+        private System.Windows.Forms.Label label441;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label65;
@@ -13353,6 +13568,10 @@
         private System.Windows.Forms.Label label116;
         private System.Windows.Forms.TextBox textBox_44;
         private System.Windows.Forms.TextBox textBox_43;
+        private System.Windows.Forms.TabPage stack3;
+        private System.Windows.Forms.Label stack_3u;
+        private System.Windows.Forms.Button clear_3;
+        private System.Windows.Forms.Label label442;
         private System.Windows.Forms.Label label117;
         private System.Windows.Forms.Label label118;
         private System.Windows.Forms.Label label119;
@@ -13443,6 +13662,10 @@
         private System.Windows.Forms.Label label170;
         private System.Windows.Forms.TextBox textBox_80;
         private System.Windows.Forms.TextBox textBox_79;
+        private System.Windows.Forms.TabPage stack4;
+        private System.Windows.Forms.Label stack_4u;
+        private System.Windows.Forms.Button clear_4;
+        private System.Windows.Forms.Label label443;
         private System.Windows.Forms.Label label171;
         private System.Windows.Forms.Label label172;
         private System.Windows.Forms.Label label173;
@@ -13533,6 +13756,10 @@
         private System.Windows.Forms.Label label224;
         private System.Windows.Forms.TextBox textBox_116;
         private System.Windows.Forms.TextBox textBox_115;
+        private System.Windows.Forms.TabPage stack5;
+        private System.Windows.Forms.Label stack_5u;
+        private System.Windows.Forms.Button clear_5;
+        private System.Windows.Forms.Label label444;
         private System.Windows.Forms.Label label225;
         private System.Windows.Forms.Label label226;
         private System.Windows.Forms.Label label227;
@@ -13623,6 +13850,10 @@
         private System.Windows.Forms.Label label278;
         private System.Windows.Forms.TextBox textBox_152;
         private System.Windows.Forms.TextBox textBox_151;
+        private System.Windows.Forms.TabPage stack6;
+        private System.Windows.Forms.Label stack_6u;
+        private System.Windows.Forms.Button clear_6;
+        private System.Windows.Forms.Label label445;
         private System.Windows.Forms.Label label279;
         private System.Windows.Forms.Label label280;
         private System.Windows.Forms.Label label281;
@@ -13713,6 +13944,10 @@
         private System.Windows.Forms.Label label332;
         private System.Windows.Forms.TextBox textBox_188;
         private System.Windows.Forms.TextBox textBox_187;
+        private System.Windows.Forms.TabPage stack7;
+        private System.Windows.Forms.Label stack_7u;
+        private System.Windows.Forms.Button clear_7;
+        private System.Windows.Forms.Label label446;
         private System.Windows.Forms.Label label333;
         private System.Windows.Forms.Label label334;
         private System.Windows.Forms.Label label335;
@@ -13803,6 +14038,10 @@
         private System.Windows.Forms.Label label386;
         private System.Windows.Forms.TextBox textBox_224;
         private System.Windows.Forms.TextBox textBox_223;
+        private System.Windows.Forms.TabPage stack8;
+        private System.Windows.Forms.Label stack_8u;
+        private System.Windows.Forms.Button clear_8;
+        private System.Windows.Forms.Label label447;
         private System.Windows.Forms.Label label387;
         private System.Windows.Forms.Label label388;
         private System.Windows.Forms.Label label389;
@@ -13893,223 +14132,7 @@
         private System.Windows.Forms.Label label440;
         private System.Windows.Forms.TextBox textBox_260;
         private System.Windows.Forms.TextBox textBox_259;
-        private System.Windows.Forms.Label label441;
-        private System.Windows.Forms.Label label442;
-        private System.Windows.Forms.Label label443;
-        private System.Windows.Forms.Label label444;
-        private System.Windows.Forms.Label label445;
-        private System.Windows.Forms.Label label446;
-        private System.Windows.Forms.Label label447;
-        private System.Windows.Forms.Label label448;
-        private System.Windows.Forms.Label label450;
-        private System.Windows.Forms.Label label451;
-        private System.Windows.Forms.TextBox inverter_temp_box;
-        private System.Windows.Forms.TextBox motor_temp_box;
-        private System.Windows.Forms.Label label453;
-        private System.Windows.Forms.Label label452;
-        private System.Windows.Forms.Button clear_4;
-        private System.Windows.Forms.Button clear_1;
-        private System.Windows.Forms.Button clear_2;
-        private System.Windows.Forms.Button clear_3;
-        private System.Windows.Forms.Button clear_5;
-        private System.Windows.Forms.Button clear_6;
-        private System.Windows.Forms.Button clear_7;
-        private System.Windows.Forms.Button clear_8;
-        private System.Windows.Forms.Label label462;
-        private System.Windows.Forms.TextBox stack8_box;
-        private System.Windows.Forms.Label label461;
-        private System.Windows.Forms.TextBox stack7_box;
-        private System.Windows.Forms.Label label460;
-        private System.Windows.Forms.TextBox stack6_box;
-        private System.Windows.Forms.Label label459;
-        private System.Windows.Forms.TextBox stack5_box;
-        private System.Windows.Forms.Label label458;
-        private System.Windows.Forms.TextBox stack4_box;
-        private System.Windows.Forms.Label label457;
-        private System.Windows.Forms.TextBox stack3_box;
-        private System.Windows.Forms.Label label456;
-        private System.Windows.Forms.TextBox stack2_box;
-        private System.Windows.Forms.Label label455;
-        private System.Windows.Forms.TextBox stack1_box;
-        private System.Windows.Forms.Label label463;
-        private System.Windows.Forms.Label label470;
-        private System.Windows.Forms.Label label469;
-        private System.Windows.Forms.Label label468;
-        private System.Windows.Forms.Label label467;
-        private System.Windows.Forms.Label label466;
-        private System.Windows.Forms.Label label465;
-        private System.Windows.Forms.Label label464;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label stack_1u;
-        private System.Windows.Forms.Label stack_2u;
-        private System.Windows.Forms.Label stack_3u;
-        private System.Windows.Forms.Label stack_4u;
-        private System.Windows.Forms.Label stack_5u;
-        private System.Windows.Forms.Label stack_6u;
-        private System.Windows.Forms.Label stack_7u;
-        private System.Windows.Forms.Label stack_8u;
-        private System.Windows.Forms.Label label472;
-        private System.Windows.Forms.TextBox hotcell;
-        private System.Windows.Forms.Label label471;
-        private System.Windows.Forms.TextBox prechrelay_box;
-        private System.Windows.Forms.TextBox airplus_box;
-        private System.Windows.Forms.TextBox airminus_box;
-        private System.Windows.Forms.Label label475;
-        private System.Windows.Forms.Label label474;
-        private System.Windows.Forms.Label label473;
-        private System.Windows.Forms.Label label476;
-        private System.Windows.Forms.TextBox current_box;
-        private System.Windows.Forms.Label label477;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label495;
-        private System.Windows.Forms.Label label496;
-        private System.Windows.Forms.Label label454;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox slave_status_box_1;
-        private System.Windows.Forms.Label label497;
-        private System.Windows.Forms.TextBox total_voltage_box;
-        private System.Windows.Forms.Label label498;
-        private System.Windows.Forms.Label label499;
-        private System.Windows.Forms.TextBox precharge_status_box;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox vcdu_status_box;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox brake_system_status_box;
-        private System.Windows.Forms.TextBox filter_id_low_box;
-        private System.Windows.Forms.TextBox filter_id_high_box;
-        private System.Windows.Forms.TextBox master_status_box;
-        private System.Windows.Forms.Label label500;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox actuator_status_box;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label label501;
-        private System.Windows.Forms.TextBox ams_lv_status_box;
-        private System.Windows.Forms.Label label506;
-        private System.Windows.Forms.Label label504;
-        private System.Windows.Forms.TextBox lv_temp_cell_3_box;
-        private System.Windows.Forms.TextBox lv_temp_cell_2_box;
-        private System.Windows.Forms.TextBox lv_temp_cell_1_box;
-        private System.Windows.Forms.TextBox lv_voltage_cell_6_box;
-        private System.Windows.Forms.TextBox lv_voltage_cell_5_box;
-        private System.Windows.Forms.TextBox lv_voltage_cell_4_box;
-        private System.Windows.Forms.TextBox lv_voltage_cell_2_box;
-        private System.Windows.Forms.TextBox lv_voltage_cell_3_box;
-        private System.Windows.Forms.TextBox lv_voltage_cell_1_box;
-        private System.Windows.Forms.TextBox lv_hottest_cell_box;
-        private System.Windows.Forms.Label label502;
-        private System.Windows.Forms.Label label503;
-        private System.Windows.Forms.Label label510;
-        private System.Windows.Forms.Label label509;
-        private System.Windows.Forms.Label label511;
-        private System.Windows.Forms.Label label508;
-        private System.Windows.Forms.Label label512;
-        private System.Windows.Forms.Label label507;
-        private System.Windows.Forms.TextBox lv_temp_cell_6_box;
-        private System.Windows.Forms.TextBox lv_temp_cell_5_box;
-        private System.Windows.Forms.TextBox lv_temp_cell_4_box;
-        private System.Windows.Forms.Button reset_button;
-        private System.Windows.Forms.Label label525;
-        private System.Windows.Forms.Label label524;
-        private System.Windows.Forms.Label label523;
-        private System.Windows.Forms.Label label522;
-        private System.Windows.Forms.Label label521;
-        private System.Windows.Forms.Label label520;
-        private System.Windows.Forms.Label label517;
-        private System.Windows.Forms.Label label518;
-        private System.Windows.Forms.Label label519;
-        private System.Windows.Forms.GroupBox group_vcu;
-        private System.Windows.Forms.Label label526;
-        private System.Windows.Forms.Label label528;
-        private System.Windows.Forms.Label label530;
-        private System.Windows.Forms.Label label531;
-        private System.Windows.Forms.Label label532;
-        private System.Windows.Forms.Label label533;
-        private System.Windows.Forms.Label label534;
-        private System.Windows.Forms.Label label535;
-        private System.Windows.Forms.Label label536;
-        private System.Windows.Forms.Label label537;
-        private System.Windows.Forms.Label label538;
-        private System.Windows.Forms.Label label539;
-        private System.Windows.Forms.TextBox assi_current_box;
-        private System.Windows.Forms.TextBox gps_current_box;
-        private System.Windows.Forms.TextBox as_current_box;
-        private System.Windows.Forms.TextBox cameras_current_box;
-        private System.Windows.Forms.TextBox res_current_box;
-        private System.Windows.Forms.TextBox lidar_current_box;
-        private System.Windows.Forms.Label label527;
-        private System.Windows.Forms.Label label529;
-        private System.Windows.Forms.TextBox brake_light_current_box;
-        private System.Windows.Forms.TextBox vcdu_current_box;
-        private System.Windows.Forms.Label label513;
-        private System.Windows.Forms.Label label514;
-        private System.Windows.Forms.Label label515;
-        private System.Windows.Forms.Label label516;
-        private System.Windows.Forms.TextBox ebs_current_box;
-        private System.Windows.Forms.TextBox actuator_current_box;
-        private System.Windows.Forms.Label label449;
-        private System.Windows.Forms.TextBox vcu_status_box;
-        private System.Windows.Forms.Label label487;
-        private System.Windows.Forms.Label label488;
-        private System.Windows.Forms.Label label485;
-        private System.Windows.Forms.Label label489;
-        private System.Windows.Forms.Label label484;
-        private System.Windows.Forms.Label label490;
-        private System.Windows.Forms.Label label483;
-        private System.Windows.Forms.Label label493;
-        private System.Windows.Forms.Label label480;
-        private System.Windows.Forms.Label label494;
-        private System.Windows.Forms.Label label479;
-        private System.Windows.Forms.Label label478;
-        private System.Windows.Forms.TextBox fan2_current_box;
-        private System.Windows.Forms.TextBox fan1_current_box;
-        private System.Windows.Forms.TextBox lcs_current_box;
-        private System.Windows.Forms.TextBox cooling_pump_current_box;
-        private System.Windows.Forms.TextBox inverter_current_box;
-        private System.Windows.Forms.TextBox tsal_current_box;
-        private System.Windows.Forms.TextBox slave_status_box_2;
-        private System.Windows.Forms.Label label505;
-        private System.Windows.Forms.Label label481;
-        private System.Windows.Forms.Label label482;
-        private System.Windows.Forms.Label label491;
-        private System.Windows.Forms.Label label486;
-        private System.Windows.Forms.Label label492;
-        private System.Windows.Forms.Label label540;
-        private System.Windows.Forms.Label label541;
-        private System.Windows.Forms.TextBox slave_status_box_4;
-        private System.Windows.Forms.TextBox slave_status_box_3;
-        private System.Windows.Forms.Label label548;
-        private System.Windows.Forms.Label label547;
-        private System.Windows.Forms.Label label546;
-        private System.Windows.Forms.Label label545;
-        private System.Windows.Forms.Label label544;
-        private System.Windows.Forms.Label label543;
-        private System.Windows.Forms.Label label542;
-        private System.Windows.Forms.TextBox slave_status_box_8;
-        private System.Windows.Forms.TextBox slave_status_box_7;
-        private System.Windows.Forms.TextBox slave_status_box_6;
-        private System.Windows.Forms.TextBox slave_status_box_5;
-        private System.Windows.Forms.Label label550;
-        private System.Windows.Forms.Label label549;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label label552;
-        private System.Windows.Forms.TextBox charging_status_box;
-        private System.Windows.Forms.Label label551;
-        private System.Windows.Forms.TextBox charging_current_box;
-        private System.Windows.Forms.Label label553;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label label558;
-        private System.Windows.Forms.TextBox voltage_min_box;
-        private System.Windows.Forms.Label stack_min_number;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Label cell_max_number;
-        private System.Windows.Forms.Label stack_max_number;
-        private System.Windows.Forms.Label label556;
-        private System.Windows.Forms.TextBox voltage_max_box;
-        private System.Windows.Forms.Label cell_min_number;
+        private System.Windows.Forms.RichTextBox richTextBox_master;
     }
 }
 
