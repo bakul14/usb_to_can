@@ -39,7 +39,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.filter_id_high_box = new System.Windows.Forms.TextBox();
             this.filter_id_low_box = new System.Windows.Forms.TextBox();
-            this.label448 = new System.Windows.Forms.Label();
             this.label554 = new System.Windows.Forms.Label();
             this.update = new System.Windows.Forms.Button();
             this.can_bus_load = new System.Windows.Forms.Label();
@@ -75,13 +74,82 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.hotcell = new System.Windows.Forms.TextBox();
+            this.label472 = new System.Windows.Forms.Label();
+            this.label471 = new System.Windows.Forms.Label();
+            this.current_box = new System.Windows.Forms.TextBox();
+            this.label477 = new System.Windows.Forms.Label();
+            this.label476 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.charging_current_box = new System.Windows.Forms.TextBox();
             this.label553 = new System.Windows.Forms.Label();
             this.label552 = new System.Windows.Forms.Label();
             this.charging_status_box = new System.Windows.Forms.TextBox();
             this.label551 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label500 = new System.Windows.Forms.Label();
+            this.richTextBox_precharge_errors = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_precharge_status = new System.Windows.Forms.RichTextBox();
+            this.label499 = new System.Windows.Forms.Label();
+            this.airminus_box = new System.Windows.Forms.TextBox();
+            this.label473 = new System.Windows.Forms.Label();
+            this.label474 = new System.Windows.Forms.Label();
+            this.label475 = new System.Windows.Forms.Label();
+            this.airplus_box = new System.Windows.Forms.TextBox();
+            this.prechrelay_box = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.group_vcu = new System.Windows.Forms.GroupBox();
+            this.richTextBox_vcu = new System.Windows.Forms.RichTextBox();
+            this.label550 = new System.Windows.Forms.Label();
+            this.label549 = new System.Windows.Forms.Label();
+            this.label526 = new System.Windows.Forms.Label();
+            this.label528 = new System.Windows.Forms.Label();
+            this.label530 = new System.Windows.Forms.Label();
+            this.label531 = new System.Windows.Forms.Label();
+            this.label532 = new System.Windows.Forms.Label();
+            this.label533 = new System.Windows.Forms.Label();
+            this.label534 = new System.Windows.Forms.Label();
+            this.label535 = new System.Windows.Forms.Label();
+            this.label536 = new System.Windows.Forms.Label();
+            this.label537 = new System.Windows.Forms.Label();
+            this.label538 = new System.Windows.Forms.Label();
+            this.label539 = new System.Windows.Forms.Label();
+            this.assi_current_box = new System.Windows.Forms.TextBox();
+            this.gps_current_box = new System.Windows.Forms.TextBox();
+            this.as_current_box = new System.Windows.Forms.TextBox();
+            this.cameras_current_box = new System.Windows.Forms.TextBox();
+            this.res_current_box = new System.Windows.Forms.TextBox();
+            this.lidar_current_box = new System.Windows.Forms.TextBox();
+            this.label527 = new System.Windows.Forms.Label();
+            this.label529 = new System.Windows.Forms.Label();
+            this.brake_light_current_box = new System.Windows.Forms.TextBox();
+            this.vcdu_current_box = new System.Windows.Forms.TextBox();
+            this.label513 = new System.Windows.Forms.Label();
+            this.label514 = new System.Windows.Forms.Label();
+            this.label515 = new System.Windows.Forms.Label();
+            this.label516 = new System.Windows.Forms.Label();
+            this.ebs_current_box = new System.Windows.Forms.TextBox();
+            this.actuator_current_box = new System.Windows.Forms.TextBox();
+            this.label449 = new System.Windows.Forms.Label();
+            this.label487 = new System.Windows.Forms.Label();
+            this.label488 = new System.Windows.Forms.Label();
+            this.label485 = new System.Windows.Forms.Label();
+            this.label489 = new System.Windows.Forms.Label();
+            this.label484 = new System.Windows.Forms.Label();
+            this.label490 = new System.Windows.Forms.Label();
+            this.label483 = new System.Windows.Forms.Label();
+            this.label493 = new System.Windows.Forms.Label();
+            this.label480 = new System.Windows.Forms.Label();
+            this.label494 = new System.Windows.Forms.Label();
+            this.label479 = new System.Windows.Forms.Label();
+            this.label478 = new System.Windows.Forms.Label();
+            this.fan2_current_box = new System.Windows.Forms.TextBox();
+            this.fan1_current_box = new System.Windows.Forms.TextBox();
+            this.lcs_current_box = new System.Windows.Forms.TextBox();
+            this.cooling_pump_current_box = new System.Windows.Forms.TextBox();
+            this.inverter_current_box = new System.Windows.Forms.TextBox();
+            this.tsal_current_box = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label492 = new System.Windows.Forms.Label();
             this.label540 = new System.Windows.Forms.Label();
@@ -131,41 +199,6 @@
             this.rpm1_box = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label499 = new System.Windows.Forms.Label();
-            this.precharge_status_box = new System.Windows.Forms.TextBox();
-            this.airminus_box = new System.Windows.Forms.TextBox();
-            this.label473 = new System.Windows.Forms.Label();
-            this.label474 = new System.Windows.Forms.Label();
-            this.label475 = new System.Windows.Forms.Label();
-            this.airplus_box = new System.Windows.Forms.TextBox();
-            this.prechrelay_box = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label548 = new System.Windows.Forms.Label();
-            this.label547 = new System.Windows.Forms.Label();
-            this.label546 = new System.Windows.Forms.Label();
-            this.label545 = new System.Windows.Forms.Label();
-            this.label544 = new System.Windows.Forms.Label();
-            this.label543 = new System.Windows.Forms.Label();
-            this.label542 = new System.Windows.Forms.Label();
-            this.slave_status_box_8 = new System.Windows.Forms.TextBox();
-            this.slave_status_box_7 = new System.Windows.Forms.TextBox();
-            this.slave_status_box_6 = new System.Windows.Forms.TextBox();
-            this.slave_status_box_5 = new System.Windows.Forms.TextBox();
-            this.slave_status_box_4 = new System.Windows.Forms.TextBox();
-            this.slave_status_box_3 = new System.Windows.Forms.TextBox();
-            this.label481 = new System.Windows.Forms.Label();
-            this.master_status_box = new System.Windows.Forms.TextBox();
-            this.label500 = new System.Windows.Forms.Label();
-            this.slave_status_box_2 = new System.Windows.Forms.TextBox();
-            this.hotcell = new System.Windows.Forms.TextBox();
-            this.label472 = new System.Windows.Forms.Label();
-            this.label471 = new System.Windows.Forms.Label();
-            this.current_box = new System.Windows.Forms.TextBox();
-            this.slave_status_box_1 = new System.Windows.Forms.TextBox();
-            this.label477 = new System.Windows.Forms.Label();
-            this.label476 = new System.Windows.Forms.Label();
-            this.label497 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.vcdu_status_box = new System.Windows.Forms.TextBox();
@@ -225,57 +258,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.group_vcu = new System.Windows.Forms.GroupBox();
-            this.label550 = new System.Windows.Forms.Label();
-            this.label549 = new System.Windows.Forms.Label();
-            this.label526 = new System.Windows.Forms.Label();
-            this.label528 = new System.Windows.Forms.Label();
-            this.label530 = new System.Windows.Forms.Label();
-            this.label531 = new System.Windows.Forms.Label();
-            this.label532 = new System.Windows.Forms.Label();
-            this.label533 = new System.Windows.Forms.Label();
-            this.label534 = new System.Windows.Forms.Label();
-            this.label535 = new System.Windows.Forms.Label();
-            this.label536 = new System.Windows.Forms.Label();
-            this.label537 = new System.Windows.Forms.Label();
-            this.label538 = new System.Windows.Forms.Label();
-            this.label539 = new System.Windows.Forms.Label();
-            this.assi_current_box = new System.Windows.Forms.TextBox();
-            this.gps_current_box = new System.Windows.Forms.TextBox();
-            this.as_current_box = new System.Windows.Forms.TextBox();
-            this.cameras_current_box = new System.Windows.Forms.TextBox();
-            this.res_current_box = new System.Windows.Forms.TextBox();
-            this.lidar_current_box = new System.Windows.Forms.TextBox();
-            this.label527 = new System.Windows.Forms.Label();
-            this.label529 = new System.Windows.Forms.Label();
-            this.brake_light_current_box = new System.Windows.Forms.TextBox();
-            this.vcdu_current_box = new System.Windows.Forms.TextBox();
-            this.label513 = new System.Windows.Forms.Label();
-            this.label514 = new System.Windows.Forms.Label();
-            this.label515 = new System.Windows.Forms.Label();
-            this.label516 = new System.Windows.Forms.Label();
-            this.ebs_current_box = new System.Windows.Forms.TextBox();
-            this.actuator_current_box = new System.Windows.Forms.TextBox();
-            this.label449 = new System.Windows.Forms.Label();
-            this.vcu_status_box = new System.Windows.Forms.TextBox();
-            this.label487 = new System.Windows.Forms.Label();
-            this.label488 = new System.Windows.Forms.Label();
-            this.label485 = new System.Windows.Forms.Label();
-            this.label489 = new System.Windows.Forms.Label();
-            this.label484 = new System.Windows.Forms.Label();
-            this.label490 = new System.Windows.Forms.Label();
-            this.label483 = new System.Windows.Forms.Label();
-            this.label493 = new System.Windows.Forms.Label();
-            this.label480 = new System.Windows.Forms.Label();
-            this.label494 = new System.Windows.Forms.Label();
-            this.label479 = new System.Windows.Forms.Label();
-            this.label478 = new System.Windows.Forms.Label();
-            this.fan2_current_box = new System.Windows.Forms.TextBox();
-            this.fan1_current_box = new System.Windows.Forms.TextBox();
-            this.lcs_current_box = new System.Windows.Forms.TextBox();
-            this.cooling_pump_current_box = new System.Windows.Forms.TextBox();
-            this.inverter_current_box = new System.Windows.Forms.TextBox();
-            this.tsal_current_box = new System.Windows.Forms.TextBox();
+            this.ams_tabpage = new System.Windows.Forms.TabPage();
+            this.clear_ams = new System.Windows.Forms.Button();
+            this.richTextBox_master = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_slave1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_slave2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_slave3 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_slave4 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_slave5 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_slave6 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_slave7 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_slave8 = new System.Windows.Forms.RichTextBox();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.stack1 = new System.Windows.Forms.TabPage();
             this.stack_1u = new System.Windows.Forms.Label();
             this.clear_1 = new System.Windows.Forms.Button();
@@ -1028,7 +1022,6 @@
             this.label440 = new System.Windows.Forms.Label();
             this.textBox_260 = new System.Windows.Forms.TextBox();
             this.textBox_259 = new System.Windows.Forms.TextBox();
-            this.richTextBox_master = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.tabcontrol1.SuspendLayout();
@@ -1036,18 +1029,19 @@
             this.nodes_groupBox.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.group_vcu.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.group_vcu.SuspendLayout();
+            this.ams_tabpage.SuspendLayout();
             this.stack1.SuspendLayout();
             this.stack2.SuspendLayout();
             this.stack3.SuspendLayout();
@@ -1076,10 +1070,10 @@
             // richTextBox2
             // 
             this.richTextBox2.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(3, 187);
+            this.richTextBox2.Location = new System.Drawing.Point(3, 129);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(425, 727);
+            this.richTextBox2.Size = new System.Drawing.Size(425, 809);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             this.richTextBox2.HScroll += new System.EventHandler(this.Form1_Load);
@@ -1151,22 +1145,11 @@
             this.filter_id_low_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.filter_id_low_box.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
-            // label448
-            // 
-            this.label448.AutoSize = true;
-            this.label448.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label448.Location = new System.Drawing.Point(3, 126);
-            this.label448.Name = "label448";
-            this.label448.Size = new System.Drawing.Size(387, 58);
-            this.label448.TabIndex = 184;
-            this.label448.Text = "Recieve CAN messages with ID from \r\n0x                    to  0x";
-            this.label448.Click += new System.EventHandler(this.label448_Click);
-            // 
             // label554
             // 
             this.label554.AutoSize = true;
             this.label554.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label554.Location = new System.Drawing.Point(3, 917);
+            this.label554.Location = new System.Drawing.Point(3, 941);
             this.label554.Name = "label554";
             this.label554.Size = new System.Drawing.Size(206, 38);
             this.label554.TabIndex = 188;
@@ -1189,7 +1172,7 @@
             // 
             this.can_bus_load.AutoSize = true;
             this.can_bus_load.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.can_bus_load.Location = new System.Drawing.Point(215, 917);
+            this.can_bus_load.Location = new System.Drawing.Point(215, 941);
             this.can_bus_load.Name = "can_bus_load";
             this.can_bus_load.Size = new System.Drawing.Size(60, 38);
             this.can_bus_load.TabIndex = 189;
@@ -1216,7 +1199,6 @@
             this.flowLayoutPanel1.Controls.Add(this.filter_id_low_box);
             this.flowLayoutPanel1.Controls.Add(this.filter_id_high_box);
             this.flowLayoutPanel1.Controls.Add(this.reset_button);
-            this.flowLayoutPanel1.Controls.Add(this.label448);
             this.flowLayoutPanel1.Controls.Add(this.richTextBox2);
             this.flowLayoutPanel1.Controls.Add(this.label554);
             this.flowLayoutPanel1.Controls.Add(this.can_bus_load);
@@ -1232,13 +1214,15 @@
             this.flowLayoutPanel2.Controls.Add(this.tabcontrol1);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(445, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1379, 988);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1456, 988);
             this.flowLayoutPanel2.TabIndex = 190;
+            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
             // tabcontrol1
             // 
             this.tabcontrol1.Controls.Add(this.tabPage1);
             this.tabcontrol1.Controls.Add(this.tabPage2);
+            this.tabcontrol1.Controls.Add(this.ams_tabpage);
             this.tabcontrol1.Controls.Add(this.stack1);
             this.tabcontrol1.Controls.Add(this.stack2);
             this.tabcontrol1.Controls.Add(this.stack3);
@@ -1251,7 +1235,7 @@
             this.tabcontrol1.Location = new System.Drawing.Point(3, 3);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(1373, 953);
+            this.tabcontrol1.Size = new System.Drawing.Size(1450, 953);
             this.tabcontrol1.TabIndex = 27;
             // 
             // tabPage1
@@ -1271,7 +1255,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1365, 910);
+            this.tabPage1.Size = new System.Drawing.Size(1442, 910);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Firmware";
             // 
@@ -1584,30 +1568,112 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1365, 910);
+            this.tabPage2.Size = new System.Drawing.Size(1442, 910);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "General";
             // 
             // panel1
             // 
-            this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.richTextBox_master);
-            this.panel1.Controls.Add(this.group_vcu);
+            this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox9);
+            this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.group_vcu);
             this.panel1.Controls.Add(this.groupBox8);
             this.panel1.Controls.Add(this.groupBox7);
             this.panel1.Controls.Add(this.groupBox6);
-            this.panel1.Controls.Add(this.groupBox4);
-            this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1330, 1126);
+            this.panel1.Size = new System.Drawing.Size(1410, 1737);
             this.panel1.TabIndex = 190;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.hotcell);
+            this.groupBox3.Controls.Add(this.label472);
+            this.groupBox3.Controls.Add(this.label471);
+            this.groupBox3.Controls.Add(this.current_box);
+            this.groupBox3.Controls.Add(this.label477);
+            this.groupBox3.Controls.Add(this.label476);
+            this.groupBox3.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
+            this.groupBox3.Location = new System.Drawing.Point(684, 639);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(296, 126);
+            this.groupBox3.TabIndex = 253;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "SERVICE";
+            // 
+            // hotcell
+            // 
+            this.hotcell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.hotcell.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hotcell.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.hotcell.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.hotcell.Location = new System.Drawing.Point(167, 31);
+            this.hotcell.Multiline = true;
+            this.hotcell.Name = "hotcell";
+            this.hotcell.ReadOnly = true;
+            this.hotcell.Size = new System.Drawing.Size(75, 25);
+            this.hotcell.TabIndex = 188;
+            this.hotcell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label472
+            // 
+            this.label472.AutoSize = true;
+            this.label472.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label472.Location = new System.Drawing.Point(248, 30);
+            this.label472.Name = "label472";
+            this.label472.Size = new System.Drawing.Size(32, 26);
+            this.label472.TabIndex = 189;
+            this.label472.Text = "°C";
+            // 
+            // label471
+            // 
+            this.label471.AutoSize = true;
+            this.label471.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label471.Location = new System.Drawing.Point(52, 33);
+            this.label471.Name = "label471";
+            this.label471.Size = new System.Drawing.Size(118, 26);
+            this.label471.TabIndex = 187;
+            this.label471.Text = "Hottest cell:";
+            // 
+            // current_box
+            // 
+            this.current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.current_box.Location = new System.Drawing.Point(167, 63);
+            this.current_box.Multiline = true;
+            this.current_box.Name = "current_box";
+            this.current_box.ReadOnly = true;
+            this.current_box.Size = new System.Drawing.Size(75, 25);
+            this.current_box.TabIndex = 197;
+            this.current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label477
+            // 
+            this.label477.AutoSize = true;
+            this.label477.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label477.Location = new System.Drawing.Point(38, 65);
+            this.label477.Name = "label477";
+            this.label477.Size = new System.Drawing.Size(132, 26);
+            this.label477.TabIndex = 199;
+            this.label477.Text = "Total Current:";
+            // 
+            // label476
+            // 
+            this.label476.AutoSize = true;
+            this.label476.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label476.Location = new System.Drawing.Point(248, 63);
+            this.label476.Name = "label476";
+            this.label476.Size = new System.Drawing.Size(26, 26);
+            this.label476.TabIndex = 198;
+            this.label476.Text = "A";
             // 
             // groupBox9
             // 
@@ -1617,10 +1683,10 @@
             this.groupBox9.Controls.Add(this.charging_status_box);
             this.groupBox9.Controls.Add(this.label551);
             this.groupBox9.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox9.Location = new System.Drawing.Point(883, 698);
+            this.groupBox9.Location = new System.Drawing.Point(986, 639);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(335, 126);
-            this.groupBox9.TabIndex = 222;
+            this.groupBox9.TabIndex = 254;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Charging";
             // 
@@ -1681,18 +1747,774 @@
             this.label551.TabIndex = 211;
             this.label551.Text = "Status:";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label500);
+            this.groupBox4.Controls.Add(this.richTextBox_precharge_errors);
+            this.groupBox4.Controls.Add(this.richTextBox_precharge_status);
+            this.groupBox4.Controls.Add(this.label499);
+            this.groupBox4.Controls.Add(this.airminus_box);
+            this.groupBox4.Controls.Add(this.label473);
+            this.groupBox4.Controls.Add(this.label474);
+            this.groupBox4.Controls.Add(this.label475);
+            this.groupBox4.Controls.Add(this.airplus_box);
+            this.groupBox4.Controls.Add(this.prechrelay_box);
+            this.groupBox4.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
+            this.groupBox4.Location = new System.Drawing.Point(238, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(510, 336);
+            this.groupBox4.TabIndex = 217;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "PreCharge";
+            // 
+            // label500
+            // 
+            this.label500.AutoSize = true;
+            this.label500.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label500.Location = new System.Drawing.Point(294, 138);
+            this.label500.Name = "label500";
+            this.label500.Size = new System.Drawing.Size(167, 26);
+            this.label500.TabIndex = 254;
+            this.label500.Text = "PreCharge Errors:";
+            // 
+            // richTextBox_precharge_errors
+            // 
+            this.richTextBox_precharge_errors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_precharge_errors.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_precharge_errors.Location = new System.Drawing.Point(255, 167);
+            this.richTextBox_precharge_errors.Name = "richTextBox_precharge_errors";
+            this.richTextBox_precharge_errors.Size = new System.Drawing.Size(249, 164);
+            this.richTextBox_precharge_errors.TabIndex = 253;
+            this.richTextBox_precharge_errors.Text = "";
+            // 
+            // richTextBox_precharge_status
+            // 
+            this.richTextBox_precharge_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_precharge_status.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_precharge_status.Location = new System.Drawing.Point(6, 167);
+            this.richTextBox_precharge_status.Name = "richTextBox_precharge_status";
+            this.richTextBox_precharge_status.Size = new System.Drawing.Size(249, 164);
+            this.richTextBox_precharge_status.TabIndex = 252;
+            this.richTextBox_precharge_status.Text = "";
+            // 
+            // label499
+            // 
+            this.label499.AutoSize = true;
+            this.label499.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label499.Location = new System.Drawing.Point(44, 140);
+            this.label499.Name = "label499";
+            this.label499.Size = new System.Drawing.Size(170, 26);
+            this.label499.TabIndex = 203;
+            this.label499.Text = "PreCharge Status:";
+            // 
+            // airminus_box
+            // 
+            this.airminus_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.airminus_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.airminus_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.airminus_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.airminus_box.Location = new System.Drawing.Point(196, 36);
+            this.airminus_box.Multiline = true;
+            this.airminus_box.Name = "airminus_box";
+            this.airminus_box.ReadOnly = true;
+            this.airminus_box.Size = new System.Drawing.Size(85, 25);
+            this.airminus_box.TabIndex = 194;
+            this.airminus_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label473
+            // 
+            this.label473.AutoSize = true;
+            this.label473.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label473.Location = new System.Drawing.Point(120, 38);
+            this.label473.Name = "label473";
+            this.label473.Size = new System.Drawing.Size(64, 26);
+            this.label473.TabIndex = 191;
+            this.label473.Text = "- AIR:";
+            // 
+            // label474
+            // 
+            this.label474.AutoSize = true;
+            this.label474.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label474.Location = new System.Drawing.Point(116, 69);
+            this.label474.Name = "label474";
+            this.label474.Size = new System.Drawing.Size(68, 26);
+            this.label474.TabIndex = 192;
+            this.label474.Text = "+ AIR:";
+            // 
+            // label475
+            // 
+            this.label475.AutoSize = true;
+            this.label475.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label475.Location = new System.Drawing.Point(29, 100);
+            this.label475.Name = "label475";
+            this.label475.Size = new System.Drawing.Size(155, 26);
+            this.label475.TabIndex = 193;
+            this.label475.Text = "Precharge relay:";
+            // 
+            // airplus_box
+            // 
+            this.airplus_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.airplus_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.airplus_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.airplus_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.airplus_box.Location = new System.Drawing.Point(196, 67);
+            this.airplus_box.Multiline = true;
+            this.airplus_box.Name = "airplus_box";
+            this.airplus_box.ReadOnly = true;
+            this.airplus_box.Size = new System.Drawing.Size(85, 25);
+            this.airplus_box.TabIndex = 195;
+            this.airplus_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // prechrelay_box
+            // 
+            this.prechrelay_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.prechrelay_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prechrelay_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.prechrelay_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.prechrelay_box.Location = new System.Drawing.Point(196, 98);
+            this.prechrelay_box.Multiline = true;
+            this.prechrelay_box.Name = "prechrelay_box";
+            this.prechrelay_box.ReadOnly = true;
+            this.prechrelay_box.Size = new System.Drawing.Size(85, 25);
+            this.prechrelay_box.TabIndex = 196;
+            this.prechrelay_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.Font = new System.Drawing.Font("3ds Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1252, 0);
+            this.button1.Location = new System.Drawing.Point(1327, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 1126);
+            this.button1.Size = new System.Drawing.Size(80, 1734);
             this.button1.TabIndex = 212;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // group_vcu
+            // 
+            this.group_vcu.AutoSize = true;
+            this.group_vcu.Controls.Add(this.richTextBox_vcu);
+            this.group_vcu.Controls.Add(this.label550);
+            this.group_vcu.Controls.Add(this.label549);
+            this.group_vcu.Controls.Add(this.label526);
+            this.group_vcu.Controls.Add(this.label528);
+            this.group_vcu.Controls.Add(this.label530);
+            this.group_vcu.Controls.Add(this.label531);
+            this.group_vcu.Controls.Add(this.label532);
+            this.group_vcu.Controls.Add(this.label533);
+            this.group_vcu.Controls.Add(this.label534);
+            this.group_vcu.Controls.Add(this.label535);
+            this.group_vcu.Controls.Add(this.label536);
+            this.group_vcu.Controls.Add(this.label537);
+            this.group_vcu.Controls.Add(this.label538);
+            this.group_vcu.Controls.Add(this.label539);
+            this.group_vcu.Controls.Add(this.assi_current_box);
+            this.group_vcu.Controls.Add(this.gps_current_box);
+            this.group_vcu.Controls.Add(this.as_current_box);
+            this.group_vcu.Controls.Add(this.cameras_current_box);
+            this.group_vcu.Controls.Add(this.res_current_box);
+            this.group_vcu.Controls.Add(this.lidar_current_box);
+            this.group_vcu.Controls.Add(this.label527);
+            this.group_vcu.Controls.Add(this.label529);
+            this.group_vcu.Controls.Add(this.brake_light_current_box);
+            this.group_vcu.Controls.Add(this.vcdu_current_box);
+            this.group_vcu.Controls.Add(this.label513);
+            this.group_vcu.Controls.Add(this.label514);
+            this.group_vcu.Controls.Add(this.label515);
+            this.group_vcu.Controls.Add(this.label516);
+            this.group_vcu.Controls.Add(this.ebs_current_box);
+            this.group_vcu.Controls.Add(this.actuator_current_box);
+            this.group_vcu.Controls.Add(this.label449);
+            this.group_vcu.Controls.Add(this.label487);
+            this.group_vcu.Controls.Add(this.label488);
+            this.group_vcu.Controls.Add(this.label485);
+            this.group_vcu.Controls.Add(this.label489);
+            this.group_vcu.Controls.Add(this.label484);
+            this.group_vcu.Controls.Add(this.label490);
+            this.group_vcu.Controls.Add(this.label483);
+            this.group_vcu.Controls.Add(this.label493);
+            this.group_vcu.Controls.Add(this.label480);
+            this.group_vcu.Controls.Add(this.label494);
+            this.group_vcu.Controls.Add(this.label479);
+            this.group_vcu.Controls.Add(this.label478);
+            this.group_vcu.Controls.Add(this.fan2_current_box);
+            this.group_vcu.Controls.Add(this.fan1_current_box);
+            this.group_vcu.Controls.Add(this.lcs_current_box);
+            this.group_vcu.Controls.Add(this.cooling_pump_current_box);
+            this.group_vcu.Controls.Add(this.inverter_current_box);
+            this.group_vcu.Controls.Add(this.tsal_current_box);
+            this.group_vcu.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
+            this.group_vcu.Location = new System.Drawing.Point(754, 3);
+            this.group_vcu.Name = "group_vcu";
+            this.group_vcu.Size = new System.Drawing.Size(567, 625);
+            this.group_vcu.TabIndex = 213;
+            this.group_vcu.TabStop = false;
+            this.group_vcu.Text = "VCU";
+            // 
+            // richTextBox_vcu
+            // 
+            this.richTextBox_vcu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_vcu.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_vcu.Location = new System.Drawing.Point(167, 310);
+            this.richTextBox_vcu.Name = "richTextBox_vcu";
+            this.richTextBox_vcu.Size = new System.Drawing.Size(344, 263);
+            this.richTextBox_vcu.TabIndex = 251;
+            this.richTextBox_vcu.Text = "";
+            // 
+            // label550
+            // 
+            this.label550.AutoSize = true;
+            this.label550.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label550.Location = new System.Drawing.Point(43, 196);
+            this.label550.Name = "label550";
+            this.label550.Size = new System.Drawing.Size(118, 26);
+            this.label550.TabIndex = 249;
+            this.label550.Text = "Brake Light:";
+            // 
+            // label549
+            // 
+            this.label549.AutoSize = true;
+            this.label549.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label549.Location = new System.Drawing.Point(92, 165);
+            this.label549.Name = "label549";
+            this.label549.Size = new System.Drawing.Size(69, 26);
+            this.label549.TabIndex = 248;
+            this.label549.Text = "VCDU:";
+            // 
+            // label526
+            // 
+            this.label526.AutoSize = true;
+            this.label526.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label526.Location = new System.Drawing.Point(334, 134);
+            this.label526.Name = "label526";
+            this.label526.Size = new System.Drawing.Size(94, 26);
+            this.label526.TabIndex = 242;
+            this.label526.Text = "Cameras:";
+            // 
+            // label528
+            // 
+            this.label528.AutoSize = true;
+            this.label528.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label528.Location = new System.Drawing.Point(385, 258);
+            this.label528.Name = "label528";
+            this.label528.Size = new System.Drawing.Size(43, 26);
+            this.label528.TabIndex = 239;
+            this.label528.Text = "AS:";
+            // 
+            // label530
+            // 
+            this.label530.AutoSize = true;
+            this.label530.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label530.Location = new System.Drawing.Point(517, 255);
+            this.label530.Name = "label530";
+            this.label530.Size = new System.Drawing.Size(26, 26);
+            this.label530.TabIndex = 247;
+            this.label530.Text = "A";
+            // 
+            // label531
+            // 
+            this.label531.AutoSize = true;
+            this.label531.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label531.Location = new System.Drawing.Point(375, 227);
+            this.label531.Name = "label531";
+            this.label531.Size = new System.Drawing.Size(53, 26);
+            this.label531.TabIndex = 237;
+            this.label531.Text = "RES:";
+            // 
+            // label532
+            // 
+            this.label532.AutoSize = true;
+            this.label532.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label532.Location = new System.Drawing.Point(517, 224);
+            this.label532.Name = "label532";
+            this.label532.Size = new System.Drawing.Size(26, 26);
+            this.label532.TabIndex = 246;
+            this.label532.Text = "A";
+            // 
+            // label533
+            // 
+            this.label533.AutoSize = true;
+            this.label533.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label533.Location = new System.Drawing.Point(368, 196);
+            this.label533.Name = "label533";
+            this.label533.Size = new System.Drawing.Size(60, 26);
+            this.label533.TabIndex = 236;
+            this.label533.Text = "ASSI:";
+            // 
+            // label534
+            // 
+            this.label534.AutoSize = true;
+            this.label534.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label534.Location = new System.Drawing.Point(517, 193);
+            this.label534.Name = "label534";
+            this.label534.Size = new System.Drawing.Size(26, 26);
+            this.label534.TabIndex = 245;
+            this.label534.Text = "A";
+            // 
+            // label535
+            // 
+            this.label535.AutoSize = true;
+            this.label535.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label535.Location = new System.Drawing.Point(367, 165);
+            this.label535.Name = "label535";
+            this.label535.Size = new System.Drawing.Size(61, 26);
+            this.label535.TabIndex = 234;
+            this.label535.Text = "Lidar:";
+            // 
+            // label536
+            // 
+            this.label536.AutoSize = true;
+            this.label536.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label536.Location = new System.Drawing.Point(517, 162);
+            this.label536.Name = "label536";
+            this.label536.Size = new System.Drawing.Size(26, 26);
+            this.label536.TabIndex = 244;
+            this.label536.Text = "A";
+            // 
+            // label537
+            // 
+            this.label537.AutoSize = true;
+            this.label537.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label537.Location = new System.Drawing.Point(372, 103);
+            this.label537.Name = "label537";
+            this.label537.Size = new System.Drawing.Size(56, 26);
+            this.label537.TabIndex = 231;
+            this.label537.Text = "GPS:";
+            // 
+            // label538
+            // 
+            this.label538.AutoSize = true;
+            this.label538.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label538.Location = new System.Drawing.Point(517, 131);
+            this.label538.Name = "label538";
+            this.label538.Size = new System.Drawing.Size(26, 26);
+            this.label538.TabIndex = 243;
+            this.label538.Text = "A";
+            // 
+            // label539
+            // 
+            this.label539.AutoSize = true;
+            this.label539.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label539.Location = new System.Drawing.Point(517, 100);
+            this.label539.Name = "label539";
+            this.label539.Size = new System.Drawing.Size(26, 26);
+            this.label539.TabIndex = 232;
+            this.label539.Text = "A";
+            // 
+            // assi_current_box
+            // 
+            this.assi_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.assi_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.assi_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.assi_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.assi_current_box.Location = new System.Drawing.Point(436, 194);
+            this.assi_current_box.Multiline = true;
+            this.assi_current_box.Name = "assi_current_box";
+            this.assi_current_box.ReadOnly = true;
+            this.assi_current_box.Size = new System.Drawing.Size(75, 25);
+            this.assi_current_box.TabIndex = 238;
+            this.assi_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // gps_current_box
+            // 
+            this.gps_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gps_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gps_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.gps_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.gps_current_box.Location = new System.Drawing.Point(436, 101);
+            this.gps_current_box.Multiline = true;
+            this.gps_current_box.Name = "gps_current_box";
+            this.gps_current_box.ReadOnly = true;
+            this.gps_current_box.Size = new System.Drawing.Size(75, 25);
+            this.gps_current_box.TabIndex = 230;
+            this.gps_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // as_current_box
+            // 
+            this.as_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.as_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.as_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.as_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.as_current_box.Location = new System.Drawing.Point(436, 256);
+            this.as_current_box.Multiline = true;
+            this.as_current_box.Name = "as_current_box";
+            this.as_current_box.ReadOnly = true;
+            this.as_current_box.Size = new System.Drawing.Size(75, 25);
+            this.as_current_box.TabIndex = 241;
+            this.as_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cameras_current_box
+            // 
+            this.cameras_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cameras_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cameras_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.cameras_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.cameras_current_box.Location = new System.Drawing.Point(436, 132);
+            this.cameras_current_box.Multiline = true;
+            this.cameras_current_box.Name = "cameras_current_box";
+            this.cameras_current_box.ReadOnly = true;
+            this.cameras_current_box.Size = new System.Drawing.Size(75, 25);
+            this.cameras_current_box.TabIndex = 233;
+            this.cameras_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // res_current_box
+            // 
+            this.res_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.res_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.res_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.res_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.res_current_box.Location = new System.Drawing.Point(436, 225);
+            this.res_current_box.Multiline = true;
+            this.res_current_box.Name = "res_current_box";
+            this.res_current_box.ReadOnly = true;
+            this.res_current_box.Size = new System.Drawing.Size(75, 25);
+            this.res_current_box.TabIndex = 240;
+            this.res_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lidar_current_box
+            // 
+            this.lidar_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lidar_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lidar_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.lidar_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lidar_current_box.Location = new System.Drawing.Point(436, 163);
+            this.lidar_current_box.Multiline = true;
+            this.lidar_current_box.Name = "lidar_current_box";
+            this.lidar_current_box.ReadOnly = true;
+            this.lidar_current_box.Size = new System.Drawing.Size(75, 25);
+            this.lidar_current_box.TabIndex = 235;
+            this.lidar_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label527
+            // 
+            this.label527.AutoSize = true;
+            this.label527.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label527.Location = new System.Drawing.Point(248, 193);
+            this.label527.Name = "label527";
+            this.label527.Size = new System.Drawing.Size(26, 26);
+            this.label527.TabIndex = 229;
+            this.label527.Text = "A";
+            // 
+            // label529
+            // 
+            this.label529.AutoSize = true;
+            this.label529.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label529.Location = new System.Drawing.Point(248, 162);
+            this.label529.Name = "label529";
+            this.label529.Size = new System.Drawing.Size(26, 26);
+            this.label529.TabIndex = 228;
+            this.label529.Text = "A";
+            // 
+            // brake_light_current_box
+            // 
+            this.brake_light_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.brake_light_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.brake_light_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.brake_light_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.brake_light_current_box.Location = new System.Drawing.Point(167, 194);
+            this.brake_light_current_box.Multiline = true;
+            this.brake_light_current_box.Name = "brake_light_current_box";
+            this.brake_light_current_box.ReadOnly = true;
+            this.brake_light_current_box.Size = new System.Drawing.Size(75, 25);
+            this.brake_light_current_box.TabIndex = 227;
+            this.brake_light_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // vcdu_current_box
+            // 
+            this.vcdu_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.vcdu_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vcdu_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.vcdu_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.vcdu_current_box.Location = new System.Drawing.Point(167, 163);
+            this.vcdu_current_box.Multiline = true;
+            this.vcdu_current_box.Name = "vcdu_current_box";
+            this.vcdu_current_box.ReadOnly = true;
+            this.vcdu_current_box.Size = new System.Drawing.Size(75, 25);
+            this.vcdu_current_box.TabIndex = 226;
+            this.vcdu_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label513
+            // 
+            this.label513.AutoSize = true;
+            this.label513.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label513.Location = new System.Drawing.Point(375, 72);
+            this.label513.Name = "label513";
+            this.label513.Size = new System.Drawing.Size(53, 26);
+            this.label513.TabIndex = 219;
+            this.label513.Text = "EBS:";
+            // 
+            // label514
+            // 
+            this.label514.AutoSize = true;
+            this.label514.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label514.Location = new System.Drawing.Point(517, 69);
+            this.label514.Name = "label514";
+            this.label514.Size = new System.Drawing.Size(26, 26);
+            this.label514.TabIndex = 223;
+            this.label514.Text = "A";
+            // 
+            // label515
+            // 
+            this.label515.AutoSize = true;
+            this.label515.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label515.Location = new System.Drawing.Point(334, 41);
+            this.label515.Name = "label515";
+            this.label515.Size = new System.Drawing.Size(94, 26);
+            this.label515.TabIndex = 218;
+            this.label515.Text = "Actuator:";
+            // 
+            // label516
+            // 
+            this.label516.AutoSize = true;
+            this.label516.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label516.Location = new System.Drawing.Point(517, 38);
+            this.label516.Name = "label516";
+            this.label516.Size = new System.Drawing.Size(26, 26);
+            this.label516.TabIndex = 222;
+            this.label516.Text = "A";
+            // 
+            // ebs_current_box
+            // 
+            this.ebs_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ebs_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ebs_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.ebs_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ebs_current_box.Location = new System.Drawing.Point(436, 70);
+            this.ebs_current_box.Multiline = true;
+            this.ebs_current_box.Name = "ebs_current_box";
+            this.ebs_current_box.ReadOnly = true;
+            this.ebs_current_box.Size = new System.Drawing.Size(75, 25);
+            this.ebs_current_box.TabIndex = 221;
+            this.ebs_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // actuator_current_box
+            // 
+            this.actuator_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.actuator_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.actuator_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.actuator_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.actuator_current_box.Location = new System.Drawing.Point(436, 39);
+            this.actuator_current_box.Multiline = true;
+            this.actuator_current_box.Name = "actuator_current_box";
+            this.actuator_current_box.ReadOnly = true;
+            this.actuator_current_box.Size = new System.Drawing.Size(75, 25);
+            this.actuator_current_box.TabIndex = 220;
+            this.actuator_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label449
+            // 
+            this.label449.AutoSize = true;
+            this.label449.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label449.Location = new System.Drawing.Point(241, 281);
+            this.label449.Name = "label449";
+            this.label449.Size = new System.Drawing.Size(115, 26);
+            this.label449.TabIndex = 217;
+            this.label449.Text = "VCU Status:";
+            // 
+            // label487
+            // 
+            this.label487.AutoSize = true;
+            this.label487.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label487.Location = new System.Drawing.Point(74, 71);
+            this.label487.Name = "label487";
+            this.label487.Size = new System.Drawing.Size(87, 26);
+            this.label487.TabIndex = 208;
+            this.label487.Text = "Inverter:";
+            // 
+            // label488
+            // 
+            this.label488.AutoSize = true;
+            this.label488.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label488.Location = new System.Drawing.Point(94, 258);
+            this.label488.Name = "label488";
+            this.label488.Size = new System.Drawing.Size(67, 26);
+            this.label488.TabIndex = 207;
+            this.label488.Text = "Fan 2:";
+            // 
+            // label485
+            // 
+            this.label485.AutoSize = true;
+            this.label485.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label485.Location = new System.Drawing.Point(248, 255);
+            this.label485.Name = "label485";
+            this.label485.Size = new System.Drawing.Size(26, 26);
+            this.label485.TabIndex = 215;
+            this.label485.Text = "A";
+            // 
+            // label489
+            // 
+            this.label489.AutoSize = true;
+            this.label489.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label489.Location = new System.Drawing.Point(94, 227);
+            this.label489.Name = "label489";
+            this.label489.Size = new System.Drawing.Size(67, 26);
+            this.label489.TabIndex = 206;
+            this.label489.Text = "Fan 1:";
+            // 
+            // label484
+            // 
+            this.label484.AutoSize = true;
+            this.label484.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label484.Location = new System.Drawing.Point(248, 224);
+            this.label484.Name = "label484";
+            this.label484.Size = new System.Drawing.Size(26, 26);
+            this.label484.TabIndex = 214;
+            this.label484.Text = "A";
+            // 
+            // label490
+            // 
+            this.label490.AutoSize = true;
+            this.label490.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label490.Location = new System.Drawing.Point(18, 134);
+            this.label490.Name = "label490";
+            this.label490.Size = new System.Drawing.Size(143, 26);
+            this.label490.TabIndex = 205;
+            this.label490.Text = "Cooling Pump:";
+            // 
+            // label483
+            // 
+            this.label483.AutoSize = true;
+            this.label483.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label483.Location = new System.Drawing.Point(248, 131);
+            this.label483.Name = "label483";
+            this.label483.Size = new System.Drawing.Size(26, 26);
+            this.label483.TabIndex = 213;
+            this.label483.Text = "A";
+            // 
+            // label493
+            // 
+            this.label493.AutoSize = true;
+            this.label493.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label493.Location = new System.Drawing.Point(97, 102);
+            this.label493.Name = "label493";
+            this.label493.Size = new System.Drawing.Size(64, 26);
+            this.label493.TabIndex = 202;
+            this.label493.Text = "TSAL:";
+            // 
+            // label480
+            // 
+            this.label480.AutoSize = true;
+            this.label480.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label480.Location = new System.Drawing.Point(248, 99);
+            this.label480.Name = "label480";
+            this.label480.Size = new System.Drawing.Size(26, 26);
+            this.label480.TabIndex = 210;
+            this.label480.Text = "A";
+            // 
+            // label494
+            // 
+            this.label494.AutoSize = true;
+            this.label494.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label494.Location = new System.Drawing.Point(110, 40);
+            this.label494.Name = "label494";
+            this.label494.Size = new System.Drawing.Size(51, 26);
+            this.label494.TabIndex = 201;
+            this.label494.Text = "LCS:";
+            // 
+            // label479
+            // 
+            this.label479.AutoSize = true;
+            this.label479.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label479.Location = new System.Drawing.Point(248, 68);
+            this.label479.Name = "label479";
+            this.label479.Size = new System.Drawing.Size(26, 26);
+            this.label479.TabIndex = 209;
+            this.label479.Text = "A";
+            // 
+            // label478
+            // 
+            this.label478.AutoSize = true;
+            this.label478.Font = new System.Drawing.Font("3ds Light", 12F);
+            this.label478.Location = new System.Drawing.Point(248, 37);
+            this.label478.Name = "label478";
+            this.label478.Size = new System.Drawing.Size(26, 26);
+            this.label478.TabIndex = 201;
+            this.label478.Text = "A";
+            // 
+            // fan2_current_box
+            // 
+            this.fan2_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.fan2_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fan2_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.fan2_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.fan2_current_box.Location = new System.Drawing.Point(167, 256);
+            this.fan2_current_box.Multiline = true;
+            this.fan2_current_box.Name = "fan2_current_box";
+            this.fan2_current_box.ReadOnly = true;
+            this.fan2_current_box.Size = new System.Drawing.Size(75, 25);
+            this.fan2_current_box.TabIndex = 208;
+            this.fan2_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // fan1_current_box
+            // 
+            this.fan1_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.fan1_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fan1_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.fan1_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.fan1_current_box.Location = new System.Drawing.Point(167, 225);
+            this.fan1_current_box.Multiline = true;
+            this.fan1_current_box.Name = "fan1_current_box";
+            this.fan1_current_box.ReadOnly = true;
+            this.fan1_current_box.Size = new System.Drawing.Size(75, 25);
+            this.fan1_current_box.TabIndex = 207;
+            this.fan1_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lcs_current_box
+            // 
+            this.lcs_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lcs_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lcs_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.lcs_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lcs_current_box.Location = new System.Drawing.Point(167, 38);
+            this.lcs_current_box.Multiline = true;
+            this.lcs_current_box.Name = "lcs_current_box";
+            this.lcs_current_box.ReadOnly = true;
+            this.lcs_current_box.Size = new System.Drawing.Size(75, 25);
+            this.lcs_current_box.TabIndex = 201;
+            this.lcs_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cooling_pump_current_box
+            // 
+            this.cooling_pump_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cooling_pump_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cooling_pump_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.cooling_pump_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.cooling_pump_current_box.Location = new System.Drawing.Point(167, 132);
+            this.cooling_pump_current_box.Multiline = true;
+            this.cooling_pump_current_box.Name = "cooling_pump_current_box";
+            this.cooling_pump_current_box.ReadOnly = true;
+            this.cooling_pump_current_box.Size = new System.Drawing.Size(75, 25);
+            this.cooling_pump_current_box.TabIndex = 206;
+            this.cooling_pump_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // inverter_current_box
+            // 
+            this.inverter_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.inverter_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.inverter_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.inverter_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.inverter_current_box.Location = new System.Drawing.Point(167, 69);
+            this.inverter_current_box.Multiline = true;
+            this.inverter_current_box.Name = "inverter_current_box";
+            this.inverter_current_box.ReadOnly = true;
+            this.inverter_current_box.Size = new System.Drawing.Size(75, 25);
+            this.inverter_current_box.TabIndex = 202;
+            this.inverter_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tsal_current_box
+            // 
+            this.tsal_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tsal_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tsal_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.tsal_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tsal_current_box.Location = new System.Drawing.Point(167, 100);
+            this.tsal_current_box.Multiline = true;
+            this.tsal_current_box.Name = "tsal_current_box";
+            this.tsal_current_box.ReadOnly = true;
+            this.tsal_current_box.Size = new System.Drawing.Size(75, 25);
+            this.tsal_current_box.TabIndex = 203;
+            this.tsal_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox8
             // 
@@ -1738,7 +2560,7 @@
             this.groupBox8.Controls.Add(this.lv_temp_cell_3_box);
             this.groupBox8.Controls.Add(this.lv_temp_cell_2_box);
             this.groupBox8.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox8.Location = new System.Drawing.Point(914, 140);
+            this.groupBox8.Location = new System.Drawing.Point(3, 474);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(198, 544);
             this.groupBox8.TabIndex = 221;
@@ -2214,7 +3036,7 @@
             // 
             this.groupBox7.Controls.Add(this.actuator_status_box);
             this.groupBox7.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox7.Location = new System.Drawing.Point(573, 4);
+            this.groupBox7.Location = new System.Drawing.Point(238, 521);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(335, 67);
             this.groupBox7.TabIndex = 220;
@@ -2241,12 +3063,12 @@
             this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Controls.Add(this.label5);
             this.groupBox6.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox6.Location = new System.Drawing.Point(914, 4);
+            this.groupBox6.Location = new System.Drawing.Point(575, 345);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(198, 99);
+            this.groupBox6.Size = new System.Drawing.Size(177, 99);
             this.groupBox6.TabIndex = 219;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "FAN Regulator";
+            this.groupBox6.Text = "FAN Reg";
             // 
             // rpm2_box
             // 
@@ -2295,439 +3117,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "RPM1:";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label499);
-            this.groupBox4.Controls.Add(this.precharge_status_box);
-            this.groupBox4.Controls.Add(this.airminus_box);
-            this.groupBox4.Controls.Add(this.label473);
-            this.groupBox4.Controls.Add(this.label474);
-            this.groupBox4.Controls.Add(this.label475);
-            this.groupBox4.Controls.Add(this.airplus_box);
-            this.groupBox4.Controls.Add(this.prechrelay_box);
-            this.groupBox4.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox4.Location = new System.Drawing.Point(573, 268);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(335, 201);
-            this.groupBox4.TabIndex = 217;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "PreCharge";
-            // 
-            // label499
-            // 
-            this.label499.AutoSize = true;
-            this.label499.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label499.Location = new System.Drawing.Point(83, 135);
-            this.label499.Name = "label499";
-            this.label499.Size = new System.Drawing.Size(170, 26);
-            this.label499.TabIndex = 203;
-            this.label499.Text = "PreCharge Status:";
-            // 
-            // precharge_status_box
-            // 
-            this.precharge_status_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.precharge_status_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.precharge_status_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.precharge_status_box.Location = new System.Drawing.Point(8, 164);
-            this.precharge_status_box.Multiline = true;
-            this.precharge_status_box.Name = "precharge_status_box";
-            this.precharge_status_box.ReadOnly = true;
-            this.precharge_status_box.Size = new System.Drawing.Size(321, 25);
-            this.precharge_status_box.TabIndex = 202;
-            this.precharge_status_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // airminus_box
-            // 
-            this.airminus_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.airminus_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.airminus_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.airminus_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.airminus_box.Location = new System.Drawing.Point(196, 36);
-            this.airminus_box.Multiline = true;
-            this.airminus_box.Name = "airminus_box";
-            this.airminus_box.ReadOnly = true;
-            this.airminus_box.Size = new System.Drawing.Size(85, 25);
-            this.airminus_box.TabIndex = 194;
-            this.airminus_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label473
-            // 
-            this.label473.AutoSize = true;
-            this.label473.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label473.Location = new System.Drawing.Point(120, 38);
-            this.label473.Name = "label473";
-            this.label473.Size = new System.Drawing.Size(64, 26);
-            this.label473.TabIndex = 191;
-            this.label473.Text = "- AIR:";
-            // 
-            // label474
-            // 
-            this.label474.AutoSize = true;
-            this.label474.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label474.Location = new System.Drawing.Point(116, 69);
-            this.label474.Name = "label474";
-            this.label474.Size = new System.Drawing.Size(68, 26);
-            this.label474.TabIndex = 192;
-            this.label474.Text = "+ AIR:";
-            // 
-            // label475
-            // 
-            this.label475.AutoSize = true;
-            this.label475.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label475.Location = new System.Drawing.Point(29, 100);
-            this.label475.Name = "label475";
-            this.label475.Size = new System.Drawing.Size(155, 26);
-            this.label475.TabIndex = 193;
-            this.label475.Text = "Precharge relay:";
-            // 
-            // airplus_box
-            // 
-            this.airplus_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.airplus_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.airplus_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.airplus_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.airplus_box.Location = new System.Drawing.Point(196, 67);
-            this.airplus_box.Multiline = true;
-            this.airplus_box.Name = "airplus_box";
-            this.airplus_box.ReadOnly = true;
-            this.airplus_box.Size = new System.Drawing.Size(85, 25);
-            this.airplus_box.TabIndex = 195;
-            this.airplus_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // prechrelay_box
-            // 
-            this.prechrelay_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.prechrelay_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prechrelay_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.prechrelay_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.prechrelay_box.Location = new System.Drawing.Point(196, 98);
-            this.prechrelay_box.Multiline = true;
-            this.prechrelay_box.Name = "prechrelay_box";
-            this.prechrelay_box.ReadOnly = true;
-            this.prechrelay_box.Size = new System.Drawing.Size(85, 25);
-            this.prechrelay_box.TabIndex = 196;
-            this.prechrelay_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label548);
-            this.groupBox3.Controls.Add(this.label547);
-            this.groupBox3.Controls.Add(this.label546);
-            this.groupBox3.Controls.Add(this.label545);
-            this.groupBox3.Controls.Add(this.label544);
-            this.groupBox3.Controls.Add(this.label543);
-            this.groupBox3.Controls.Add(this.label542);
-            this.groupBox3.Controls.Add(this.slave_status_box_8);
-            this.groupBox3.Controls.Add(this.slave_status_box_7);
-            this.groupBox3.Controls.Add(this.slave_status_box_6);
-            this.groupBox3.Controls.Add(this.slave_status_box_5);
-            this.groupBox3.Controls.Add(this.slave_status_box_4);
-            this.groupBox3.Controls.Add(this.slave_status_box_3);
-            this.groupBox3.Controls.Add(this.label481);
-            this.groupBox3.Controls.Add(this.master_status_box);
-            this.groupBox3.Controls.Add(this.label500);
-            this.groupBox3.Controls.Add(this.slave_status_box_2);
-            this.groupBox3.Controls.Add(this.hotcell);
-            this.groupBox3.Controls.Add(this.label472);
-            this.groupBox3.Controls.Add(this.label471);
-            this.groupBox3.Controls.Add(this.current_box);
-            this.groupBox3.Controls.Add(this.slave_status_box_1);
-            this.groupBox3.Controls.Add(this.label477);
-            this.groupBox3.Controls.Add(this.label476);
-            this.groupBox3.Controls.Add(this.label497);
-            this.groupBox3.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox3.Location = new System.Drawing.Point(241, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(317, 465);
-            this.groupBox3.TabIndex = 216;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "AMS Service";
-            // 
-            // label548
-            // 
-            this.label548.AutoSize = true;
-            this.label548.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label548.Location = new System.Drawing.Point(6, 423);
-            this.label548.Name = "label548";
-            this.label548.Size = new System.Drawing.Size(30, 26);
-            this.label548.TabIndex = 228;
-            this.label548.Text = "8:";
-            // 
-            // label547
-            // 
-            this.label547.AutoSize = true;
-            this.label547.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label547.Location = new System.Drawing.Point(6, 392);
-            this.label547.Name = "label547";
-            this.label547.Size = new System.Drawing.Size(30, 26);
-            this.label547.TabIndex = 227;
-            this.label547.Text = "7:";
-            // 
-            // label546
-            // 
-            this.label546.AutoSize = true;
-            this.label546.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label546.Location = new System.Drawing.Point(6, 362);
-            this.label546.Name = "label546";
-            this.label546.Size = new System.Drawing.Size(30, 26);
-            this.label546.TabIndex = 226;
-            this.label546.Text = "6:";
-            // 
-            // label545
-            // 
-            this.label545.AutoSize = true;
-            this.label545.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label545.Location = new System.Drawing.Point(6, 330);
-            this.label545.Name = "label545";
-            this.label545.Size = new System.Drawing.Size(30, 26);
-            this.label545.TabIndex = 225;
-            this.label545.Text = "5:";
-            // 
-            // label544
-            // 
-            this.label544.AutoSize = true;
-            this.label544.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label544.Location = new System.Drawing.Point(6, 299);
-            this.label544.Name = "label544";
-            this.label544.Size = new System.Drawing.Size(30, 26);
-            this.label544.TabIndex = 224;
-            this.label544.Text = "4:";
-            // 
-            // label543
-            // 
-            this.label543.AutoSize = true;
-            this.label543.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label543.Location = new System.Drawing.Point(6, 269);
-            this.label543.Name = "label543";
-            this.label543.Size = new System.Drawing.Size(30, 26);
-            this.label543.TabIndex = 223;
-            this.label543.Text = "3:";
-            // 
-            // label542
-            // 
-            this.label542.AutoSize = true;
-            this.label542.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label542.Location = new System.Drawing.Point(6, 238);
-            this.label542.Name = "label542";
-            this.label542.Size = new System.Drawing.Size(30, 26);
-            this.label542.TabIndex = 222;
-            this.label542.Text = "2:";
-            // 
-            // slave_status_box_8
-            // 
-            this.slave_status_box_8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.slave_status_box_8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slave_status_box_8.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.slave_status_box_8.Location = new System.Drawing.Point(42, 421);
-            this.slave_status_box_8.Multiline = true;
-            this.slave_status_box_8.Name = "slave_status_box_8";
-            this.slave_status_box_8.ReadOnly = true;
-            this.slave_status_box_8.Size = new System.Drawing.Size(264, 25);
-            this.slave_status_box_8.TabIndex = 221;
-            this.slave_status_box_8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // slave_status_box_7
-            // 
-            this.slave_status_box_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.slave_status_box_7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slave_status_box_7.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.slave_status_box_7.Location = new System.Drawing.Point(42, 390);
-            this.slave_status_box_7.Multiline = true;
-            this.slave_status_box_7.Name = "slave_status_box_7";
-            this.slave_status_box_7.ReadOnly = true;
-            this.slave_status_box_7.Size = new System.Drawing.Size(264, 25);
-            this.slave_status_box_7.TabIndex = 220;
-            this.slave_status_box_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // slave_status_box_6
-            // 
-            this.slave_status_box_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.slave_status_box_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slave_status_box_6.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.slave_status_box_6.Location = new System.Drawing.Point(42, 359);
-            this.slave_status_box_6.Multiline = true;
-            this.slave_status_box_6.Name = "slave_status_box_6";
-            this.slave_status_box_6.ReadOnly = true;
-            this.slave_status_box_6.Size = new System.Drawing.Size(264, 25);
-            this.slave_status_box_6.TabIndex = 219;
-            this.slave_status_box_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // slave_status_box_5
-            // 
-            this.slave_status_box_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.slave_status_box_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slave_status_box_5.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.slave_status_box_5.Location = new System.Drawing.Point(42, 328);
-            this.slave_status_box_5.Multiline = true;
-            this.slave_status_box_5.Name = "slave_status_box_5";
-            this.slave_status_box_5.ReadOnly = true;
-            this.slave_status_box_5.Size = new System.Drawing.Size(264, 25);
-            this.slave_status_box_5.TabIndex = 218;
-            this.slave_status_box_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // slave_status_box_4
-            // 
-            this.slave_status_box_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.slave_status_box_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slave_status_box_4.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.slave_status_box_4.Location = new System.Drawing.Point(42, 297);
-            this.slave_status_box_4.Multiline = true;
-            this.slave_status_box_4.Name = "slave_status_box_4";
-            this.slave_status_box_4.ReadOnly = true;
-            this.slave_status_box_4.Size = new System.Drawing.Size(265, 25);
-            this.slave_status_box_4.TabIndex = 217;
-            this.slave_status_box_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // slave_status_box_3
-            // 
-            this.slave_status_box_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.slave_status_box_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slave_status_box_3.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.slave_status_box_3.Location = new System.Drawing.Point(42, 266);
-            this.slave_status_box_3.Multiline = true;
-            this.slave_status_box_3.Name = "slave_status_box_3";
-            this.slave_status_box_3.ReadOnly = true;
-            this.slave_status_box_3.Size = new System.Drawing.Size(265, 25);
-            this.slave_status_box_3.TabIndex = 215;
-            this.slave_status_box_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label481
-            // 
-            this.label481.AutoSize = true;
-            this.label481.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label481.Location = new System.Drawing.Point(6, 206);
-            this.label481.Name = "label481";
-            this.label481.Size = new System.Drawing.Size(30, 26);
-            this.label481.TabIndex = 214;
-            this.label481.Text = "1:";
-            // 
-            // master_status_box
-            // 
-            this.master_status_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.master_status_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.master_status_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.master_status_box.Location = new System.Drawing.Point(6, 136);
-            this.master_status_box.Multiline = true;
-            this.master_status_box.Name = "master_status_box";
-            this.master_status_box.ReadOnly = true;
-            this.master_status_box.Size = new System.Drawing.Size(300, 25);
-            this.master_status_box.TabIndex = 212;
-            this.master_status_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label500
-            // 
-            this.label500.AutoSize = true;
-            this.label500.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label500.Location = new System.Drawing.Point(6, 104);
-            this.label500.Name = "label500";
-            this.label500.Size = new System.Drawing.Size(139, 26);
-            this.label500.TabIndex = 211;
-            this.label500.Text = "Master Status:";
-            // 
-            // slave_status_box_2
-            // 
-            this.slave_status_box_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.slave_status_box_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slave_status_box_2.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.slave_status_box_2.Location = new System.Drawing.Point(42, 235);
-            this.slave_status_box_2.Multiline = true;
-            this.slave_status_box_2.Name = "slave_status_box_2";
-            this.slave_status_box_2.ReadOnly = true;
-            this.slave_status_box_2.Size = new System.Drawing.Size(264, 25);
-            this.slave_status_box_2.TabIndex = 213;
-            this.slave_status_box_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // hotcell
-            // 
-            this.hotcell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.hotcell.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.hotcell.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.hotcell.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.hotcell.Location = new System.Drawing.Point(167, 31);
-            this.hotcell.Multiline = true;
-            this.hotcell.Name = "hotcell";
-            this.hotcell.ReadOnly = true;
-            this.hotcell.Size = new System.Drawing.Size(75, 25);
-            this.hotcell.TabIndex = 188;
-            this.hotcell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label472
-            // 
-            this.label472.AutoSize = true;
-            this.label472.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label472.Location = new System.Drawing.Point(248, 30);
-            this.label472.Name = "label472";
-            this.label472.Size = new System.Drawing.Size(32, 26);
-            this.label472.TabIndex = 189;
-            this.label472.Text = "°C";
-            // 
-            // label471
-            // 
-            this.label471.AutoSize = true;
-            this.label471.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label471.Location = new System.Drawing.Point(52, 33);
-            this.label471.Name = "label471";
-            this.label471.Size = new System.Drawing.Size(118, 26);
-            this.label471.TabIndex = 187;
-            this.label471.Text = "Hottest cell:";
-            // 
-            // current_box
-            // 
-            this.current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.current_box.Location = new System.Drawing.Point(167, 63);
-            this.current_box.Multiline = true;
-            this.current_box.Name = "current_box";
-            this.current_box.ReadOnly = true;
-            this.current_box.Size = new System.Drawing.Size(75, 25);
-            this.current_box.TabIndex = 197;
-            this.current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // slave_status_box_1
-            // 
-            this.slave_status_box_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.slave_status_box_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slave_status_box_1.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.slave_status_box_1.Location = new System.Drawing.Point(42, 204);
-            this.slave_status_box_1.Multiline = true;
-            this.slave_status_box_1.Name = "slave_status_box_1";
-            this.slave_status_box_1.ReadOnly = true;
-            this.slave_status_box_1.Size = new System.Drawing.Size(264, 25);
-            this.slave_status_box_1.TabIndex = 201;
-            this.slave_status_box_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label477
-            // 
-            this.label477.AutoSize = true;
-            this.label477.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label477.Location = new System.Drawing.Point(38, 65);
-            this.label477.Name = "label477";
-            this.label477.Size = new System.Drawing.Size(132, 26);
-            this.label477.TabIndex = 199;
-            this.label477.Text = "Total Current:";
-            // 
-            // label476
-            // 
-            this.label476.AutoSize = true;
-            this.label476.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label476.Location = new System.Drawing.Point(248, 63);
-            this.label476.Name = "label476";
-            this.label476.Size = new System.Drawing.Size(26, 26);
-            this.label476.TabIndex = 198;
-            this.label476.Text = "A";
-            // 
-            // label497
-            // 
-            this.label497.AutoSize = true;
-            this.label497.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label497.Location = new System.Drawing.Point(6, 174);
-            this.label497.Name = "label497";
-            this.label497.Size = new System.Drawing.Size(124, 26);
-            this.label497.TabIndex = 200;
-            this.label497.Text = "Slave Status:";
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label8);
@@ -2739,7 +3128,7 @@
             this.groupBox5.Controls.Add(this.label452);
             this.groupBox5.Controls.Add(this.label453);
             this.groupBox5.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox5.Location = new System.Drawing.Point(573, 83);
+            this.groupBox5.Location = new System.Drawing.Point(238, 345);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(335, 170);
             this.groupBox5.TabIndex = 218;
@@ -2869,7 +3258,7 @@
             this.groupBox1.Controls.Add(this.label465);
             this.groupBox1.Controls.Add(this.label466);
             this.groupBox1.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox1.Location = new System.Drawing.Point(4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(229, 465);
             this.groupBox1.TabIndex = 214;
@@ -3313,7 +3702,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.groupBox2.Location = new System.Drawing.Point(573, 484);
+            this.groupBox2.Location = new System.Drawing.Point(238, 601);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(335, 200);
             this.groupBox2.TabIndex = 215;
@@ -3445,633 +3834,136 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "bar";
             // 
-            // group_vcu
-            // 
-            this.group_vcu.AutoSize = true;
-            this.group_vcu.Controls.Add(this.label550);
-            this.group_vcu.Controls.Add(this.label549);
-            this.group_vcu.Controls.Add(this.label526);
-            this.group_vcu.Controls.Add(this.label528);
-            this.group_vcu.Controls.Add(this.label530);
-            this.group_vcu.Controls.Add(this.label531);
-            this.group_vcu.Controls.Add(this.label532);
-            this.group_vcu.Controls.Add(this.label533);
-            this.group_vcu.Controls.Add(this.label534);
-            this.group_vcu.Controls.Add(this.label535);
-            this.group_vcu.Controls.Add(this.label536);
-            this.group_vcu.Controls.Add(this.label537);
-            this.group_vcu.Controls.Add(this.label538);
-            this.group_vcu.Controls.Add(this.label539);
-            this.group_vcu.Controls.Add(this.assi_current_box);
-            this.group_vcu.Controls.Add(this.gps_current_box);
-            this.group_vcu.Controls.Add(this.as_current_box);
-            this.group_vcu.Controls.Add(this.cameras_current_box);
-            this.group_vcu.Controls.Add(this.res_current_box);
-            this.group_vcu.Controls.Add(this.lidar_current_box);
-            this.group_vcu.Controls.Add(this.label527);
-            this.group_vcu.Controls.Add(this.label529);
-            this.group_vcu.Controls.Add(this.brake_light_current_box);
-            this.group_vcu.Controls.Add(this.vcdu_current_box);
-            this.group_vcu.Controls.Add(this.label513);
-            this.group_vcu.Controls.Add(this.label514);
-            this.group_vcu.Controls.Add(this.label515);
-            this.group_vcu.Controls.Add(this.label516);
-            this.group_vcu.Controls.Add(this.ebs_current_box);
-            this.group_vcu.Controls.Add(this.actuator_current_box);
-            this.group_vcu.Controls.Add(this.label449);
-            this.group_vcu.Controls.Add(this.vcu_status_box);
-            this.group_vcu.Controls.Add(this.label487);
-            this.group_vcu.Controls.Add(this.label488);
-            this.group_vcu.Controls.Add(this.label485);
-            this.group_vcu.Controls.Add(this.label489);
-            this.group_vcu.Controls.Add(this.label484);
-            this.group_vcu.Controls.Add(this.label490);
-            this.group_vcu.Controls.Add(this.label483);
-            this.group_vcu.Controls.Add(this.label493);
-            this.group_vcu.Controls.Add(this.label480);
-            this.group_vcu.Controls.Add(this.label494);
-            this.group_vcu.Controls.Add(this.label479);
-            this.group_vcu.Controls.Add(this.label478);
-            this.group_vcu.Controls.Add(this.fan2_current_box);
-            this.group_vcu.Controls.Add(this.fan1_current_box);
-            this.group_vcu.Controls.Add(this.lcs_current_box);
-            this.group_vcu.Controls.Add(this.cooling_pump_current_box);
-            this.group_vcu.Controls.Add(this.inverter_current_box);
-            this.group_vcu.Controls.Add(this.tsal_current_box);
-            this.group_vcu.Font = new System.Drawing.Font("Adobe Heiti Std R", 13.8F, System.Drawing.FontStyle.Italic);
-            this.group_vcu.Location = new System.Drawing.Point(0, 484);
-            this.group_vcu.Name = "group_vcu";
-            this.group_vcu.Size = new System.Drawing.Size(567, 392);
-            this.group_vcu.TabIndex = 213;
-            this.group_vcu.TabStop = false;
-            this.group_vcu.Text = "VCU";
-            // 
-            // label550
-            // 
-            this.label550.AutoSize = true;
-            this.label550.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label550.Location = new System.Drawing.Point(43, 196);
-            this.label550.Name = "label550";
-            this.label550.Size = new System.Drawing.Size(118, 26);
-            this.label550.TabIndex = 249;
-            this.label550.Text = "Brake Light:";
-            // 
-            // label549
-            // 
-            this.label549.AutoSize = true;
-            this.label549.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label549.Location = new System.Drawing.Point(92, 165);
-            this.label549.Name = "label549";
-            this.label549.Size = new System.Drawing.Size(69, 26);
-            this.label549.TabIndex = 248;
-            this.label549.Text = "VCDU:";
-            // 
-            // label526
-            // 
-            this.label526.AutoSize = true;
-            this.label526.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label526.Location = new System.Drawing.Point(334, 134);
-            this.label526.Name = "label526";
-            this.label526.Size = new System.Drawing.Size(94, 26);
-            this.label526.TabIndex = 242;
-            this.label526.Text = "Cameras:";
-            // 
-            // label528
-            // 
-            this.label528.AutoSize = true;
-            this.label528.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label528.Location = new System.Drawing.Point(385, 258);
-            this.label528.Name = "label528";
-            this.label528.Size = new System.Drawing.Size(43, 26);
-            this.label528.TabIndex = 239;
-            this.label528.Text = "AS:";
-            // 
-            // label530
-            // 
-            this.label530.AutoSize = true;
-            this.label530.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label530.Location = new System.Drawing.Point(517, 255);
-            this.label530.Name = "label530";
-            this.label530.Size = new System.Drawing.Size(26, 26);
-            this.label530.TabIndex = 247;
-            this.label530.Text = "A";
-            // 
-            // label531
-            // 
-            this.label531.AutoSize = true;
-            this.label531.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label531.Location = new System.Drawing.Point(375, 227);
-            this.label531.Name = "label531";
-            this.label531.Size = new System.Drawing.Size(53, 26);
-            this.label531.TabIndex = 237;
-            this.label531.Text = "RES:";
-            // 
-            // label532
-            // 
-            this.label532.AutoSize = true;
-            this.label532.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label532.Location = new System.Drawing.Point(517, 224);
-            this.label532.Name = "label532";
-            this.label532.Size = new System.Drawing.Size(26, 26);
-            this.label532.TabIndex = 246;
-            this.label532.Text = "A";
-            // 
-            // label533
-            // 
-            this.label533.AutoSize = true;
-            this.label533.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label533.Location = new System.Drawing.Point(368, 196);
-            this.label533.Name = "label533";
-            this.label533.Size = new System.Drawing.Size(60, 26);
-            this.label533.TabIndex = 236;
-            this.label533.Text = "ASSI:";
-            // 
-            // label534
-            // 
-            this.label534.AutoSize = true;
-            this.label534.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label534.Location = new System.Drawing.Point(517, 193);
-            this.label534.Name = "label534";
-            this.label534.Size = new System.Drawing.Size(26, 26);
-            this.label534.TabIndex = 245;
-            this.label534.Text = "A";
-            // 
-            // label535
-            // 
-            this.label535.AutoSize = true;
-            this.label535.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label535.Location = new System.Drawing.Point(367, 165);
-            this.label535.Name = "label535";
-            this.label535.Size = new System.Drawing.Size(61, 26);
-            this.label535.TabIndex = 234;
-            this.label535.Text = "Lidar:";
-            // 
-            // label536
-            // 
-            this.label536.AutoSize = true;
-            this.label536.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label536.Location = new System.Drawing.Point(517, 162);
-            this.label536.Name = "label536";
-            this.label536.Size = new System.Drawing.Size(26, 26);
-            this.label536.TabIndex = 244;
-            this.label536.Text = "A";
-            // 
-            // label537
-            // 
-            this.label537.AutoSize = true;
-            this.label537.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label537.Location = new System.Drawing.Point(372, 103);
-            this.label537.Name = "label537";
-            this.label537.Size = new System.Drawing.Size(56, 26);
-            this.label537.TabIndex = 231;
-            this.label537.Text = "GPS:";
-            // 
-            // label538
-            // 
-            this.label538.AutoSize = true;
-            this.label538.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label538.Location = new System.Drawing.Point(517, 131);
-            this.label538.Name = "label538";
-            this.label538.Size = new System.Drawing.Size(26, 26);
-            this.label538.TabIndex = 243;
-            this.label538.Text = "A";
-            // 
-            // label539
-            // 
-            this.label539.AutoSize = true;
-            this.label539.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label539.Location = new System.Drawing.Point(517, 100);
-            this.label539.Name = "label539";
-            this.label539.Size = new System.Drawing.Size(26, 26);
-            this.label539.TabIndex = 232;
-            this.label539.Text = "A";
-            // 
-            // assi_current_box
-            // 
-            this.assi_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.assi_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.assi_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.assi_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.assi_current_box.Location = new System.Drawing.Point(436, 194);
-            this.assi_current_box.Multiline = true;
-            this.assi_current_box.Name = "assi_current_box";
-            this.assi_current_box.ReadOnly = true;
-            this.assi_current_box.Size = new System.Drawing.Size(75, 25);
-            this.assi_current_box.TabIndex = 238;
-            this.assi_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // gps_current_box
-            // 
-            this.gps_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gps_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gps_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.gps_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.gps_current_box.Location = new System.Drawing.Point(436, 101);
-            this.gps_current_box.Multiline = true;
-            this.gps_current_box.Name = "gps_current_box";
-            this.gps_current_box.ReadOnly = true;
-            this.gps_current_box.Size = new System.Drawing.Size(75, 25);
-            this.gps_current_box.TabIndex = 230;
-            this.gps_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // as_current_box
-            // 
-            this.as_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.as_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.as_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.as_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.as_current_box.Location = new System.Drawing.Point(436, 256);
-            this.as_current_box.Multiline = true;
-            this.as_current_box.Name = "as_current_box";
-            this.as_current_box.ReadOnly = true;
-            this.as_current_box.Size = new System.Drawing.Size(75, 25);
-            this.as_current_box.TabIndex = 241;
-            this.as_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cameras_current_box
-            // 
-            this.cameras_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cameras_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cameras_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.cameras_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.cameras_current_box.Location = new System.Drawing.Point(436, 132);
-            this.cameras_current_box.Multiline = true;
-            this.cameras_current_box.Name = "cameras_current_box";
-            this.cameras_current_box.ReadOnly = true;
-            this.cameras_current_box.Size = new System.Drawing.Size(75, 25);
-            this.cameras_current_box.TabIndex = 233;
-            this.cameras_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // res_current_box
-            // 
-            this.res_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.res_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.res_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.res_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.res_current_box.Location = new System.Drawing.Point(436, 225);
-            this.res_current_box.Multiline = true;
-            this.res_current_box.Name = "res_current_box";
-            this.res_current_box.ReadOnly = true;
-            this.res_current_box.Size = new System.Drawing.Size(75, 25);
-            this.res_current_box.TabIndex = 240;
-            this.res_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lidar_current_box
-            // 
-            this.lidar_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lidar_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lidar_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.lidar_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lidar_current_box.Location = new System.Drawing.Point(436, 163);
-            this.lidar_current_box.Multiline = true;
-            this.lidar_current_box.Name = "lidar_current_box";
-            this.lidar_current_box.ReadOnly = true;
-            this.lidar_current_box.Size = new System.Drawing.Size(75, 25);
-            this.lidar_current_box.TabIndex = 235;
-            this.lidar_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label527
-            // 
-            this.label527.AutoSize = true;
-            this.label527.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label527.Location = new System.Drawing.Point(248, 193);
-            this.label527.Name = "label527";
-            this.label527.Size = new System.Drawing.Size(26, 26);
-            this.label527.TabIndex = 229;
-            this.label527.Text = "A";
-            // 
-            // label529
-            // 
-            this.label529.AutoSize = true;
-            this.label529.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label529.Location = new System.Drawing.Point(248, 162);
-            this.label529.Name = "label529";
-            this.label529.Size = new System.Drawing.Size(26, 26);
-            this.label529.TabIndex = 228;
-            this.label529.Text = "A";
-            // 
-            // brake_light_current_box
-            // 
-            this.brake_light_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.brake_light_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.brake_light_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.brake_light_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.brake_light_current_box.Location = new System.Drawing.Point(167, 194);
-            this.brake_light_current_box.Multiline = true;
-            this.brake_light_current_box.Name = "brake_light_current_box";
-            this.brake_light_current_box.ReadOnly = true;
-            this.brake_light_current_box.Size = new System.Drawing.Size(75, 25);
-            this.brake_light_current_box.TabIndex = 227;
-            this.brake_light_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // vcdu_current_box
-            // 
-            this.vcdu_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.vcdu_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vcdu_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.vcdu_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.vcdu_current_box.Location = new System.Drawing.Point(167, 163);
-            this.vcdu_current_box.Multiline = true;
-            this.vcdu_current_box.Name = "vcdu_current_box";
-            this.vcdu_current_box.ReadOnly = true;
-            this.vcdu_current_box.Size = new System.Drawing.Size(75, 25);
-            this.vcdu_current_box.TabIndex = 226;
-            this.vcdu_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label513
-            // 
-            this.label513.AutoSize = true;
-            this.label513.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label513.Location = new System.Drawing.Point(375, 72);
-            this.label513.Name = "label513";
-            this.label513.Size = new System.Drawing.Size(53, 26);
-            this.label513.TabIndex = 219;
-            this.label513.Text = "EBS:";
-            // 
-            // label514
-            // 
-            this.label514.AutoSize = true;
-            this.label514.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label514.Location = new System.Drawing.Point(517, 69);
-            this.label514.Name = "label514";
-            this.label514.Size = new System.Drawing.Size(26, 26);
-            this.label514.TabIndex = 223;
-            this.label514.Text = "A";
-            // 
-            // label515
-            // 
-            this.label515.AutoSize = true;
-            this.label515.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label515.Location = new System.Drawing.Point(334, 41);
-            this.label515.Name = "label515";
-            this.label515.Size = new System.Drawing.Size(94, 26);
-            this.label515.TabIndex = 218;
-            this.label515.Text = "Actuator:";
-            // 
-            // label516
-            // 
-            this.label516.AutoSize = true;
-            this.label516.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label516.Location = new System.Drawing.Point(517, 38);
-            this.label516.Name = "label516";
-            this.label516.Size = new System.Drawing.Size(26, 26);
-            this.label516.TabIndex = 222;
-            this.label516.Text = "A";
-            // 
-            // ebs_current_box
-            // 
-            this.ebs_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ebs_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ebs_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.ebs_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ebs_current_box.Location = new System.Drawing.Point(436, 70);
-            this.ebs_current_box.Multiline = true;
-            this.ebs_current_box.Name = "ebs_current_box";
-            this.ebs_current_box.ReadOnly = true;
-            this.ebs_current_box.Size = new System.Drawing.Size(75, 25);
-            this.ebs_current_box.TabIndex = 221;
-            this.ebs_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // actuator_current_box
-            // 
-            this.actuator_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.actuator_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.actuator_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.actuator_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.actuator_current_box.Location = new System.Drawing.Point(436, 39);
-            this.actuator_current_box.Multiline = true;
-            this.actuator_current_box.Name = "actuator_current_box";
-            this.actuator_current_box.ReadOnly = true;
-            this.actuator_current_box.Size = new System.Drawing.Size(75, 25);
-            this.actuator_current_box.TabIndex = 220;
-            this.actuator_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label449
-            // 
-            this.label449.AutoSize = true;
-            this.label449.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label449.Location = new System.Drawing.Point(241, 281);
-            this.label449.Name = "label449";
-            this.label449.Size = new System.Drawing.Size(115, 26);
-            this.label449.TabIndex = 217;
-            this.label449.Text = "VCU Status:";
-            // 
-            // vcu_status_box
-            // 
-            this.vcu_status_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.vcu_status_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.vcu_status_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.vcu_status_box.Location = new System.Drawing.Point(8, 315);
-            this.vcu_status_box.Multiline = true;
-            this.vcu_status_box.Name = "vcu_status_box";
-            this.vcu_status_box.ReadOnly = true;
-            this.vcu_status_box.Size = new System.Drawing.Size(540, 25);
-            this.vcu_status_box.TabIndex = 216;
-            this.vcu_status_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label487
-            // 
-            this.label487.AutoSize = true;
-            this.label487.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label487.Location = new System.Drawing.Point(74, 71);
-            this.label487.Name = "label487";
-            this.label487.Size = new System.Drawing.Size(87, 26);
-            this.label487.TabIndex = 208;
-            this.label487.Text = "Inverter:";
-            // 
-            // label488
-            // 
-            this.label488.AutoSize = true;
-            this.label488.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label488.Location = new System.Drawing.Point(94, 258);
-            this.label488.Name = "label488";
-            this.label488.Size = new System.Drawing.Size(67, 26);
-            this.label488.TabIndex = 207;
-            this.label488.Text = "Fan 2:";
-            // 
-            // label485
-            // 
-            this.label485.AutoSize = true;
-            this.label485.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label485.Location = new System.Drawing.Point(248, 255);
-            this.label485.Name = "label485";
-            this.label485.Size = new System.Drawing.Size(26, 26);
-            this.label485.TabIndex = 215;
-            this.label485.Text = "A";
-            // 
-            // label489
-            // 
-            this.label489.AutoSize = true;
-            this.label489.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label489.Location = new System.Drawing.Point(94, 227);
-            this.label489.Name = "label489";
-            this.label489.Size = new System.Drawing.Size(67, 26);
-            this.label489.TabIndex = 206;
-            this.label489.Text = "Fan 1:";
-            // 
-            // label484
-            // 
-            this.label484.AutoSize = true;
-            this.label484.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label484.Location = new System.Drawing.Point(248, 224);
-            this.label484.Name = "label484";
-            this.label484.Size = new System.Drawing.Size(26, 26);
-            this.label484.TabIndex = 214;
-            this.label484.Text = "A";
-            // 
-            // label490
-            // 
-            this.label490.AutoSize = true;
-            this.label490.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label490.Location = new System.Drawing.Point(18, 134);
-            this.label490.Name = "label490";
-            this.label490.Size = new System.Drawing.Size(143, 26);
-            this.label490.TabIndex = 205;
-            this.label490.Text = "Cooling Pump:";
-            // 
-            // label483
-            // 
-            this.label483.AutoSize = true;
-            this.label483.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label483.Location = new System.Drawing.Point(248, 131);
-            this.label483.Name = "label483";
-            this.label483.Size = new System.Drawing.Size(26, 26);
-            this.label483.TabIndex = 213;
-            this.label483.Text = "A";
-            // 
-            // label493
-            // 
-            this.label493.AutoSize = true;
-            this.label493.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label493.Location = new System.Drawing.Point(97, 102);
-            this.label493.Name = "label493";
-            this.label493.Size = new System.Drawing.Size(64, 26);
-            this.label493.TabIndex = 202;
-            this.label493.Text = "TSAL:";
-            // 
-            // label480
-            // 
-            this.label480.AutoSize = true;
-            this.label480.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label480.Location = new System.Drawing.Point(248, 99);
-            this.label480.Name = "label480";
-            this.label480.Size = new System.Drawing.Size(26, 26);
-            this.label480.TabIndex = 210;
-            this.label480.Text = "A";
-            // 
-            // label494
-            // 
-            this.label494.AutoSize = true;
-            this.label494.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label494.Location = new System.Drawing.Point(110, 40);
-            this.label494.Name = "label494";
-            this.label494.Size = new System.Drawing.Size(51, 26);
-            this.label494.TabIndex = 201;
-            this.label494.Text = "LCS:";
-            // 
-            // label479
-            // 
-            this.label479.AutoSize = true;
-            this.label479.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label479.Location = new System.Drawing.Point(248, 68);
-            this.label479.Name = "label479";
-            this.label479.Size = new System.Drawing.Size(26, 26);
-            this.label479.TabIndex = 209;
-            this.label479.Text = "A";
-            // 
-            // label478
-            // 
-            this.label478.AutoSize = true;
-            this.label478.Font = new System.Drawing.Font("3ds Light", 12F);
-            this.label478.Location = new System.Drawing.Point(248, 37);
-            this.label478.Name = "label478";
-            this.label478.Size = new System.Drawing.Size(26, 26);
-            this.label478.TabIndex = 201;
-            this.label478.Text = "A";
-            // 
-            // fan2_current_box
-            // 
-            this.fan2_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.fan2_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fan2_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.fan2_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.fan2_current_box.Location = new System.Drawing.Point(167, 256);
-            this.fan2_current_box.Multiline = true;
-            this.fan2_current_box.Name = "fan2_current_box";
-            this.fan2_current_box.ReadOnly = true;
-            this.fan2_current_box.Size = new System.Drawing.Size(75, 25);
-            this.fan2_current_box.TabIndex = 208;
-            this.fan2_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // fan1_current_box
-            // 
-            this.fan1_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.fan1_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fan1_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.fan1_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.fan1_current_box.Location = new System.Drawing.Point(167, 225);
-            this.fan1_current_box.Multiline = true;
-            this.fan1_current_box.Name = "fan1_current_box";
-            this.fan1_current_box.ReadOnly = true;
-            this.fan1_current_box.Size = new System.Drawing.Size(75, 25);
-            this.fan1_current_box.TabIndex = 207;
-            this.fan1_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lcs_current_box
-            // 
-            this.lcs_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lcs_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lcs_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.lcs_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lcs_current_box.Location = new System.Drawing.Point(167, 38);
-            this.lcs_current_box.Multiline = true;
-            this.lcs_current_box.Name = "lcs_current_box";
-            this.lcs_current_box.ReadOnly = true;
-            this.lcs_current_box.Size = new System.Drawing.Size(75, 25);
-            this.lcs_current_box.TabIndex = 201;
-            this.lcs_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cooling_pump_current_box
-            // 
-            this.cooling_pump_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cooling_pump_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cooling_pump_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.cooling_pump_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.cooling_pump_current_box.Location = new System.Drawing.Point(167, 132);
-            this.cooling_pump_current_box.Multiline = true;
-            this.cooling_pump_current_box.Name = "cooling_pump_current_box";
-            this.cooling_pump_current_box.ReadOnly = true;
-            this.cooling_pump_current_box.Size = new System.Drawing.Size(75, 25);
-            this.cooling_pump_current_box.TabIndex = 206;
-            this.cooling_pump_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // inverter_current_box
-            // 
-            this.inverter_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.inverter_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inverter_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.inverter_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.inverter_current_box.Location = new System.Drawing.Point(167, 69);
-            this.inverter_current_box.Multiline = true;
-            this.inverter_current_box.Name = "inverter_current_box";
-            this.inverter_current_box.ReadOnly = true;
-            this.inverter_current_box.Size = new System.Drawing.Size(75, 25);
-            this.inverter_current_box.TabIndex = 202;
-            this.inverter_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tsal_current_box
-            // 
-            this.tsal_current_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tsal_current_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tsal_current_box.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.tsal_current_box.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.tsal_current_box.Location = new System.Drawing.Point(167, 100);
-            this.tsal_current_box.Multiline = true;
-            this.tsal_current_box.Name = "tsal_current_box";
-            this.tsal_current_box.ReadOnly = true;
-            this.tsal_current_box.Size = new System.Drawing.Size(75, 25);
-            this.tsal_current_box.TabIndex = 203;
-            this.tsal_current_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // ams_tabpage
+            // 
+            this.ams_tabpage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ams_tabpage.Controls.Add(this.clear_ams);
+            this.ams_tabpage.Controls.Add(this.richTextBox_master);
+            this.ams_tabpage.Controls.Add(this.richTextBox_slave1);
+            this.ams_tabpage.Controls.Add(this.richTextBox_slave2);
+            this.ams_tabpage.Controls.Add(this.richTextBox_slave3);
+            this.ams_tabpage.Controls.Add(this.richTextBox_slave4);
+            this.ams_tabpage.Controls.Add(this.richTextBox_slave5);
+            this.ams_tabpage.Controls.Add(this.richTextBox_slave6);
+            this.ams_tabpage.Controls.Add(this.richTextBox_slave7);
+            this.ams_tabpage.Controls.Add(this.richTextBox_slave8);
+            this.ams_tabpage.Controls.Add(this.flowLayoutPanel4);
+            this.ams_tabpage.Location = new System.Drawing.Point(4, 39);
+            this.ams_tabpage.Name = "ams_tabpage";
+            this.ams_tabpage.Size = new System.Drawing.Size(1442, 910);
+            this.ams_tabpage.TabIndex = 11;
+            this.ams_tabpage.Text = "AMS";
+            // 
+            // clear_ams
+            // 
+            this.clear_ams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.clear_ams.Location = new System.Drawing.Point(289, 9);
+            this.clear_ams.Name = "clear_ams";
+            this.clear_ams.Size = new System.Drawing.Size(150, 60);
+            this.clear_ams.TabIndex = 253;
+            this.clear_ams.Text = "Clear";
+            this.clear_ams.UseVisualStyleBackColor = false;
+            this.clear_ams.Click += new System.EventHandler(this.clear_ams_Click);
+            // 
+            // richTextBox_master
+            // 
+            this.richTextBox_master.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_master.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_master.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox_master.Name = "richTextBox_master";
+            this.richTextBox_master.Size = new System.Drawing.Size(280, 250);
+            this.richTextBox_master.TabIndex = 250;
+            this.richTextBox_master.Text = "";
+            // 
+            // richTextBox_slave1
+            // 
+            this.richTextBox_slave1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_slave1.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_slave1.Location = new System.Drawing.Point(3, 254);
+            this.richTextBox_slave1.Name = "richTextBox_slave1";
+            this.richTextBox_slave1.Size = new System.Drawing.Size(280, 325);
+            this.richTextBox_slave1.TabIndex = 242;
+            this.richTextBox_slave1.Text = "";
+            // 
+            // richTextBox_slave2
+            // 
+            this.richTextBox_slave2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_slave2.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_slave2.Location = new System.Drawing.Point(289, 254);
+            this.richTextBox_slave2.Name = "richTextBox_slave2";
+            this.richTextBox_slave2.Size = new System.Drawing.Size(280, 325);
+            this.richTextBox_slave2.TabIndex = 245;
+            this.richTextBox_slave2.Text = "";
+            // 
+            // richTextBox_slave3
+            // 
+            this.richTextBox_slave3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_slave3.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_slave3.Location = new System.Drawing.Point(575, 254);
+            this.richTextBox_slave3.Name = "richTextBox_slave3";
+            this.richTextBox_slave3.Size = new System.Drawing.Size(280, 325);
+            this.richTextBox_slave3.TabIndex = 243;
+            this.richTextBox_slave3.Text = "";
+            // 
+            // richTextBox_slave4
+            // 
+            this.richTextBox_slave4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_slave4.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_slave4.Location = new System.Drawing.Point(861, 254);
+            this.richTextBox_slave4.Name = "richTextBox_slave4";
+            this.richTextBox_slave4.Size = new System.Drawing.Size(280, 325);
+            this.richTextBox_slave4.TabIndex = 244;
+            this.richTextBox_slave4.Text = "";
+            // 
+            // richTextBox_slave5
+            // 
+            this.richTextBox_slave5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_slave5.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_slave5.Location = new System.Drawing.Point(3, 582);
+            this.richTextBox_slave5.Name = "richTextBox_slave5";
+            this.richTextBox_slave5.Size = new System.Drawing.Size(280, 325);
+            this.richTextBox_slave5.TabIndex = 247;
+            this.richTextBox_slave5.Text = "";
+            // 
+            // richTextBox_slave6
+            // 
+            this.richTextBox_slave6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_slave6.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_slave6.Location = new System.Drawing.Point(289, 582);
+            this.richTextBox_slave6.Name = "richTextBox_slave6";
+            this.richTextBox_slave6.Size = new System.Drawing.Size(280, 325);
+            this.richTextBox_slave6.TabIndex = 248;
+            this.richTextBox_slave6.Text = "";
+            // 
+            // richTextBox_slave7
+            // 
+            this.richTextBox_slave7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_slave7.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_slave7.Location = new System.Drawing.Point(575, 582);
+            this.richTextBox_slave7.Name = "richTextBox_slave7";
+            this.richTextBox_slave7.Size = new System.Drawing.Size(280, 325);
+            this.richTextBox_slave7.TabIndex = 249;
+            this.richTextBox_slave7.Text = "";
+            // 
+            // richTextBox_slave8
+            // 
+            this.richTextBox_slave8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.richTextBox_slave8.Font = new System.Drawing.Font("Adobe Heiti Std R", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.richTextBox_slave8.Location = new System.Drawing.Point(861, 582);
+            this.richTextBox_slave8.Name = "richTextBox_slave8";
+            this.richTextBox_slave8.Size = new System.Drawing.Size(280, 325);
+            this.richTextBox_slave8.TabIndex = 246;
+            this.richTextBox_slave8.Text = "";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoSize = true;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel4.MaximumSize = new System.Drawing.Size(1200, 0);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1200, 0);
+            this.flowLayoutPanel4.TabIndex = 0;
+            this.flowLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel4_Paint);
             // 
             // stack1
             // 
@@ -4171,7 +4063,7 @@
             this.stack1.Controls.Add(this.textBox_7);
             this.stack1.Location = new System.Drawing.Point(4, 39);
             this.stack1.Name = "stack1";
-            this.stack1.Size = new System.Drawing.Size(1365, 910);
+            this.stack1.Size = new System.Drawing.Size(1442, 910);
             this.stack1.TabIndex = 3;
             this.stack1.Text = "Stack 1";
             // 
@@ -4194,6 +4086,7 @@
             this.clear_1.TabIndex = 185;
             this.clear_1.Text = "Clear";
             this.clear_1.UseVisualStyleBackColor = false;
+            this.clear_1.Click += new System.EventHandler(this.clear_1_Click_1);
             // 
             // label61
             // 
@@ -5293,7 +5186,7 @@
             this.stack2.Controls.Add(this.textBox_43);
             this.stack2.Location = new System.Drawing.Point(4, 39);
             this.stack2.Name = "stack2";
-            this.stack2.Size = new System.Drawing.Size(1365, 910);
+            this.stack2.Size = new System.Drawing.Size(1442, 910);
             this.stack2.TabIndex = 4;
             this.stack2.Text = "Stack 2";
             // 
@@ -5316,6 +5209,7 @@
             this.clear_2.TabIndex = 185;
             this.clear_2.Text = "Clear";
             this.clear_2.UseVisualStyleBackColor = false;
+            this.clear_2.Click += new System.EventHandler(this.clear_2_Click_1);
             // 
             // label441
             // 
@@ -6415,7 +6309,7 @@
             this.stack3.Controls.Add(this.textBox_79);
             this.stack3.Location = new System.Drawing.Point(4, 39);
             this.stack3.Name = "stack3";
-            this.stack3.Size = new System.Drawing.Size(1365, 910);
+            this.stack3.Size = new System.Drawing.Size(1442, 910);
             this.stack3.TabIndex = 5;
             this.stack3.Text = "Stack 3";
             // 
@@ -7537,7 +7431,7 @@
             this.stack4.Controls.Add(this.textBox_115);
             this.stack4.Location = new System.Drawing.Point(4, 39);
             this.stack4.Name = "stack4";
-            this.stack4.Size = new System.Drawing.Size(1365, 910);
+            this.stack4.Size = new System.Drawing.Size(1442, 910);
             this.stack4.TabIndex = 6;
             this.stack4.Text = "Stack 4";
             // 
@@ -8659,7 +8553,7 @@
             this.stack5.Controls.Add(this.textBox_151);
             this.stack5.Location = new System.Drawing.Point(4, 39);
             this.stack5.Name = "stack5";
-            this.stack5.Size = new System.Drawing.Size(1365, 933);
+            this.stack5.Size = new System.Drawing.Size(1442, 910);
             this.stack5.TabIndex = 7;
             this.stack5.Text = "Stack 5";
             // 
@@ -9781,7 +9675,7 @@
             this.stack6.Controls.Add(this.textBox_187);
             this.stack6.Location = new System.Drawing.Point(4, 39);
             this.stack6.Name = "stack6";
-            this.stack6.Size = new System.Drawing.Size(1365, 933);
+            this.stack6.Size = new System.Drawing.Size(1442, 910);
             this.stack6.TabIndex = 8;
             this.stack6.Text = "Stack 6";
             // 
@@ -10903,7 +10797,7 @@
             this.stack7.Controls.Add(this.textBox_223);
             this.stack7.Location = new System.Drawing.Point(4, 39);
             this.stack7.Name = "stack7";
-            this.stack7.Size = new System.Drawing.Size(1365, 933);
+            this.stack7.Size = new System.Drawing.Size(1442, 910);
             this.stack7.TabIndex = 9;
             this.stack7.Text = "Stack 7";
             // 
@@ -12025,7 +11919,7 @@
             this.stack8.Controls.Add(this.textBox_259);
             this.stack8.Location = new System.Drawing.Point(4, 39);
             this.stack8.Name = "stack8";
-            this.stack8.Size = new System.Drawing.Size(1365, 933);
+            this.stack8.Size = new System.Drawing.Size(1442, 910);
             this.stack8.TabIndex = 10;
             this.stack8.Text = "Stack 8";
             // 
@@ -13049,24 +12943,13 @@
             this.textBox_259.TabIndex = 93;
             this.textBox_259.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // richTextBox_master
-            // 
-            this.richTextBox_master.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.richTextBox_master.Font = new System.Drawing.Font("Adobe Heiti Std R", 12F, System.Drawing.FontStyle.Bold);
-            this.richTextBox_master.Location = new System.Drawing.Point(574, 833);
-            this.richTextBox_master.Name = "richTextBox_master";
-            this.richTextBox_master.ReadOnly = true;
-            this.richTextBox_master.Size = new System.Drawing.Size(326, 287);
-            this.richTextBox_master.TabIndex = 223;
-            this.richTextBox_master.Text = "";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1822, 1003);
+            this.ClientSize = new System.Drawing.Size(1882, 1003);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Font = new System.Drawing.Font("3ds Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -13088,18 +12971,20 @@
             this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.group_vcu.ResumeLayout(false);
+            this.group_vcu.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -13110,8 +12995,8 @@
             this.groupBox10.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.group_vcu.ResumeLayout(false);
-            this.group_vcu.PerformLayout();
+            this.ams_tabpage.ResumeLayout(false);
+            this.ams_tabpage.PerformLayout();
             this.stack1.ResumeLayout(false);
             this.stack1.PerformLayout();
             this.stack2.ResumeLayout(false);
@@ -13143,7 +13028,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox filter_id_high_box;
         private System.Windows.Forms.TextBox filter_id_low_box;
-        private System.Windows.Forms.Label label448;
         private System.Windows.Forms.Label label554;
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.Label can_bus_load;
@@ -13179,12 +13063,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.TextBox charging_current_box;
-        private System.Windows.Forms.Label label553;
-        private System.Windows.Forms.Label label552;
-        private System.Windows.Forms.TextBox charging_status_box;
-        private System.Windows.Forms.Label label551;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label492;
         private System.Windows.Forms.Label label540;
@@ -13236,39 +13114,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label499;
-        private System.Windows.Forms.TextBox precharge_status_box;
         private System.Windows.Forms.TextBox airminus_box;
         private System.Windows.Forms.Label label473;
         private System.Windows.Forms.Label label474;
         private System.Windows.Forms.Label label475;
         private System.Windows.Forms.TextBox airplus_box;
         private System.Windows.Forms.TextBox prechrelay_box;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label548;
-        private System.Windows.Forms.Label label547;
-        private System.Windows.Forms.Label label546;
-        private System.Windows.Forms.Label label545;
-        private System.Windows.Forms.Label label544;
-        private System.Windows.Forms.Label label543;
-        private System.Windows.Forms.Label label542;
-        private System.Windows.Forms.TextBox slave_status_box_8;
-        private System.Windows.Forms.TextBox slave_status_box_7;
-        private System.Windows.Forms.TextBox slave_status_box_6;
-        private System.Windows.Forms.TextBox slave_status_box_5;
-        private System.Windows.Forms.TextBox slave_status_box_4;
-        private System.Windows.Forms.TextBox slave_status_box_3;
-        private System.Windows.Forms.Label label481;
-        private System.Windows.Forms.TextBox master_status_box;
-        private System.Windows.Forms.Label label500;
-        private System.Windows.Forms.TextBox slave_status_box_2;
-        private System.Windows.Forms.TextBox hotcell;
-        private System.Windows.Forms.Label label472;
-        private System.Windows.Forms.Label label471;
-        private System.Windows.Forms.TextBox current_box;
-        private System.Windows.Forms.TextBox slave_status_box_1;
-        private System.Windows.Forms.Label label477;
-        private System.Windows.Forms.Label label476;
-        private System.Windows.Forms.Label label497;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox vcdu_status_box;
@@ -13348,7 +13199,6 @@
         private System.Windows.Forms.TextBox ebs_current_box;
         private System.Windows.Forms.TextBox actuator_current_box;
         private System.Windows.Forms.Label label449;
-        private System.Windows.Forms.TextBox vcu_status_box;
         private System.Windows.Forms.Label label487;
         private System.Windows.Forms.Label label488;
         private System.Windows.Forms.Label label485;
@@ -14132,7 +13982,35 @@
         private System.Windows.Forms.Label label440;
         private System.Windows.Forms.TextBox textBox_260;
         private System.Windows.Forms.TextBox textBox_259;
+        private System.Windows.Forms.TabPage ams_tabpage;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.RichTextBox richTextBox_master;
+        private System.Windows.Forms.RichTextBox richTextBox_slave1;
+        private System.Windows.Forms.RichTextBox richTextBox_slave2;
+        private System.Windows.Forms.RichTextBox richTextBox_slave3;
+        private System.Windows.Forms.RichTextBox richTextBox_slave4;
+        private System.Windows.Forms.RichTextBox richTextBox_slave5;
+        private System.Windows.Forms.RichTextBox richTextBox_slave6;
+        private System.Windows.Forms.RichTextBox richTextBox_slave7;
+        private System.Windows.Forms.RichTextBox richTextBox_slave8;
+        private System.Windows.Forms.Button clear_ams;
+        private System.Windows.Forms.RichTextBox richTextBox_vcu;
+        private System.Windows.Forms.RichTextBox richTextBox_precharge_status;
+        private System.Windows.Forms.Label label500;
+        private System.Windows.Forms.RichTextBox richTextBox_precharge_errors;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox hotcell;
+        private System.Windows.Forms.Label label472;
+        private System.Windows.Forms.Label label471;
+        private System.Windows.Forms.TextBox current_box;
+        private System.Windows.Forms.Label label477;
+        private System.Windows.Forms.Label label476;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.TextBox charging_current_box;
+        private System.Windows.Forms.Label label553;
+        private System.Windows.Forms.Label label552;
+        private System.Windows.Forms.TextBox charging_status_box;
+        private System.Windows.Forms.Label label551;
     }
 }
 

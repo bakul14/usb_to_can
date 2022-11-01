@@ -70,6 +70,18 @@ namespace utc2
             "CHARGING_ON", "BATTERY_CHARGED"
         };
 
+        string[] precharge_statuses = new string[5]
+        {
+            "IDLE", "PRECHARGE", "FINISHED",
+            "CHARGING", "ERROR"
+        };
+
+        string[] precharge_errors = new string[6]
+        {
+            "OK", "LOW VOLTAGE", "HIGH VOLTAGE",
+            "TIMEOUT", "NO SHUTDOWN", "AMS NOT RESPONIDNG"
+        };
+
 
         char start_symbol;
         int message_counter = 0;
@@ -97,6 +109,7 @@ namespace utc2
         Control[] fan_rpm = new Control[2];
         Control[] vcu_currents = new Control[16];
         Control[] slave_number = new Control[8];
+        Control[] relays = new Control[3];
 
 
         Dictionary<int, string> precharge_dict =
@@ -164,8 +177,10 @@ namespace utc2
             vcu_currents[8] = actuator_current_box; vcu_currents[9] = ebs_current_box; vcu_currents[10] = gps_current_box; vcu_currents[11] = cameras_current_box;
             vcu_currents[12] = lidar_current_box; vcu_currents[13] = assi_current_box; vcu_currents[14] = res_current_box; vcu_currents[15] = as_current_box;
 
-            slave_number[0] = slave_status_box_1; slave_number[1] = slave_status_box_2; slave_number[2] = slave_status_box_3; slave_number[3] = slave_status_box_4;
-            slave_number[4] = slave_status_box_5; slave_number[5] = slave_status_box_6; slave_number[6] = slave_status_box_7; slave_number[7] = slave_status_box_8;
+            relays[0] = airminus_box; relays[1] = prechrelay_box; relays[2] = airplus_box;
+
+            //slave_number[0] = slave_status_box_1; slave_number[1] = slave_status_box_2; slave_number[2] = slave_status_box_3; slave_number[3] = slave_status_box_4;
+            //slave_number[4] = slave_status_box_5; slave_number[5] = slave_status_box_6; slave_number[6] = slave_status_box_7; slave_number[7] = slave_status_box_8;
 
             filter_id_low_box.Text = filter_id_low.ToString("X");
             filter_id_high_box.Text = filter_id_high.ToString("X");
@@ -185,6 +200,7 @@ namespace utc2
             myThread1.IsBackground = true;
             myThread1.Start();
         }
+
         private int row_count(string readfile)
         {
             int notEmptyCount = readfile
@@ -417,7 +433,7 @@ namespace utc2
                 status = hexascii_to_halfbyte(str[i * 2 + 5]) * 16 + hexascii_to_halfbyte(str[i * 2 + 6]);
                 if (status < 14)
                 {
-                    slave_number[i].Text = slave_statuses_messages[status].ToString();
+                    //slave_number[i].Text = slave_statuses_messages[status].ToString();
                 }
                 else
                     continue;
@@ -428,30 +444,30 @@ namespace utc2
         {
             int byte_1 = 0, byte_2 = 0;
             int mask = 0;
+            string buf = "";
             if (copy_of_dlc >= 2) { }
             else return;
             byte_1 = (hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]));
             byte_2 = (hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]));
-            richTextBox_master.Clear();
-            if (byte_2 > 0)
+            /*if (byte_2 > 0)
             {
                 for (int i = 0; i < 8; i++)
                 {
                     mask = 1 << i;
                     if ((byte_2 & (mask)) == (1 << i))
-                        richTextBox_master.AppendText(master_statuses[i] + "\n");
-                    //richTextBox_master.BeginInvoke(new Action(() => richTextBox_master.AppendText(master_statuses[i] + "\n")));
+                        buf += master_statuses[i] + "\n";
                 }
             }
             if (byte_1 > 0)
             {
-                for (int i = 0; i < 2; i++)
+                for (int i = 8; i < 10; i++)
                 {
                     mask = 1 << i;
                     if ((byte_1 & (mask)) == (1 << i))
-                        richTextBox_master.AppendText(master_statuses[i + 8] + "\n");
+                        buf += master_statuses[i] + "\n";
                 }
-            }
+            }*/
+            richTextBox_master.Text = buf;
         }
 
         private void actuator_show(string str, int copy_of_dlc)
@@ -468,16 +484,45 @@ namespace utc2
 
         private void precharge_show(string str, int copy_of_dlc)
         {
-            if (copy_of_dlc >= 2) { }
+            if (copy_of_dlc >= 3) { }
             else return;
             string[] state = new string[2] { "Opened", "Closed" };
-            int status = 0;
-            string value = "";
+            string buf = "";
+            int status = 0, byte_1 = 0, mask = 0;
 
-            status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
+            byte_1 = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
+            for (int i = 0; i < 5; i++)
+            {
+                mask = 1 << i;
+                if ((byte_1 & (mask)) == (1 << i))
+                    buf += precharge_statuses[i] + "\n";
+            }
+            richTextBox_precharge_status.Text = buf;
+
+            byte_1 = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
+            for (int i = 0; i < 3; i++)
+            {
+                mask = 1 << i;
+                if ((byte_1 & (mask)) == (1 << i))
+                    relays[i].Text = state[1];
+                else
+                    relays[i].Text = state[0];
+            }
+
+            buf = "";
+            byte_1 = hexascii_to_halfbyte(str[9]) * 16 + hexascii_to_halfbyte(str[10]);
+            for (int i = 0; i < 6; i++)
+            {
+                mask = 1 << i;
+                if ((byte_1 & (mask)) == (1 << i))
+                    buf += precharge_errors[i] + "\n";
+            }
+            richTextBox_precharge_errors.Text = buf;
+
+            /*status = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
             if (precharge_dict.TryGetValue(status, out value))
             {
-                precharge_status_box.Text = value;
+                //precharge_status_box.Text = value;
             }
 
             status = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
@@ -488,9 +533,7 @@ namespace utc2
                 case 2: airminus_box.Text = state[1]; airplus_box.Text = state[0]; prechrelay_box.Text = state[0]; break;
                 case 3: airminus_box.Text = state[1]; airplus_box.Text = state[0]; prechrelay_box.Text = state[1]; break;
                 case 4: airminus_box.Text = state[1]; airplus_box.Text = state[1]; prechrelay_box.Text = state[0]; break;
-            }
-
-
+            }*/
         }
 
         private void ams_lv_show(string str, int copy_of_dlc, int id)
@@ -568,25 +611,27 @@ namespace utc2
         {
             if (copy_of_dlc >= 2) { }
             else return;
-            int byte1, byte2;
-            int status;
-            byte1 = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
-            byte2 = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
-            status = (byte)((byte1 * 256) + byte2);
+            int byte_1 = 0, byte_2 = 0;
+            int mask = 0;
+            string buf = "";
+            byte_1 = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
+            byte_2 = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
 
-
-            for (int i = 0; i <= 15; i++)
-            {
-                /*if (status & (1 << i))
+                for (int i = 0; i < 8; i++)
                 {
-
-                }*/
-            }
-
-            if (status < 12)
-            {
-                vcu_status_box.Text = vcu_statuses[status];
-            }
+                    mask = 1 << i;
+                    if ((byte_2 & (mask)) == (1 << i))
+                        buf += vcu_statuses[i] + "\n";
+                }
+            
+            
+                for (int i = 8; i < 12; i++)
+                {
+                    mask = 1 << i;
+                    if ((byte_1 & (mask)) == (1 << i))
+                        buf += vcu_statuses[i] + "\n";
+                }
+                richTextBox_vcu.Text = buf;
         }
 
         private int getfilter(string str)
@@ -1031,7 +1076,7 @@ namespace utc2
 
         }
 
-        private void clear_1_Click(object sender, EventArgs e)
+        private void clear_1_Click_1(object sender, EventArgs e)
         {
             int list = 36 * 0;
             for (int i = 0; i < 36; i++)
@@ -1041,7 +1086,7 @@ namespace utc2
             stackboxes_u[0].Text = "Stack voltage: -";
         }
 
-        private void clear_2_Click(object sender, EventArgs e)
+        private void clear_2_Click_1(object sender, EventArgs e)
         {
             int list = 36 * 1;
             for (int i = 0; i < 36; i++)
@@ -1051,7 +1096,7 @@ namespace utc2
             stackboxes_u[1].Text = "Stack voltage: -";
         }
 
-        private void clear_3_Click(object sender, EventArgs e)
+        private void clear_3_Click_1(object sender, EventArgs e)
         {
             int list = 36 * 2;
             for (int i = 0; i < 36; i++)
@@ -1061,7 +1106,7 @@ namespace utc2
             stackboxes_u[2].Text = "Stack voltage: -";
         }
 
-        private void clear_4_Click(object sender, EventArgs e)
+        private void clear_4_Click_1(object sender, EventArgs e)
         {
             int list = 36 * 3;
             for (int i = 0; i < 36; i++)
@@ -1071,7 +1116,7 @@ namespace utc2
             stackboxes_u[3].Text = "Stack voltage: -";
         }
 
-        private void clear_5_Click(object sender, EventArgs e)
+        private void clear_5_Click_1(object sender, EventArgs e)
         {
             int list = 36 * 4;
             for (int i = 0; i < 36; i++)
@@ -1081,7 +1126,7 @@ namespace utc2
             stackboxes_u[4].Text = "Stack voltage: -";
         }
 
-        private void clear_6_Click(object sender, EventArgs e)
+        private void clear_6_Click_1(object sender, EventArgs e)
         {
             int list = 36 * 5;
             for (int i = 0; i < 36; i++)
@@ -1091,7 +1136,7 @@ namespace utc2
             stackboxes_u[5].Text = "Stack voltage: -";
         }
 
-        private void clear_7_Click(object sender, EventArgs e)
+        private void clear_7_Click_1(object sender, EventArgs e)
         {
             int list = 36 * 6;
             for (int i = 0; i < 36; i++)
@@ -1101,7 +1146,7 @@ namespace utc2
             stackboxes_u[6].Text = "Stack voltage: -";
         }
 
-        private void clear_8_Click(object sender, EventArgs e)
+        private void clear_8_Click_1(object sender, EventArgs e)
         {
             int list = 36 * 7;
             for (int i = 0; i < 36; i++)
@@ -1456,20 +1501,13 @@ namespace utc2
             inverter_temp_box.Clear();
             hotcell.Clear();
             current_box.Clear();
-            slave_status_box_1.Clear();
-            slave_status_box_2.Clear();
-            slave_status_box_3.Clear();
-            slave_status_box_4.Clear();
-            slave_status_box_5.Clear();
-            slave_status_box_6.Clear();
-            slave_status_box_7.Clear();
-            slave_status_box_8.Clear();
             vcdu_status_box.Clear();
             brake_system_status_box.Clear();
             airminus_box.Clear();
             airplus_box.Clear();
             prechrelay_box.Clear();
-            precharge_status_box.Clear();
+            richTextBox_precharge_errors.Clear();
+            richTextBox_precharge_status.Clear();
             total_voltage_box.Clear();
             lcs_current_box.Clear();
             inverter_current_box.Clear();
@@ -1479,8 +1517,7 @@ namespace utc2
             brake_light_current_box.Clear();
             fan1_current_box.Clear();
             fan2_current_box.Clear();
-            vcu_status_box.Clear();
-            master_status_box.Clear();
+            richTextBox_vcu.Clear();
             actuator_status_box.Clear();
             lv_hottest_cell_box.Clear();
             lv_temp_cell_1_box.Clear();
@@ -1518,6 +1555,50 @@ namespace utc2
             min_cell_voltage = 1000;
             richTextBox_master.Clear();
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void richTextBox_master_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clear_ams_Click(object sender, EventArgs e)
+        {
+            richTextBox_master.Clear();
+            richTextBox_slave1.Clear();
+            richTextBox_slave2.Clear();
+            richTextBox_slave3.Clear();
+            richTextBox_slave4.Clear();
+            richTextBox_slave5.Clear();
+            richTextBox_slave6.Clear();
+            richTextBox_slave7.Clear();
+            richTextBox_slave8.Clear();
+        }
+
 
         private void timer2_Tick(object sender, EventArgs e)
         {
