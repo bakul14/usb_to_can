@@ -110,6 +110,7 @@ namespace utc2
         Control[] vcu_currents = new Control[16];
         Control[] slave_number = new Control[8];
         Control[] relays = new Control[3];
+        Control[] slave = new Control[8];
 
 
         Dictionary<int, string> precharge_dict =
@@ -178,6 +179,9 @@ namespace utc2
             vcu_currents[12] = lidar_current_box; vcu_currents[13] = assi_current_box; vcu_currents[14] = res_current_box; vcu_currents[15] = as_current_box;
 
             relays[0] = airminus_box; relays[1] = prechrelay_box; relays[2] = airplus_box;
+
+            slave[0] = richTextBox_slave1; slave[1] = richTextBox_slave2; slave[2] = richTextBox_slave3; slave[3] = richTextBox_slave4;
+            slave[4] = richTextBox_slave5; slave[5] = richTextBox_slave6; slave[6] = richTextBox_slave7; slave[7] = richTextBox_slave8;
 
             //slave_number[0] = slave_status_box_1; slave_number[1] = slave_status_box_2; slave_number[2] = slave_status_box_3; slave_number[3] = slave_status_box_4;
             //slave_number[4] = slave_status_box_5; slave_number[5] = slave_status_box_6; slave_number[6] = slave_status_box_7; slave_number[7] = slave_status_box_8;
@@ -423,21 +427,34 @@ namespace utc2
             vcu_currents[id - 0x500].Text = (current).ToString("F2");
         }
 
-        private void slave_status_show(string str, int copy_of_dlc)
+        private void slave_status_show(string str, int copy_of_dlc, int id)
         {
+            int byte_1 = 0, byte_2 = 0, result = 0;
+            int mask = 0;
+            string buf = "";
             if (copy_of_dlc >= 8) { }
             else return;
-            int status;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 4; i++)
             {
-                status = hexascii_to_halfbyte(str[i * 2 + 5]) * 16 + hexascii_to_halfbyte(str[i * 2 + 6]);
-                if (status < 14)
+                byte_1 = (hexascii_to_halfbyte(str[5 + i * 4]) * 16 + hexascii_to_halfbyte(str[6 + i * 4]));
+                byte_2 = (hexascii_to_halfbyte(str[7 + i * 4]) * 16 + hexascii_to_halfbyte(str[8 + i * 4]));
+                result = (byte_1 * 0x100) + byte_2;
+                buf = "";
+                for (int j = 0; j < 8; j++)
                 {
-                    //slave_number[i].Text = slave_statuses_messages[status].ToString();
+                    mask = 1 << j;
+                    if ((result & (mask)) == (1 << j))
+                        buf += slave_statuses_messages[j] + "\n";
                 }
-                else
-                    continue;
+                for (int k = 8; k < 14; k++)
+                {
+                    mask = 1 << k;
+                    if ((result & (mask)) == (1 << k))
+                        buf += slave_statuses_messages[k] + "\n";
+                }
+                slave[(id - 0x144) * 2 + i].Text = buf;
             }
+            
         }
 
         private void ams_master_status_show(string str, int copy_of_dlc)
@@ -449,7 +466,7 @@ namespace utc2
             else return;
             byte_1 = (hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]));
             byte_2 = (hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]));
-            /*if (byte_2 > 0)
+            if (byte_2 > 0)
             {
                 for (int i = 0; i < 8; i++)
                 {
@@ -466,7 +483,7 @@ namespace utc2
                     if ((byte_1 & (mask)) == (1 << i))
                         buf += master_statuses[i] + "\n";
                 }
-            }*/
+            }
             richTextBox_master.Text = buf;
         }
 
@@ -617,21 +634,21 @@ namespace utc2
             byte_1 = hexascii_to_halfbyte(str[5]) * 16 + hexascii_to_halfbyte(str[6]);
             byte_2 = hexascii_to_halfbyte(str[7]) * 16 + hexascii_to_halfbyte(str[8]);
 
-                for (int i = 0; i < 8; i++)
-                {
-                    mask = 1 << i;
-                    if ((byte_2 & (mask)) == (1 << i))
-                        buf += vcu_statuses[i] + "\n";
-                }
-            
-            
-                for (int i = 8; i < 12; i++)
-                {
-                    mask = 1 << i;
-                    if ((byte_1 & (mask)) == (1 << i))
-                        buf += vcu_statuses[i] + "\n";
-                }
-                richTextBox_vcu.Text = buf;
+            for (int i = 0; i < 8; i++)
+            {
+                mask = 1 << i;
+                if ((byte_2 & (mask)) == (1 << i))
+                    buf += vcu_statuses[i] + "\n";
+            }
+
+
+            for (int i = 8; i < 12; i++)
+            {
+                mask = 1 << i;
+                if ((byte_1 & (mask)) == (1 << i))
+                    buf += vcu_statuses[i] + "\n";
+            }
+            richTextBox_vcu.Text = buf;
         }
 
         private int getfilter(string str)
@@ -675,6 +692,8 @@ namespace utc2
 
             if ((id >= 0x100) && (id <= 0x13F))
                 ams_show(message, dlc, id); // delta 288
+            else if ((id >= 0x144) && (id <= 0x145))
+                slave_status_show(message, dlc, id);
             else if ((id >= 0x500) && (id <= 0x515))
                 vcu_show(message, dlc, id);
             else if ((id >= 0x700) && (id <= 0x704))
@@ -684,7 +703,7 @@ namespace utc2
 
                 switch (id) //in hex formate
                 {
-                    case 0x140: slave_status_show(message, dlc); break;
+                    case 0x140: slave_status_show(message, dlc, id); break;
                     case 0x141: ams_master_status_show(message, dlc); break;
                     case 0x142: hotcell_show(message, dlc); break;
                     case 0x143: charging_status_show(message, dlc); break;
