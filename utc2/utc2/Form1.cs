@@ -12,16 +12,36 @@ using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
+using System.Numerics;
 
 
 
 namespace utc2
 {
 
+    /*public static class extension
+    {
+        public static void AppendText(this RichTextBox box, string text, Color color, bool AddNewLine = false)
+        {
+            if (AddNewLine)
+            {
+                text += Environment.NewLine;
+            }
+
+            box.SelectionStart = box.TextLength;
+            box.SelectionLength = 0;
+
+            box.SelectionColor = color;
+            box.AppendText(text);
+            box.SelectionColor = box.ForeColor;
+        }
+    }*/
+
     public partial class Form1 : Form
     {
+        
 
-        Queue<string> serial_messages = new Queue<string>();
+        Queue<string> transmitted_can_messages = new Queue<string>();
 
         int filter_id_low = 0x0;
         int filter_id_high = 0x7ff;
@@ -111,7 +131,7 @@ namespace utc2
         Control[] slave_number = new Control[8];
         Control[] relays = new Control[3];
         Control[] slave = new Control[8];
-
+        Control[] can_bytes = new Control[8];
 
         Dictionary<int, string> precharge_dict =
             new Dictionary<int, string>();
@@ -183,6 +203,10 @@ namespace utc2
             slave[0] = richTextBox_slave1; slave[1] = richTextBox_slave2; slave[2] = richTextBox_slave3; slave[3] = richTextBox_slave4;
             slave[4] = richTextBox_slave5; slave[5] = richTextBox_slave6; slave[6] = richTextBox_slave7; slave[7] = richTextBox_slave8;
 
+            
+            can_bytes[0] = can_transmit_byte0; can_bytes[1] = can_transmit_byte1; can_bytes[2] = can_transmit_byte2; can_bytes[3] = can_transmit_byte3;
+            can_bytes[4] = can_transmit_byte4; can_bytes[5] = can_transmit_byte5; can_bytes[6] = can_transmit_byte6; can_bytes[7] = can_transmit_byte7;
+
             //slave_number[0] = slave_status_box_1; slave_number[1] = slave_status_box_2; slave_number[2] = slave_status_box_3; slave_number[3] = slave_status_box_4;
             //slave_number[4] = slave_status_box_5; slave_number[5] = slave_status_box_6; slave_number[6] = slave_status_box_7; slave_number[7] = slave_status_box_8;
 
@@ -199,11 +223,17 @@ namespace utc2
             precharge_dict.Add(17, "Precharge Process");
             precharge_dict.Add(19, "AMS_NOT_RESPONDING");
 
+            dlc_numeric.Value = 8;
+
+            //richTextBox2.BeginInvoke(new Action(() => richTextBox2.ForeColor = Color.DarkViolet));
+            richTextBox2.ForeColor = Color.DarkViolet;
+
             this.WindowState = FormWindowState.Maximized;
             Thread myThread1 = new Thread(new ThreadStart(my_thread_1));
             myThread1.IsBackground = true;
             myThread1.Start();
         }
+
 
         private int row_count(string readfile)
         {
@@ -920,6 +950,23 @@ namespace utc2
                 richTextBox2.BeginInvoke(new Action(() => richTextBox2.AppendText("Received from usb\n")));
                 feedback_usb_flag = true;
             }
+            else if (start_symbol == 'z')
+            {
+                if (input_message[1] == '2')
+                {
+                    //richTextBox1.SelectionColor = Color.Green;
+                    //richTextBox2.BeginInvoke(new Action(() => richTextBox2.AppendText(input_message)));
+                }
+                else if (input_message[1] == '0')
+                {
+                    //richTextBox2.BeginInvoke(new Action(() => richTextBox2.AppendText(input_message)));
+                    //richTextBox2.Select(0, input_message.Length);
+                    //richTextBox2.SelectionColor = Color.Red;
+                }
+
+                if (transmitted_can_messages.Count != 0)
+                    richTextBox2.BeginInvoke(new Action(() => richTextBox2.AppendText(transmitted_can_messages.Dequeue() + "\n")));
+            }
         }
 
         void my_thread_1() // thread
@@ -1618,6 +1665,241 @@ namespace utc2
             richTextBox_slave8.Clear();
         }
 
+        private void open_file_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label448_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ams_tabpage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dlc_numeric_ValueChanged(object sender, EventArgs e)
+        {
+            int i = 0;
+            for (i = 0; i < dlc_numeric.Value; i++) 
+            {
+                can_bytes[i].Enabled = true;
+                can_bytes[i].BackColor = Color.White;
+            }
+            for (i = (int)dlc_numeric.Value; i < 8; i++)
+            {
+                can_bytes[i].Enabled = false;
+                can_bytes[i].BackColor = Color.DarkGray;
+            }
+        }
+
+        private void stack5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_154_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_153_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_156_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_155_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_150_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_149_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_148_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_147_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_146_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_145_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_152_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_151_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_166_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_165_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_168_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_167_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_162_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_161_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_160_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_159_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_158_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_157_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_164_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_163_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabcontrol1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_178_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_177_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_180_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_179_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_174_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_173_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_172_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_171_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_170_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_169_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_176_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_175_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void can_transmit_btn_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                string can_str = "t";
+                can_str += ((int)id_numeric.Value).ToString("X3");
+                can_str += ((int)dlc_numeric.Value).ToString("X1");
+                for (int i = 0; i < (int)dlc_numeric.Value; i++)
+                    can_str += ((int)((NumericUpDown)can_bytes[i]).Value).ToString("X2");
+                serialPort1.WriteLine(can_str);
+                transmitted_can_messages.Enqueue(can_str);
+            }
+            else
+                return;
+        }
 
         private void timer2_Tick(object sender, EventArgs e)
         {

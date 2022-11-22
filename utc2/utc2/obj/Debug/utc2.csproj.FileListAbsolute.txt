@@ -25,9 +25,9 @@ D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\bin\Debug\utc2.exe
 D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\bin\Debug\utc2.pdb
 D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.csproj.AssemblyReference.cache
 D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.csproj.SuggestedBindingRedirects.cache
-D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.Form1.resources
 D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.Properties.Resources.resources
 D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.csproj.GenerateResource.cache
 D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.csproj.CoreCompileInputs.cache
 D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.exe
 D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.pdb
+D:\misha\bmstu\BRT\myutc\forms\usb_to_can\utc2\utc2\obj\Debug\utc2.Form1.resources
