@@ -39,7 +39,7 @@ namespace utc2
 
     public partial class Form1 : Form
     {
-        
+
 
         Queue<string> transmitted_can_messages = new Queue<string>();
 
@@ -138,7 +138,9 @@ namespace utc2
 
         static Semaphore semaphore_thread1 = new Semaphore(2, 2);
 
+        Thread myThread1;
 
+        [Obsolete]
         public Form1()
         {
             InitializeComponent();
@@ -203,7 +205,7 @@ namespace utc2
             slave[0] = richTextBox_slave1; slave[1] = richTextBox_slave2; slave[2] = richTextBox_slave3; slave[3] = richTextBox_slave4;
             slave[4] = richTextBox_slave5; slave[5] = richTextBox_slave6; slave[6] = richTextBox_slave7; slave[7] = richTextBox_slave8;
 
-            
+
             can_bytes[0] = can_transmit_byte0; can_bytes[1] = can_transmit_byte1; can_bytes[2] = can_transmit_byte2; can_bytes[3] = can_transmit_byte3;
             can_bytes[4] = can_transmit_byte4; can_bytes[5] = can_transmit_byte5; can_bytes[6] = can_transmit_byte6; can_bytes[7] = can_transmit_byte7;
 
@@ -229,8 +231,9 @@ namespace utc2
             richTextBox2.ForeColor = Color.DarkViolet;
 
             this.WindowState = FormWindowState.Maximized;
-            Thread myThread1 = new Thread(new ThreadStart(my_thread_1));
+            myThread1 = new Thread(new ThreadStart(my_thread_1));
             myThread1.IsBackground = true;
+            myThread1.Priority = ThreadPriority.Highest;
             myThread1.Start();
         }
 
@@ -484,7 +487,7 @@ namespace utc2
                 }
                 slave[(id - 0x144) * 2 + i].Text = buf;
             }
-            
+
         }
 
         private void ams_master_status_show(string str, int copy_of_dlc)
@@ -793,7 +796,7 @@ namespace utc2
 
         private void download_Click(object sender, EventArgs e)
         {
-
+            progressBar1.BeginInvoke(new Action(() => progressBar1.Value = 0));
             node_id = -1;
             foreach (Control control in nodes_groupBox.Controls)
             {
@@ -824,7 +827,10 @@ namespace utc2
             }
 
             if (serialPort1.IsOpen)
+            {
                 download_button_flag = true;
+            }
+
             else
             {
                 MessageBox.Show(this,
@@ -969,6 +975,7 @@ namespace utc2
             }
         }
 
+        [Obsolete]
         void my_thread_1() // thread
         {
             int mem_transmit = 0, goal = 0;
@@ -1055,6 +1062,7 @@ namespace utc2
                             MessageBoxIcon.Information,
                             MessageBoxDefaultButton.Button1,  // specify "Yes" as the default
                             (MessageBoxOptions)0x40000);
+                        //myThread1.Suspend();
                     }
                 }
                 else
@@ -1683,7 +1691,7 @@ namespace utc2
         private void dlc_numeric_ValueChanged(object sender, EventArgs e)
         {
             int i = 0;
-            for (i = 0; i < dlc_numeric.Value; i++) 
+            for (i = 0; i < dlc_numeric.Value; i++)
             {
                 can_bytes[i].Enabled = true;
                 can_bytes[i].BackColor = Color.White;
@@ -1894,6 +1902,30 @@ namespace utc2
                 can_str += ((int)dlc_numeric.Value).ToString("X1");
                 for (int i = 0; i < (int)dlc_numeric.Value; i++)
                     can_str += ((int)((NumericUpDown)can_bytes[i]).Value).ToString("X2");
+                serialPort1.WriteLine(can_str);
+                transmitted_can_messages.Enqueue(can_str);
+            }
+            else
+                return;
+        }
+
+        private void BALANCE_ON_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                string can_str = "t14680200000000000000";
+                serialPort1.WriteLine(can_str);
+                transmitted_can_messages.Enqueue(can_str);
+            }
+            else
+                return;
+        }
+
+        private void BALANCE_OFF_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                string can_str = "t14680100000000000000";
                 serialPort1.WriteLine(can_str);
                 transmitted_can_messages.Enqueue(can_str);
             }

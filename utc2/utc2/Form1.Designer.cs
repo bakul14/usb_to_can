@@ -1037,6 +1037,8 @@
             this.label440 = new System.Windows.Forms.Label();
             this.textBox_260 = new System.Windows.Forms.TextBox();
             this.textBox_259 = new System.Windows.Forms.TextBox();
+            this.BALANCE_ON = new System.Windows.Forms.Button();
+            this.BALANCE_OFF = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dlc_numeric)).BeginInit();
@@ -1228,6 +1230,8 @@
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel3);
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel2);
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel1);
+            this.flowLayoutPanel1.Controls.Add(this.BALANCE_OFF);
+            this.flowLayoutPanel1.Controls.Add(this.BALANCE_ON);
             this.flowLayoutPanel1.Controls.Add(this.richTextBox2);
             this.flowLayoutPanel1.Controls.Add(this.label554);
             this.flowLayoutPanel1.Controls.Add(this.can_bus_load);
@@ -1493,7 +1497,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(374, 40);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 40);
             this.tableLayoutPanel1.TabIndex = 254;
             // 
             // tabcontrol1
@@ -13277,6 +13281,26 @@
             this.textBox_259.TabIndex = 93;
             this.textBox_259.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // BALANCE_ON
+            // 
+            this.BALANCE_ON.Location = new System.Drawing.Point(338, 186);
+            this.BALANCE_ON.Name = "BALANCE_ON";
+            this.BALANCE_ON.Size = new System.Drawing.Size(43, 40);
+            this.BALANCE_ON.TabIndex = 264;
+            this.BALANCE_ON.Text = "ON";
+            this.BALANCE_ON.UseVisualStyleBackColor = true;
+            this.BALANCE_ON.Click += new System.EventHandler(this.BALANCE_ON_Click);
+            // 
+            // BALANCE_OFF
+            // 
+            this.BALANCE_OFF.Location = new System.Drawing.Point(289, 186);
+            this.BALANCE_OFF.Name = "BALANCE_OFF";
+            this.BALANCE_OFF.Size = new System.Drawing.Size(43, 40);
+            this.BALANCE_OFF.TabIndex = 265;
+            this.BALANCE_OFF.Text = "OFF";
+            this.BALANCE_OFF.UseVisualStyleBackColor = true;
+            this.BALANCE_OFF.Click += new System.EventHandler(this.BALANCE_OFF_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -14373,6 +14397,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button BALANCE_ON;
+        private System.Windows.Forms.Button BALANCE_OFF;
     }
 }
 
